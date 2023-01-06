@@ -1,0 +1,154 @@
+/*
+======================
+reset impostazioni browser
+======================
+*/
+* 
+{
+	padding: 0em;
+	margin: 0em;
+}
+/*
+======================
+dichiarazione variabili di colore
+======================
+*/
+:root
+{
+	--bgcolor: #FFF;
+  --breadcolor: #9B0014;
+  --txtcolor: #000;
+  --linkcolor: #FFF/*#9C0015*/;
+  --breadlinkcolor: rgb(209, 212, 14);
+  --visitedcolor: #454953;
+  --menucolor: #454953;
+  --hovercolor: #9C0015;
+}
+
+html, body 
+{
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5em;
+  margin: auto;
+}
+  
+header 
+{
+  background-color: var(--bgcolor);
+  color: var(--txtcolor);
+  text-align: center;
+  padding: 1em;
+  padding-top: 0.7em;
+  margin: 0.7em;
+}
+
+header h1 
+{
+  background-image: url('../images/logo_senza_sfondo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -9999px;
+  line-height: 1.5em;
+  font-size: 6em;
+}
+
+header h2
+{
+	font-size:  1.8em;
+	padding: 0.5em;
+	margin-top:  0.7em;
+}
+
+#menu 
+{
+  background-color: var(--menucolor);
+  padding: 10px;
+}
+
+#menu ul 
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu li 
+{
+  display: inline-block;
+  margin-right: 1em;
+}
+
+#menu a 
+{
+  color: var(--linkcolor);
+}
+
+#menu a:hover 
+{
+  color: var(--hovercolor);
+}
+
+#currentLink
+{
+  background: url('../images/heart-69-16.ico') left center no-repeat;
+  background-size: 1.2em;
+  color: var(#);
+  padding-left: 1.5em;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main h2 {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+  /*---------------------------------------------*/
+  /*
+======================
+Definizione dimensioni
+del content
+======================
+*/
+body{
+	max-width: 1024px;
+  margin: auto;
+  background-color: var(--bgcolor);
+  /*border-style: solid;
+  border-width: 0.15em;
+  border-color: var(--bordercolor);*/
+}
+
+/*
+==============
+SEZIONE BREADCRUMB
+==============
+*/
+
+#breadcrumb
+{
+	background-color: var(--breadcolor);
+  color: var(--linkcolor);
+  padding: 0.5em 1em 0.5em;
+}
+
+#breadcrumb a:link{
+	color: var(--linkcolor);
+}
+
+#breadcrumb a:visited{
+	color: var(--linkcolor);
+}
