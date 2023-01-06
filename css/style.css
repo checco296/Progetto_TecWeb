@@ -141,6 +141,24 @@ main
   padding-top: 1em;
 }
 
+#presentazione
+{
+  background-color: rgb(172, 172, 172);
+  margin-bottom: 0.3em;
+  padding: 0.5em;
+  border-style: solid;
+  border-radius: 1em;
+}
+
+#avvertimento
+{
+  background-color: var(--menucolor);
+  color: var(--footer_txt_color);
+  margin-bottom: 0.3em;
+  padding: 0.5em;
+  border-style: solid;
+  border-radius: 1em;
+}
 /*main p
 {
   margin-bottom: 0.3em;
