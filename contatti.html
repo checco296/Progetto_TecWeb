@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Centro Adozioni PD</title>
+    <meta name="description" content="Pagina dedicata ai contatti diretti con Centro Adozioni PD" />
+    <meta name="keywords"    content="Numero, telefono, indirizzo, scivici, chiamaci" />
+    <meta name="author"      content="Francesco Ferraioli" />    
+    
+    <link rel="stylesheet" href="./css/style.css" media="handheld,screen" />
+    <link rel="stylesheet" href="./css/mini.css"  media="handheld, screen and (max-width:600px), only screen and (max-device-width:600px)" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
+
+    <link rel="shortcut icon" type="image/png" href="./images/prototipo.png" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Centro Adozioni PD</h1>
+      <h2>Contattaci</h2>
+    </header>
+    <nav id="menu" aria-label="menu del sito">
+      <ul>
+        <li><a href="main.html"><span lang="en">Home</span></a></li>
+        <li><a href="adotta.html">Adotta</a></li>
+        <li><a href="about.html">Chi siamo</a></li>
+        <li id="currentLink" aria-current="page">Contattaci</li>
+      </ul>
+    </nav>
+    <nav id="breadcrumb" aria-label="percorso">
+      <p>Ti trovi in: <span lang="en"><a href="main.html">Home</a></span> &gt; &gt; Contattaci</p>
+    </nav>
+
+    <main>
+      <h2>Contattaci</h2>
+      <!--<p>We'd love to hear from you! You can reach us at the following:</p>-->
+      <ul>
+        <li>Email: francesco.ferraioli@studenti.unipd.it</li>
+        <li>Telefono: 555-555-5555</li>
+        <li>Indirizzo: 123 Strada Principale, Padova, IT</li>
+      </ul>
+      <p>Se preferisci puoi utilizzare la <span lang="en">form</span> sottostante per inviarci un messaggio</p>
+      <form action="submit.php" method="post">
+        <label for="name">Nome:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="message">Messaggio:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        <input type="submit" value="Submit">
+      </form> 
+    </main>
+    <footer>
+      <img class="imgValidCode" src="./images/valid-xhtml10.png" alt="HTML valido" />
+      <p><span lang="en">Copyright</span> 2023 Centro Adozione PD <span lang="en">All right Reserved</span></p>
+      <img class="imgValidCode" src="./images/vcss-blue.gif" alt="CSS valido" />
+    </footer>
+  </body>
+</html>
