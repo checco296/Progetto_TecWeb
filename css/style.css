@@ -70,6 +70,9 @@ SEZIONE MENU
 */
 #menu 
 {
+  border-style: solid;
+  border-color: #000;
+  border-bottom: none;
   height: 3em;
   overflow: hidden;
   text-align: left;
@@ -94,7 +97,7 @@ SEZIONE MENU
 #menu a 
 {
   color: var(--linkcolor);
-  padding: 1em;
+  padding: 1.1em;
   background-color: var(--menucolor);
   text-decoration: none;
 }
@@ -105,14 +108,18 @@ SEZIONE MENU
   background-color: var(--hovercolor);
 }
 
-#menu #currentLink
+#currentLink
 {
   background: url('../images/heart-69-16.ico') 8% center no-repeat;
   background-size: 1em;
   background-color: var(--bread_footer_color);
-  color: var(--txtcolor);
+  color: var(--linkcolor);
   padding-left: 1.6em;
   padding-right: 1em;
+}
+
+#Log_in>a
+{
   
 }
 
@@ -123,6 +130,8 @@ SEZIONE BREADCRUMB
 */
 #breadcrumb
 {
+  border-style: solid;
+  border-color: #000;
   text-align: left;
   background-color: var(--bread_footer_color);
   color: var(--linkcolor);
@@ -169,13 +178,6 @@ main
   border-radius: 1em;
   border-color: #000;
 }
-/*main p
-{
-  margin-bottom: 0.3em;
-  padding: 0.5em;
-  border-style: solid;
-  border-radius: 1em;
-}*/
 
 main h2 
 {
@@ -183,10 +185,36 @@ main h2
   margin-bottom: 0.5em;
   text-align: center;
 }
+main h3
+{
+  text-align: left;
+  padding: 0.5em;
+}
+
+main dl
+{
+  padding: 0.5em 2em;
+}
 
 main dt
 {
   color: var(--menucolor);
+  border-style: solid;
+  border-bottom: none;
+  border-radius: 1em 1em 0em 0em;
+  border-color: var(--menucolor);
+  padding: 0.5em;
+  padding-bottom: 0.2em;
+}
+main dd
+{
+  border-style: solid;
+  border-top: none;
+  border-radius: 0em 0em 1em 1em;
+  border-color: var(--menucolor);
+  padding: 0.5em;
+  padding-top: 0.2em;
+  margin-bottom: 1em;
 }
 
 /*
@@ -214,6 +242,8 @@ footer
   text-align: center;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  border-style: solid;
+  border-color: black;
 }
 
 footer p
