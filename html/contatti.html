@@ -31,27 +31,36 @@
       </nav>
     </header>
       
-    <main>
+    <main id="contatti">
       <h2>Contattaci</h2>
       <h3>RECAPITI,INDIRIZZO ED ORARI DI APERTURA</h3>
       <p>
         Per avere maggiori informazioni sul centro, per segnalazioni o per collaborare con noi, puoi contattarci ai numeri di telefono sotto indicati,
         oppure puoi compilare il modulo in fondo a questa pagina. La struttura è aperta negli orari sottoindicati.
       </p>
-      <ul>
-        <li>Email: francesco.ferraioli@studenti.unipd.it</li>
-        <li>Telefono: 555-555-5555</li>
-        <li>Indirizzo: 123 Strada Principale, Padova, IT</li>
+      <ul id="Recapiti">
+        <li id="telefono"><img src="./images/phone-icon.png" alt="Telefono" title="Telefono"/><p>555-555-5555</p></li>
+        <li id="mail"><img src="./images/mail-icon.png" alt="E-mail" title="E-mail"/><p>francesco.ferraioli@studenti.unipd.it</p></li>
+        <li id="indirizzo"><img src="./images/map-icon.png" alt="Indirizzo" title="Indirizzo"/><p>123 Strada Principale, Padova, IT</p></li>
       </ul>
-      <p>Se preferisci puoi utilizzare la <span lang="en">form</span> sottostante per inviarci un messaggio</p>
+      <p>Scrivici e seguici sui nostri <span lang="en">Social</span> per novità in tempo reale:</p>
+      <ul id="Social">
+        <li><a href="#"><img src="./images/facebook_icon-icons.com_59205.ico" alt="Link collegamento a Facebook" /></a></li>
+    		<li><a href="#"><img src="./images/social_network_twitter_icon-icons.com_66157.ico" alt="Link collegamento a Twitter" /></a></li>
+    		<li><a href="#"><img src="./images/1491580635-yumminkysocialmedia26_83102.ico" alt="Link collegamento a Instagram" /></a></li>
+    		<li><a href="#"><img src="./images/social_linkedin_button_blue_256_30639.ico" alt="Link collegamento a LinkedIn" /></a></li>
+      </ul>
+        <p>Se preferisci puoi utilizzare la <span lang="en">form</span> sottostante per inviarci un messaggio</p>
       <form action="submit.php" method="post">
-        <label for="name">Nome:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email"><br>
-        <label for="message">Messaggio:</label><br>
-        <textarea id="message" name="message"></textarea><br>
-        <input type="submit" value="Submit">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name">
+        <label for="surname">Cognome:</label>
+        <input type="text" id="surname" name="surname">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <label for="message">Messaggio:</label>
+        <textarea id="message" name="message"></textarea>
+        <button type="submit">Invia</button>
       </form> 
     </main>
     <footer>
