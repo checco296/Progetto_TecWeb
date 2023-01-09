@@ -258,3 +258,24 @@ footer img
   margin: 0em 0em;
   size: 1em;
 }
+.card{
+  width: calc(30% - 0.6em);
+  margin: 0.6em 0.3em 0 0.3em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: var(--colore-dettagli-card);
+  font-size: 1.1em;
+  border:1px solid var(--colore-bordo-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.card dt:not(.posizione){
+  height: 70%;
+  margin-bottom: 0.2em;
+  overflow: hidden;
+}
+
+.card input[type=image] {
+  width: 100%;
+}

@@ -1,0 +1,19 @@
+
+ <div class ="card">
+    <dt>
+        <form action="pagina_cane.php" method="get" class="copertina" aria-hidden="true">
+            <input type="hidden" value="%id%" name="idcane">
+            <input type="image" src="../images/Luna.jpg" alt="%desc%" tabindex="-1">
+        </form>
+    </dt>
+    <dd class="dettagli">
+        <form action="pagina_film.php" method="get" class="titolo">
+            <input type="hidden" value="%id%" name="idcane">	
+            <button type="submit" value="%nomeCane%" aria-label="%nomeCane%: vai alla pagina del film">%nomeCane%</button>	
+        </form>
+        <div id="infoUtente">
+            <span>Sesso: %sessoCane%</span>
+            <span>Nascita: %nascita%</span>
+            <span>Stato: %stato%</span>
+        </div>    
+</div>    
