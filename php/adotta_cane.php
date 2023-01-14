@@ -5,10 +5,10 @@ require_once ('card.php');
 
 $pagina=file_get_contents("../html/adotta_cane.html");
 
-$query_info_cane="SELECT cani.id_cani as id,foto_cane.path as foto ,cani.nome,cani.sesso,cani.data_nascita as
- nascita,cani.stato
-FROM foto_cane ,cani
-where foto_cane.id = cani.id_cani;";
+$query_info_cane="SELECT animali.id_animale as id,foto_animali.path as foto ,animali.nome,animali.sesso,animali.data_nascita as
+ nascita,animali.stato
+FROM foto_animali ,animali
+where foto_animali.id = animali.id_animale;";
 $connessione = new connessione();
 if(!$connessione->apriConnessione()){
     //exit

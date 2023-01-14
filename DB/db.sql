@@ -7,21 +7,22 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
+SHOW WARNINGS;
 -- -----------------------------------------------------
 -- Schema tec_progetto
 -- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `tec_progetto` ;
 
 -- -----------------------------------------------------
 -- Schema tec_progetto
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `tec_progetto` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+SHOW WARNINGS;
 USE `tec_progetto` ;
 
 -- -----------------------------------------------------
 -- Table `tec_progetto`.`adozioni`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tec_progetto`.`adozioni` ;
-
 CREATE TABLE IF NOT EXISTS `tec_progetto`.`adozioni` (
   `id_adozioni` INT NOT NULL,
   `nome_proprietario` VARCHAR(45) NOT NULL,
@@ -32,30 +33,29 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `tec_progetto`.`cani`
+-- Table `tec_progetto`.`animali`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tec_progetto`.`cani` ;
-
-CREATE TABLE IF NOT EXISTS `tec_progetto`.`cani` (
-  `id_cani` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `tec_progetto`.`animali` (
+  `id_animale` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `data_nascita` DATE NOT NULL,
   `stato` VARCHAR(45) NOT NULL,
   `sesso` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`id_cani`))
+  `descrizione` MEDIUMTEXT NOT NULL,
+  PRIMARY KEY (`id_animale`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `tec_progetto`.`foto_cane`
+-- Table `tec_progetto`.`foto_animali`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tec_progetto`.`foto_cane` ;
-
-CREATE TABLE IF NOT EXISTS `tec_progetto`.`foto_cane` (
+CREATE TABLE IF NOT EXISTS `tec_progetto`.`foto_animali` (
   `id` INT NOT NULL,
   `path` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
@@ -63,38 +63,39 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `tec_progetto`.`gatti`
+-- Table `tec_progetto`.`prenotazioni`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tec_progetto`.`gatti` ;
-
-CREATE TABLE IF NOT EXISTS `tec_progetto`.`gatti` (
-  `idgatti` INT NOT NULL,
-  `nome` VARCHAR(45) NOT NULL,
-  `data_nascita` VARCHAR(45) NOT NULL,
-  `stato` VARCHAR(45) NOT NULL,
-  `sesso` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idgatti`))
+CREATE TABLE IF NOT EXISTS `tec_progetto`.`prenotazioni` (
+  `id` INT NOT NULL,
+  `nome_cliente` VARCHAR(45) NOT NULL,
+  `cognome_cliente` VARCHAR(45) NOT NULL,
+  `email_cliente` VARCHAR(45) NOT NULL,
+  `data_prenotazione` DATE NOT NULL,
+  `id_animale` INT NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `tec_progetto`.`proprietario`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tec_progetto`.`proprietario` ;
-
 CREATE TABLE IF NOT EXISTS `tec_progetto`.`proprietario` (
   `id_proprietario` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
-  `residenza` VARCHAR(45) NOT NULL,
+  `cognome` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id_proprietario`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
+SHOW WARNINGS;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

@@ -1,15 +1,15 @@
 
  <div class ="card">
     <dt>
-        <form action="pagina_cane.php" method="get" class="copertina" aria-hidden="true">
-            <input type="hidden" value="%id%" name="idcane">
-            <input type="image" src="../images/Luna.jpg" alt="%desc%" tabindex="-1">
+        <form action="pagina_animale.php" method="get" class="copertina" aria-hidden="true">
+            <input type="hidden" value="%id%" name="id">
+            <input type="image" src="%foto%" alt="%desc%" tabindex="-1">
         </form>
     </dt>
     <dd class="dettagli">
-        <form action="pagina_film.php" method="get" class="titolo">
-            <input type="hidden" value="%id%" name="idcane">	
-            <button type="submit" value="%nomeCane%" aria-label="%nomeCane%: vai alla pagina del film">%nomeCane%</button>	
+        <form action="pagina_animale.php" method="get" class="titolo">
+            <input type="hidden" value="%id%" name="id">	
+            <button type="submit" value="%nomeCane%" aria-label="%nomeCane%">%nomeCane%</button>	
         </form>
         <div id="infoUtente">
             <span>Sesso: %sessoCane%</span>
