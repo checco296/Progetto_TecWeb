@@ -19,7 +19,7 @@ dichiarazione variabili di colore
 {
 	--bgcolor: #FFF;
   --menucolor: #9B0014;
-  --txtcolor: #000;
+  --txtcolor: #FFF;
   --linkcolor: #FFF;
   --visitedcolor: #454953;
   --bread_footer_color: #454953;
@@ -39,6 +39,14 @@ html, body
   max-width: 800px;
 }
 
+html{
+  background-image: url(../images/free-cat-and-dog-pattern-vector.png);
+}
+
+body
+{
+  background-color: #373f51f5;
+}
 /*
 ==============
 SEZIONE HEADER
@@ -59,8 +67,9 @@ header h1
   background-position: center;
   background-size: contain;
   text-indent: -9999px;
-  line-height: 1.5em;
+  line-height: 2em;
   font-size: 6em;
+  color: var(--txtcolor);
 }
 
 /*
@@ -161,11 +170,13 @@ main
 
 #presentazione
 {
-  background-color: rgb(172, 172, 172);
+  background-color: var(--bread_footer_color);
+  color: var(--txtcolor);
   padding: 0.5em;
   margin-bottom: 0.3em;
   border-style: solid;
   border-radius: 1em;
+  border-color: black;
 }
 
 #avvertimento
@@ -184,37 +195,60 @@ main h2
   font-size: 2em;
   margin-bottom: 0.5em;
   text-align: center;
+  color: var(--txtcolor);
 }
 main h3
 {
   text-align: left;
   padding: 0.5em;
+  color: var(--txtcolor);
 }
 
 main dl
 {
   padding: 0.5em 2em;
+  width: 70%;
 }
 
 main dt
 {
   color: var(--menucolor);
   border-style: solid;
+  border-width: 0.3em;
   border-bottom: none;
   border-radius: 1em 1em 0em 0em;
   border-color: var(--menucolor);
   padding: 0.5em;
   padding-bottom: 0.2em;
+  background-color: var(--bgcolor);
+  font-weight: bold;
 }
+
 main dd
 {
   border-style: solid;
   border-top: none;
+  border-width: 0.3em;
   border-radius: 0em 0em 1em 1em;
   border-color: var(--menucolor);
-  padding: 0.5em;
-  padding-top: 0.2em;
   margin-bottom: 1em;
+  background-color: var(--bgcolor);
+  display: flex;
+}
+
+main dd>p
+{
+  margin-left: 0.5em;
+  padding: 1em;
+}
+
+.icona
+{
+  margin-left: 0.5em;
+  width: 6em;
+  height: 6em;
+  align-self: center;
+  
 }
 
 #Recapiti
@@ -269,14 +303,112 @@ main dd
 {
   margin-bottom: 1.5em;
   text-align: center;
+  color: var(--txtcolor);
 }
 
 #contatti h3
 {
   text-align: center;
+  color: #9B0014;
 }
 
+#primo_par
+{
+  background-image: url(../images/Team-7-1671797716186-638x425.jpg);
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 30% 100%;
+  background-clip: padding-box;
+  padding: 2em;
+  padding-left: 31%;
+  border-radius: 1em;
+  border: solid var(--menucolor);
+  margin-bottom: 1em;
+}
 
+#secondo_par
+{
+  background-image: url(../images/cane-canile-600x399.jpg.webp);
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 30% 100%;
+  background-clip: padding-box;
+  padding: 2em;
+  padding-right: 31%;
+  border-radius: 1em;
+  border: solid var(--menucolor);
+  margin-bottom: 1em;
+}
+
+#terzo_par
+{
+  background-image: url(../images/shutterstock_242940202-2.jpg);
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 30% 100%;
+  background-clip: padding-box;
+  padding: 2em;
+  padding-left: 31%;
+  border-radius: 1em;
+  border: solid var(--menucolor);
+  margin-bottom: 1em;
+}
+
+#quarto_par
+{
+  background-image: url(../images/gattino-con-pelo-a-forma-di-cuore-e1446037850649.jpg);
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 30% 100%;
+  background-clip: padding-box;
+  padding: 2em;
+  padding-right: 31%;
+  border-radius: 1em;
+  border: solid var(--menucolor);
+  margin-bottom: 1em;
+}
+
+#errore_404
+{
+  text-align: center;
+  color: var(--txtcolor);
+} 
+
+#errore_404 h2
+{
+  font-size: 3em;
+}
+
+#errore_404 h3
+{
+  background-image: url('../images/Cuccioli-di-Gattini.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -9999px;
+  line-height: 4em;
+  font-size: 6em;
+}
+
+#errore_404 a:link
+{
+  color: var(--linkcolor);
+}
+
+#errore_404 a:visited
+{
+  color: var(--menucolor);
+}
+
+#errore_404 p
+{
+  font-size: 1.5em;
+  padding-bottom: 1em;
+}
 /*
 ==============
 SEZIONE AIUTI
@@ -366,7 +498,7 @@ form textarea
 form button 
 {
   background-color: var(--bgcolor);
-  color: var(--txtcolor);
+  color: var(--menucolor);
   padding: 0.75em 1.25em;
   border: solid black;
   border-radius: 1em;
