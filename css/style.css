@@ -3,10 +3,9 @@
 reset impostazioni browser
 ======================
 */
-* 
-{
-	padding: 0;
-	margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 /*
 ======================
@@ -15,24 +14,23 @@ dichiarazione variabili di colore
 */
 /*#9C0015*/
 /*#454953*/
-:root
-{
-	--bgcolor: #FFF;
-  --menucolor: #9B0014;
+:root {
+  --bgcolor: #fff;
+  --menucolor: #9b0014;
   --txtcolor: #000;
-  --linkcolor: #FFF;
+  --linkcolor: #fff;
   --visitedcolor: #454953;
   --bread_footer_color: #454953;
-  --hovercolor: #777;
-  --footer_txt_color: #FFF;
+  --hovercolor: #ddd;
+  --footer_txt_color: #fff;
 }
 /*
 ======================
 impostazione generale
 ======================
 */
-html, body 
-{
+html,
+body {
   font-family: Arial, sans-serif;
   margin: auto;
   font-size: 100%;
@@ -44,17 +42,15 @@ html, body
 SEZIONE HEADER
 ==============
 */
-header 
-{
+header {
   color: var(--txtcolor);
   text-align: center;
   padding-top: 0.7em;
   margin: auto;
 }
 
-header h1 
-{
-  background-image: url('../images/logo_senza_sfondo.png');
+header h1 {
+  background-image: url("../images/logo_senza_sfondo.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -68,11 +64,13 @@ header h1
 SEZIONE MENU
 ==============
 */
-#menu 
-{
+#menu {
   border-style: solid;
   border-color: #000;
   border-bottom: none;
+
+  border-width: 2px;
+
   height: 3em;
   overflow: hidden;
   text-align: left;
@@ -81,36 +79,32 @@ SEZIONE MENU
   border-top-right-radius: 1em;
 }
 
-#menu ul 
-{
+#menu ul {
   display: flex;
   list-style-type: none;
 }
 
-#menu li 
-{
+#menu li {
   padding-top: 1em;
   padding-bottom: 1em;
   display: inline;
 }
 
-#menu a 
-{
+#menu a {
   color: var(--linkcolor);
   padding: 1.1em;
   background-color: var(--menucolor);
   text-decoration: none;
 }
 
-#menu a:hover 
-{
+#menu a:hover {
   color: var(--txtcolor);
   background-color: var(--hovercolor);
+  text-decoration: underline;
 }
 
-#currentLink
-{
-  background: url('../images/heart-69-16.ico') 8% center no-repeat;
+#currentLink {
+  background: url("../images/heart-69-16.ico") 8% center no-repeat;
   background-size: 1em;
   background-color: var(--bread_footer_color);
   color: var(--linkcolor);
@@ -118,20 +112,24 @@ SEZIONE MENU
   padding-right: 1em;
 }
 
-#Log_in>a
-{
+/*
+#loginForm{
   
 }
+*/
 
 /*
 ==============
 SEZIONE BREADCRUMB
 ==============
 */
-#breadcrumb
-{
+#breadcrumb {
   border-style: solid;
   border-color: #000;
+
+  border-top: none;
+  border-width: 2px;
+
   text-align: left;
   background-color: var(--bread_footer_color);
   color: var(--linkcolor);
@@ -140,11 +138,11 @@ SEZIONE BREADCRUMB
   border-bottom-right-radius: 1em;
 }
 
-#breadcrumb a:link{
+#breadcrumb a:link {
   color: var(--linkcolor);
 }
 
-#breadcrumb a:visited{
+#breadcrumb a:visited {
   color: var(--linkcolor); /*dovrei cambiarlo?*/
 }
 
@@ -153,14 +151,12 @@ SEZIONE BREADCRUMB
 SEZIONE CONTENUTO
 ==============
 */
-main 
-{
+main {
   margin: auto;
   padding: 1em;
 }
 
-#presentazione
-{
+#presentazione {
   background-color: rgb(172, 172, 172);
   padding: 0.5em;
   margin-bottom: 0.3em;
@@ -168,8 +164,7 @@ main
   border-radius: 1em;
 }
 
-#avvertimento
-{
+#avvertimento {
   background-color: var(--menucolor);
   color: var(--footer_txt_color);
   margin-bottom: 0.3em;
@@ -179,25 +174,21 @@ main
   border-color: #000;
 }
 
-main h2 
-{
+main h2 {
   font-size: 2em;
   margin-bottom: 0.5em;
   text-align: center;
 }
-main h3
-{
+main h3 {
   text-align: left;
   padding: 0.5em;
 }
 
-main dl
-{
+main dl {
   padding: 0.5em 2em;
 }
 
-main dt
-{
+main dt {
   color: var(--menucolor);
   border-style: solid;
   border-bottom: none;
@@ -206,8 +197,7 @@ main dt
   padding: 0.5em;
   padding-bottom: 0.2em;
 }
-main dd
-{
+main dd {
   border-style: solid;
   border-top: none;
   border-radius: 0em 0em 1em 1em;
@@ -217,16 +207,14 @@ main dd
   margin-bottom: 1em;
 }
 
-#Recapiti
-{
+#Recapiti {
   display: flex;
   list-style: none;
   justify-content: space-around;
   margin-bottom: 1.25em;
 }
 
-#Recapiti li
-{
+#Recapiti li {
   padding: 1.5em;
   padding-bottom: 0.5em;
   margin: 0.5em;
@@ -238,52 +226,43 @@ main dd
   text-align: center;
 }
 
-#Recapiti img
-{
+#Recapiti img {
   width: 4em;
   height: 4em;
   margin-bottom: 0.5em;
 }
 
-#Social
-{
+#Social {
   display: flex;
   list-style: none;
   justify-content: space-around;
 }
 
-#Social img
-{
+#Social img {
   width: 5em;
   height: 5em;
   padding: 0.5em;
-
 }
 
-#Social a:hover
-{
+#Social a:hover {
   opacity: 0.4;
 }
 
-#contatti p
-{
+#contatti p {
   margin-bottom: 1.5em;
   text-align: center;
 }
 
-#contatti h3
-{
+#contatti h3 {
   text-align: center;
 }
-
 
 /*
 ==============
 SEZIONE AIUTI
 ==============
 */
-.aiuti
-{
+.aiuti {
   display: block;
   text-indent: -9999em;
   height: 1px;
@@ -295,8 +274,7 @@ SEZIONE AIUTI
 SEZIONE FOOTER
 ==============
 */
-footer 
-{
+footer {
   display: flex;
   justify-content: space-around;
 
@@ -307,17 +285,20 @@ footer
   padding-bottom: 0.5em;
   border-style: solid;
   border-color: black;
+
+  align-items: center;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-width: 2px;
 }
 
-footer p
-{
+footer p {
   display: inline;
   font-style: italic;
   font-size: 0.8em;
 }
 
-footer img
-{
+footer img {
   margin: 0em 0em;
   size: 1em;
 }
@@ -326,8 +307,7 @@ footer img
 SEZIONE FORM
 ==============
 */
-form 
-{
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -340,14 +320,13 @@ form
   color: var(--footer_txt_color);
 }
 
-form label 
-{
+form label {
   font-size: 1.3em;
   margin-bottom: 5px;
   display: block;
 }
-form input, form textarea 
-{
+form input,
+form textarea {
   width: 100%;
   padding: 0.75em 1.25em;
   margin-bottom: 1.25em;
@@ -358,13 +337,11 @@ form input, form textarea
   background-color: var(--bgcolor);
   color: var(--menucolor);
 }
-form textarea 
-{
+form textarea {
   height: 12.5em;
   resize: vertical;
 }
-form button 
-{
+form button {
   background-color: var(--bgcolor);
   color: var(--txtcolor);
   padding: 0.75em 1.25em;
@@ -373,29 +350,64 @@ form button
   cursor: pointer;
   font-size: 1em;
 }
-form button:hover 
-{
+form button:hover {
   opacity: 0.8;
 }
 
-.card{
+.card {
   width: calc(30% - 0.6em);
   margin: 0.6em 0.3em 0 0.3em;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   background-color: var(--colore-dettagli-card);
   font-size: 1.1em;
-  border:1px solid var(--colore-bordo-card);
+  border: 1px solid var(--colore-bordo-card);
   display: flex;
   flex-direction: column;
 }
 
-.card dt:not(.posizione){
+.card dt:not(.posizione) {
   height: 70%;
   margin-bottom: 0.2em;
   overflow: hidden;
 }
 
-.card input[type=image] {
+.card input[type="image"] {
   width: 100%;
+}
+
+#validatedForm button {
+  background-color: var(--visitedcolor);
+  color: var(--bgcolor);
+}
+
+#validatedForm {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#animali {
+  width: 95%;
+  margin: auto;
+}
+
+#animali > dt {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-left: 2%;
+}
+
+#animali dd {
+  padding-left: 2%;
+}
+
+#animali > dd > img {
+  width: 40%;
+  float: left;
+  border-radius: 1em;
+}
+
+.animale {
+  margin-left: 40%;
+  padding: 0.5em 1em;
 }
