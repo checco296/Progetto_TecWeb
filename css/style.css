@@ -20,8 +20,8 @@ dichiarazione variabili di colore
 	--bgcolor: #FFF;
   --menucolor: #9B0014;
   --txtcolor: #FFF;
-  --visitedcolor: #FFF;
-  --linkcolor: #ace432;
+  --linkcolor: #FFF;
+  --visitedcolor: #454953;
   --bread_footer_color: #454953;
   --hovercolor: #777;
   --footer_txt_color: #FFF;
@@ -33,14 +33,13 @@ impostazione generale
 */
 html, body 
 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   margin: auto;
+  font-size: 100%;
   max-width: 800px;
-  font-size: 1em;
 }
 
-html
-{
+html{
   background-image: url(../images/free-cat-and-dog-pattern-vector.png);
 }
 
@@ -53,6 +52,14 @@ body
 SEZIONE HEADER
 ==============
 */
+header 
+{
+  color: var(--txtcolor);
+  text-align: center;
+  padding-top: 0.7em;
+  margin: auto;
+}
+
 header h1 
 {
   background-image: url('../images/logo_senza_sfondo.png');
@@ -104,12 +111,7 @@ SEZIONE MENU
   text-decoration: none;
 }
 
-#menu a:visited
-{
-  color: var(--visitedcolor);
-}
-
-#menu a:hover
+#menu a:hover 
 {
   color: var(--txtcolor);
   background-color: var(--hovercolor);
@@ -120,7 +122,7 @@ SEZIONE MENU
   background: url('../images/heart-69-16.ico') 8% center no-repeat;
   background-size: 1em;
   background-color: var(--bread_footer_color);
-  color: var(--txtcolor);
+  color: var(--linkcolor);
   padding-left: 1.6em;
   padding-right: 1em;
 }
@@ -141,20 +143,18 @@ SEZIONE BREADCRUMB
   border-color: #000;
   text-align: left;
   background-color: var(--bread_footer_color);
-  color: var(--txtcolor);
+  color: var(--linkcolor);
   padding: 0.5em 1em 0.5em;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
 }
 
-#breadcrumb a
-{
+#breadcrumb a:link{
   color: var(--linkcolor);
 }
 
-#breadcrumb a:visited
-{
-  color: var(--visitedcolor);
+#breadcrumb a:visited{
+  color: var(--linkcolor); /*dovrei cambiarlo?*/
 }
 
 /*
@@ -199,21 +199,20 @@ main h2
 }
 main h3
 {
-  text-align: center;
+  text-align: left;
   padding: 0.5em;
   color: var(--txtcolor);
 }
 
 main dl
 {
+  padding: 0.5em 2em;
   width: 70%;
-  margin: auto;
 }
 
 main dt
 {
   color: var(--menucolor);
-  text-align: center;
   border-style: solid;
   border-width: 0.3em;
   border-bottom: none;
@@ -256,7 +255,7 @@ main dd>p
 {
   display: flex;
   list-style: none;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 1.25em;
 }
 
@@ -313,8 +312,9 @@ main dd>p
   color: #9B0014;
 }
 
-.paragrafo-dispari
+#primo_par
 {
+  background-image: url(../images/Team-7-1671797716186-638x425.jpg);
   background-color: #FFF;
   background-repeat: no-repeat;
   background-position: left;
@@ -327,8 +327,9 @@ main dd>p
   margin-bottom: 1em;
 }
 
-.paragrafo-pari
+#secondo_par
 {
+  background-image: url(../images/cane-canile-600x399.jpg.webp);
   background-color: #FFF;
   background-repeat: no-repeat;
   background-position: right;
@@ -341,26 +342,34 @@ main dd>p
   margin-bottom: 1em;
 }
 
-
-#primo_par
-{
-  background-image: url(../images/Team-7-1671797716186-638x425.jpg);
-}
-
-#secondo_par
-{
-  background-image: url(../images/cane-canile-600x399.jpg.webp);
-  
-}
-
 #terzo_par
 {
   background-image: url(../images/shutterstock_242940202-2.jpg);
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 30% 100%;
+  background-clip: padding-box;
+  padding: 2em;
+  padding-left: 31%;
+  border-radius: 1em;
+  border: solid var(--menucolor);
+  margin-bottom: 1em;
 }
 
 #quarto_par
 {
   background-image: url(../images/gattino-con-pelo-a-forma-di-cuore-e1446037850649.jpg);
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 30% 100%;
+  background-clip: padding-box;
+  padding: 2em;
+  padding-right: 31%;
+  border-radius: 1em;
+  border: solid var(--menucolor);
+  margin-bottom: 1em;
 }
 
 #errore_404
@@ -407,10 +416,10 @@ SEZIONE AIUTI
 */
 .aiuti
 {
+  display: block;
+  text-indent: -9999em;
   height: 1px;
   width: 1px;
-  overflow: hidden;
-  position: absolute;
 }
 
 /*
@@ -421,15 +430,13 @@ SEZIONE FOOTER
 footer 
 {
   display: flex;
-  align-items: center;
   justify-content: space-around;
-  border-radius: 1em 1em 0em 0em;
+
   background-color: var(--bread_footer_color);
   color: var(--footer_txt_color);
   text-align: center;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  margin-bottom: 0.01em;
   border-style: solid;
   border-color: black;
 }
@@ -502,12 +509,6 @@ form button:hover
 {
   opacity: 0.8;
 }
-
-/*
-==============
-SEZIONE CARD
-==============
-*/
 
 .card{
   width: calc(30% - 0.6em);
