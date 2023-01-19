@@ -1,10 +1,106 @@
-header h1
+/*impostazione generale*/
+html, body 
 {
-    line-height: 1.1em;
-    font-size: 4em;
+    width: 100%;
 }
 
-footer img
+/*SEZIONE MENU*/
+#menu 
 {
-    width: 20%;
+    height: auto;
+    width: 25em;
+    text-align: center;
+    margin: auto;
+    border-bottom: solid black;
+    border-radius: 1em;
+}
+
+#menu ul 
+{
+    display:block;
+}
+
+#menu li 
+{
+    display: block;
+    padding-top: 0em;
+    padding-bottom: 0em;
+}
+
+#menu a
+{
+    display: block;
+}
+
+#menu #currentLink
+{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-size: 2em;
+    background: url('../images/heart-69-16.ico') 8% center no-repeat,url('../images/heart-69-16.ico') 92% center no-repeat;
+    background-color: var(--bread_footer_color);
+}
+
+
+/*
+==============
+SEZIONE BREADCRUMB
+==============
+*/
+#breadcrumb
+{
+    display: none;
+}
+
+/*eventualment eingrandire un po il tutto*/
+
+#presentazione
+{
+    width: 90%;
+    margin: auto;
+}
+
+#avvertimento
+{
+    width: 90%;
+    margin: auto;
+    margin-top: 0.5em;
+}
+
+main dl
+{
+    width: 90%;
+}
+
+#Recapiti
+{
+    display: block;
+}
+
+#Recapiti li
+{
+    margin: auto;
+    margin-top: 0.5em;
+    width: 60%;
+}
+
+#Social img
+{
+    height: 5.5em;
+    width: 5.5em;
+}
+
+form
+{
+    width: 70%;
+}
+
+form button
+{
+    padding: 2em;
+}
+
+.paragrafo-dispari, .paragrafo-pari
+{
+    background-size: 30% 70%;
 }
