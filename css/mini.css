@@ -52,7 +52,7 @@ SEZIONE BREADCRUMB
     display: none;
 }
 
-/*eventualment eingrandire un po il tutto*/
+/*eventualment ingrandire un po il tutto*/
 
 #presentazione
 {
@@ -79,10 +79,12 @@ main dl
 
 #Recapiti li
 {
+    display: block;
     margin: auto;
     margin-top: 0.5em;
     width: 60%;
 }
+
 
 #Social img
 {

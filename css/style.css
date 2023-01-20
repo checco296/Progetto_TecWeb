@@ -22,6 +22,7 @@ dichiarazione variabili di colore
   --txtcolor: #FFF;
   --visitedcolor: #FFF;
   --linkcolor: #ace432;
+  --linkesterni: #45bbff;
   --bread_footer_color: #454953;
   --hovercolor: #777;
   --footer_txt_color: #FFF;
@@ -256,7 +257,7 @@ main dd>p
 {
   display: flex;
   list-style: none;
-  justify-content: center;
+  justify-content:space-evenly;
   margin-bottom: 1.25em;
 }
 
@@ -271,13 +272,21 @@ main dd>p
   border: solid black;
   border-radius: 2em;
   text-align: center;
+  padding-bottom: 1em;
+  display: block;
+}
+
+#Recapiti a
+{
+  display: block;
+  color: var(--linkesterni);
 }
 
 #Recapiti img
 {
   width: 4em;
   height: 4em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 #Social
@@ -342,23 +351,23 @@ main dd>p
 }
 
 
-#primo_par
+#intro
 {
   background-image: url(../images/Team-7-1671797716186-638x425.jpg);
 }
 
-#secondo_par
+#adozione
 {
   background-image: url(../images/cane-canile-600x399.jpg.webp);
   
 }
 
-#terzo_par
+#post-adozione
 {
   background-image: url(../images/shutterstock_242940202-2.jpg);
 }
 
-#quarto_par
+#ringraziamenti
 {
   background-image: url(../images/gattino-con-pelo-a-forma-di-cuore-e1446037850649.jpg);
 }
@@ -488,7 +497,7 @@ form textarea
   height: 12.5em;
   resize: vertical;
 }
-form button 
+#button 
 {
   background-color: var(--bgcolor);
   color: var(--menucolor);
@@ -498,7 +507,7 @@ form button
   cursor: pointer;
   font-size: 1em;
 }
-form button:hover 
+#button:hover 
 {
   opacity: 0.8;
 }
