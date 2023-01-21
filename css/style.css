@@ -3,9 +3,10 @@
 reset impostazioni browser
 ======================
 */
-* {
-  padding: 0;
-  margin: 0;
+* 
+{
+	padding: 0;
+	margin: 0;
 }
 /*
 ======================
@@ -14,49 +15,55 @@ dichiarazione variabili di colore
 */
 /*#9C0015*/
 /*#454953*/
-:root {
-  --bgcolor: #fff;
-  --menucolor: #9b0014;
-  --txtcolor: #000;
-  --linkcolor: #fff;
-  --visitedcolor: #454953;
+:root
+{
+	--bgcolor: #FFF;
+  --menucolor: #9B0014;
+  --txtcolor: #FFF;
+  --visitedcolor: #FFF;
+  --linkcolor: #D4F291;
+  --linkesterni: #FFE0FF;
   --bread_footer_color: #454953;
-  --hovercolor: #ddd;
-  --footer_txt_color: #fff;
+  --hovercolor: #777;
+  --footer_txt_color: #FFF;
 }
 /*
 ======================
 impostazione generale
 ======================
 */
-html,
-body {
-  font-family: Arial, sans-serif;
+html, body 
+{
+  font-family: Arial, Helvetica, sans-serif;
   margin: auto;
-  font-size: 100%;
   max-width: 800px;
+  font-size: 1em;
 }
 
+html
+{
+  background-image: url(../images/free-cat-and-dog-pattern-vector.png);
+}
+
+body
+{
+  background-color: #373f51f5;
+}
 /*
 ==============
 SEZIONE HEADER
 ==============
 */
-header {
-  color: var(--txtcolor);
-  text-align: center;
-  padding-top: 0.7em;
-  margin: auto;
-}
-
-header h1 {
-  background-image: url("../images/logo_senza_sfondo.png");
+header h1 
+{
+  background-image: url('../images/logo_senza_sfondo.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   text-indent: -9999px;
-  line-height: 1.5em;
+  line-height: 2em;
   font-size: 6em;
+  color: var(--txtcolor);
 }
 
 /*
@@ -64,13 +71,11 @@ header h1 {
 SEZIONE MENU
 ==============
 */
-#menu {
+#menu 
+{
   border-style: solid;
   border-color: #000;
   border-bottom: none;
-
-  border-width: 2px;
-
   height: 3em;
   overflow: hidden;
   text-align: left;
@@ -79,71 +84,81 @@ SEZIONE MENU
   border-top-right-radius: 1em;
 }
 
-#menu ul {
+#menu ul 
+{
   display: flex;
   list-style-type: none;
 }
 
-#menu li {
+#menu li 
+{
   padding-top: 1em;
   padding-bottom: 1em;
   display: inline;
+  border-right: solid black;
 }
 
-#menu a {
+#menu a 
+{
   color: var(--linkcolor);
   padding: 1.1em;
   background-color: var(--menucolor);
   text-decoration: none;
 }
 
-#menu a:hover {
+#menu a:visited
+{
+  color: var(--visitedcolor);
+}
+
+#menu a:hover
+{
   color: var(--txtcolor);
   background-color: var(--hovercolor);
-  text-decoration: underline;
+  text-decoration-line: underline;
 }
 
-#currentLink {
-  background: url("../images/heart-69-16.ico") 8% center no-repeat;
+#currentLink
+{
+  background: url('../images/heart-69-16.ico') 8% center no-repeat;
   background-size: 1em;
   background-color: var(--bread_footer_color);
-  color: var(--linkcolor);
+  color: var(--txtcolor);
   padding-left: 1.6em;
   padding-right: 1em;
+  border-right: solid black;
 }
 
-/*
-#loginForm{
+#Log_in>a
+{
   
 }
-*/
 
 /*
 ==============
 SEZIONE BREADCRUMB
 ==============
 */
-#breadcrumb {
+#breadcrumb
+{
   border-style: solid;
   border-color: #000;
-
-  border-top: none;
-  border-width: 2px;
-
   text-align: left;
   background-color: var(--bread_footer_color);
-  color: var(--linkcolor);
+  color: var(--txtcolor);
   padding: 0.5em 1em 0.5em;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
 }
 
-#breadcrumb a:link {
+#breadcrumb a
+{
   color: var(--linkcolor);
 }
 
-#breadcrumb a:visited {
-  color: var(--linkcolor); /*dovrei cambiarlo?*/
+#breadcrumb a:visited
+{
+  color: var(--visitedcolor);
 }
 
 /*
@@ -151,20 +166,25 @@ SEZIONE BREADCRUMB
 SEZIONE CONTENUTO
 ==============
 */
-main {
+main 
+{
   margin: auto;
   padding: 1em;
 }
 
-#presentazione {
-  background-color: rgb(172, 172, 172);
+#presentazione
+{
+  background-color: var(--bread_footer_color);
+  color: var(--txtcolor);
   padding: 0.5em;
   margin-bottom: 0.3em;
   border-style: solid;
   border-radius: 1em;
+  border-color: black;
 }
 
-#avvertimento {
+#avvertimento
+{
   background-color: var(--menucolor);
   color: var(--footer_txt_color);
   margin-bottom: 0.3em;
@@ -174,47 +194,78 @@ main {
   border-color: #000;
 }
 
-main h2 {
+main h2 
+{
   font-size: 2em;
   margin-bottom: 0.5em;
   text-align: center;
+  color: var(--txtcolor);
 }
-main h3 {
-  text-align: left;
+main h3
+{
+  text-align: center;
   padding: 0.5em;
+  color: var(--txtcolor);
 }
 
-main dl {
-  padding: 0.5em 2em;
+main dl
+{
+  width: 70%;
+  margin: auto;
 }
 
-main dt {
+main dt
+{
   color: var(--menucolor);
+  text-align: center;
   border-style: solid;
+  border-width: 0.3em;
   border-bottom: none;
   border-radius: 1em 1em 0em 0em;
   border-color: var(--menucolor);
   padding: 0.5em;
   padding-bottom: 0.2em;
-}
-main dd {
-  border-style: solid;
-  border-top: none;
-  border-radius: 0em 0em 1em 1em;
-  border-color: var(--menucolor);
-  padding: 0.5em;
-  padding-top: 0.2em;
-  margin-bottom: 1em;
+  background-color: var(--bgcolor);
+  font-weight: bold;
 }
 
-#Recapiti {
+main dd
+{
+  border-style: solid;
+  border-top: none;
+  border-width: 0.3em;
+  border-radius: 0em 0em 1em 1em;
+  border-color: var(--menucolor);
+  margin-bottom: 1em;
+  background-color: var(--bgcolor);
+  display: flex;
+}
+
+main dd>p
+{
+  margin-left: 0.5em;
+  padding: 1em;
+}
+
+.icona
+{
+  margin-left: 0.5em;
+  width: 6em;
+  height: 6em;
+  align-self: center;
+  
+}
+
+#Recapiti
+{
   display: flex;
   list-style: none;
-  justify-content: space-around;
+  justify-content:space-evenly;
   margin-bottom: 1.25em;
 }
 
-#Recapiti li {
+#Recapiti li
+{
   padding: 1.5em;
   padding-bottom: 0.5em;
   margin: 0.5em;
@@ -224,49 +275,154 @@ main dd {
   border: solid black;
   border-radius: 2em;
   text-align: center;
+  padding-bottom: 1em;
+  display: block;
 }
 
-#Recapiti img {
+#Recapiti a
+{
+  display: block;
+  color: var(--linkesterni);
+}
+
+#Recapiti img
+{
   width: 4em;
   height: 4em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
-#Social {
+#Social
+{
   display: flex;
   list-style: none;
   justify-content: space-around;
 }
 
-#Social img {
+#Social img
+{
   width: 5em;
   height: 5em;
   padding: 0.5em;
+
 }
 
-#Social a:hover {
+#Social a:hover
+{
   opacity: 0.4;
 }
 
-#contatti p {
+#contatti p
+{
   margin-bottom: 1.5em;
   text-align: center;
+  color: var(--txtcolor);
 }
 
-#contatti h3 {
+#contatti h3
+{
   text-align: center;
+  color: #9B0014;
 }
 
+.paragrafo-dispari
+{
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 30% 100%;
+  background-clip: padding-box;
+  padding: 2em;
+  padding-left: 31%;
+  border-radius: 1em;
+  border: solid var(--menucolor);
+  margin-bottom: 1em;
+}
+
+.paragrafo-pari
+{
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 30% 100%;
+  background-clip: padding-box;
+  padding: 2em;
+  padding-right: 31%;
+  border-radius: 1em;
+  border: solid var(--menucolor);
+  margin-bottom: 1em;
+}
+
+
+#intro
+{
+  background-image: url(../images/Team-7-1671797716186-638x425.jpg);
+}
+
+#adozione
+{
+  background-image: url(../images/cane-canile-600x399.jpg.webp);
+  
+}
+
+#post-adozione
+{
+  background-image: url(../images/shutterstock_242940202-2.jpg);
+}
+
+#ringraziamenti
+{
+  background-image: url(../images/gattino-con-pelo-a-forma-di-cuore-e1446037850649.jpg);
+}
+
+#errore_404
+{
+  text-align: center;
+  color: var(--txtcolor);
+} 
+
+#errore_404 h2
+{
+  font-size: 3em;
+}
+
+#errore_404 h3
+{
+  background-image: url('../images/Cuccioli-di-Gattini.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -9999px;
+  line-height: 4em;
+  font-size: 6em;
+}
+
+#errore_404 a:link
+{
+  color: var(--linkcolor);
+}
+
+#errore_404 a:visited
+{
+  color: var(--menucolor);
+}
+
+#errore_404 p
+{
+  font-size: 1.5em;
+  padding-bottom: 1em;
+}
 /*
 ==============
 SEZIONE AIUTI
 ==============
 */
-.aiuti {
-  display: block;
-  text-indent: -9999em;
+.aiuti
+{
   height: 1px;
   width: 1px;
+  overflow: hidden;
+  position: absolute;
 }
 
 /*
@@ -274,40 +430,40 @@ SEZIONE AIUTI
 SEZIONE FOOTER
 ==============
 */
-footer {
+footer 
+{
   display: flex;
+  align-items: center;
   justify-content: space-around;
-
+  border-radius: 1em 1em 0em 0em;
   background-color: var(--bread_footer_color);
   color: var(--footer_txt_color);
   text-align: center;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  margin-bottom: 0.01em;
   border-style: solid;
   border-color: black;
-
-  align-items: center;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  border-width: 2px;
 }
 
-footer p {
+footer p
+{
   display: inline;
   font-style: italic;
   font-size: 0.8em;
 }
 
-footer img {
+footer img
+{
   margin: 0em 0em;
-  size: 1em;
 }
 /*
 ==============
 SEZIONE FORM
 ==============
 */
-form {
+form 
+{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -320,13 +476,14 @@ form {
   color: var(--footer_txt_color);
 }
 
-form label {
+form label 
+{
   font-size: 1.3em;
-  margin-bottom: 5px;
+  margin-bottom: 0.5em;
   display: block;
 }
-form input,
-form textarea {
+form input, form textarea 
+{
   width: 100%;
   padding: 0.75em 1.25em;
   margin-bottom: 1.25em;
@@ -337,77 +494,52 @@ form textarea {
   background-color: var(--bgcolor);
   color: var(--menucolor);
 }
-form textarea {
+form textarea 
+{
   height: 12.5em;
   resize: vertical;
 }
-form button {
+#button 
+{
   background-color: var(--bgcolor);
-  color: var(--txtcolor);
-  padding: 0.75em 1.25em;
+  color: var(--menucolor);
+  width: 50%;
+  padding: 0.5em;
   border: solid black;
   border-radius: 1em;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 2em;
+  margin-bottom: 0em;
 }
-form button:hover {
+#button:hover 
+{
   opacity: 0.8;
 }
 
-.card {
+/*
+==============
+SEZIONE CARD
+==============
+*/
+
+.card{
   width: calc(30% - 0.6em);
   margin: 0.6em 0.3em 0 0.3em;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   background-color: var(--colore-dettagli-card);
   font-size: 1.1em;
-  border: 1px solid var(--colore-bordo-card);
+  border:1px solid var(--colore-bordo-card);
   display: flex;
   flex-direction: column;
 }
 
-.card dt:not(.posizione) {
+.card dt:not(.posizione){
   height: 70%;
   margin-bottom: 0.2em;
   overflow: hidden;
 }
 
-.card input[type="image"] {
+.card input[type=image] {
   width: 100%;
-}
-
-#validatedForm button {
-  background-color: var(--visitedcolor);
-  color: var(--bgcolor);
-}
-
-#validatedForm {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-#animali {
-  width: 95%;
-  margin: auto;
-}
-
-#animali > dt {
-  font-size: 1.5em;
-  font-weight: bold;
-  padding-left: 2%;
-}
-
-#animali dd {
-  padding-left: 2%;
-}
-
-#animali > dd > img {
-  width: 40%;
-  float: left;
-  border-radius: 1em;
-}
-
-.animale {
-  margin-left: 40%;
-  padding: 0.5em 1em;
 }

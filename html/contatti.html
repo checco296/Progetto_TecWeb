@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Centro Adozioni PD</title>
+    <title>Contatti &#8722; C.A.PD</title>
     <meta name="description" content="Pagina dedicata ai contatti diretti con Centro Adozioni PD" />
     <meta name="keywords"    content="Numero, telefono, indirizzo, scivici, chiamaci" />
     <meta name="author"      content="Francesco Ferraioli" />    
@@ -17,20 +17,26 @@
 
   <body>
     <header>
-      <h1>Centro Adozioni PD</h1>
+      <h1>Contatti &#8722; <abbr>C.A.PD</abbr></h1>
       <nav id="menu" aria-label="menu del sito">
         <ul>
-          <li><a href="main.html"><span lang="en">Home</span></a></li>
-          <li><a href="adotta.html">Adotta</a></li>
-          <li><a href="about.html">Chi siamo</a></li>
+          <li><a href="../html/main.html"><span lang="en">Home</span></a></li>
+          <li><a href="../php/adotta_cane.php">Adotta</a></li>
+          <li><a href="../html/about.html">Chi siamo</a></li>
           <li id="currentLink" aria-current="page">Contattaci</li>
+          <li id="Profilo"><a href="../html/login.html">Profilo</a></li>
         </ul>
       </nav>
       <nav id="breadcrumb" aria-label="percorso">
-        <p>Ti trovi in: <span lang="en"><a href="main.html">Home</a></span> &gt; &gt; Contattaci</p>
+        <p>Ti trovi in: <span lang="en"><a href="../html/main.html">Home</a></span> &gt; &gt; Contattaci</p>
       </nav>
     </header>
       
+    <a class="aiuti" href="#telefono">Salta al nemero di telefono</a>
+    <a class="aiuti" href="#mail">Salta alla <span lang="en">e-mail</span></a>
+    <a class="aiuti" href="#indirizzo">Salta all'indirizzo</a>
+    <a class="aiuti" href="#Social">Salta alla sezione Social</a>
+    <a class="aiuti" href="#Form-contatti">Salta alla <span lang="en">Form</span> per contatti</a>
     <main id="contatti">
       <h2>Contattaci</h2>
       <h3>RECAPITI,INDIRIZZO ED ORARI DI APERTURA</h3>
@@ -39,19 +45,19 @@
         oppure puoi compilare il modulo in fondo a questa pagina. La struttura è aperta negli orari sottoindicati.
       </p>
       <ul id="Recapiti">
-        <li id="telefono"><img src="../images/phone-icon.png" alt="Telefono" title="Telefono"/><p>555-555-5555</p><p>444-444-4444</p></li>
-        <li id="mail"><img src="../images/mail-icon.png" alt="E-mail" title="E-mail"/><p>francesco.ferraioli@studenti.unipd.it</p><p>prova.mail@unipd.it</p></li>
-        <li id="indirizzo"><img src="../images/map-icon.png" alt="Indirizzo" title="Indirizzo"/><p>123 Strada Principale, Padova, IT</p></li>
+        <li id="telefono"><img src="../images/phone-icon.png" alt="Telefono" title="Telefono"/><a href="tel:555-555-5555">555-555-5555</a></li>
+        <li id="mail"><img src="../images/mail-icon.png" alt="E-mail" title="E-mail"/><a href="mailto:francesco@gmail.com">adozioniCAPD@mail.com</a></li>
+        <li id="indirizzo"><img src="../images/map-icon.png" alt="Indirizzo" title="Indirizzo"/><a href="https://www.google.it/maps/place/Torre+Archimede,+Via+Trieste,+63,+35121+Padova+PD/@45.4113824,11.8852839,17z/data=!3m1!4b1!4m5!3m4!1s0x477eda58b44676df:0xfacae5884fca17f5!8m2!3d45.4113787!4d11.8874726" target="_blank">123 Strada Principale, Padova, IT</a></li>
       </ul>
       <p>Scrivici e seguici sui nostri <span lang="en">Social</span> per novità in tempo reale:</p>
       <ul id="Social">
-        <li><a href="#"><img src="../images/facebook_icon-icons.com_59205.ico" alt="Link collegamento a Facebook" /></a></li>
-    		<li><a href="#"><img src="../images/social_network_twitter_icon-icons.com_66157.ico" alt="Link collegamento a Twitter" /></a></li>
-    		<li><a href="#"><img src="../images/1491580635-yumminkysocialmedia26_83102.ico" alt="Link collegamento a Instagram" /></a></li>
-    		<li><a href="#"><img src="../images/social_linkedin_button_blue_256_30639.ico" alt="Link collegamento a LinkedIn" /></a></li>
+        <li><a href="https://it-it.facebook.com/universitapadova/" target="_blank"><img src="../images/facebook_icon-icons.com_59205.ico" alt="Link collegamento a Facebook" /></a></li>
+    		<li><a href="https://twitter.com/UniPadova" target="_blank"><img src="../images/social_network_twitter_icon-icons.com_66157.ico" alt="Link collegamento a Twitter" /></a></li>
+    		<li><a href="https://instagram.com/unipd?igshid=YmMyMTA2M2Y=" target="_blank"><img src="../images/1491580635-yumminkysocialmedia26_83102.ico" alt="Link collegamento a Instagram" /></a></li>
+    		<li><a href="https://www.linkedin.com/school/university-of-padova/" target="_blank"><img src="../images/social_linkedin_button_blue_256_30639.ico" alt="Link collegamento a LinkedIn" /></a></li>
       </ul>
         <p>Se preferisci puoi utilizzare la <span lang="en">form</span> sottostante per inviarci un messaggio</p>
-      <form action="submit.php" method="post">
+      <form action="mailto:francescovillorba@gmail.com" method="post" id="Form-contatti" enctype="text/plain" >
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name">
         <label for="surname">Cognome:</label>
@@ -60,7 +66,7 @@
         <input type="text" id="email" name="email">
         <label for="message">Messaggio:</label>
         <textarea id="message" name="message"></textarea>
-        <button type="submit">Invia</button>
+        <input type="submit" value="Invia" id="button">
       </form> 
     </main>
     <footer>

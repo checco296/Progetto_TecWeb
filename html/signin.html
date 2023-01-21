@@ -28,18 +28,18 @@
       <nav id="menu" aria-label="menu del sito">
         <ul>
           <li>
-            <a href="main.html"><span lang="en">Home</span></a>
+            <a href="../html/main.html"><span lang="en">Home</span></a>
           </li>
-          <li><a href="adotta.html">Adotta</a></li>
-          <li><a href="about.html">Chi siamo</a></li>
-          <li><a href="contatti.html">Contattaci</a></li>
-          <li id="currentLink" aria-curr ent="page">Area personale</li>
+          <li><a href="../php/adotta_cane.php">Adotta</a></li>
+          <li><a href="../html/about.html">Chi siamo</a></li>
+          <li><a href="../html/contatti.html">Contattaci</a></li>
+          <li id="currentLink" aria-curr ent="page">Profilo</li>
         </ul>
       </nav>
 
       <nav id="breadcrumb" aria-label="percorso">
         <p>
-          Ti trovi in: <span lang="en"><a href="main.html">Home</a></span> &gt;
+          Ti trovi in: <span lang="en"><a href="../html/main.html">Home</a></span> &gt;
           &gt; Registrati
         </p>
       </nav>
@@ -49,25 +49,28 @@
       <div id="signin">
         <h2>Registrati</h2>
 
-        <form action="#" method="post" id="validatedForm">
-          <label for="user" lang="en">Email</label>
-          <input type="text" id="user" name="username" />
+        <form action="../php/signin.php" method="post" id="validatedForm">
+          <label for="user"><span lang="en">Username</span>   </label>
+          <input type="text" id="username" name="username" placeholder="Username"/>
           <span class="error none" id="user-error"></span>
 
-          <label for="pass" lang="en">Password</label>
-          <input type="password" id="pass" name="password" />
-          <span class="error none" id="pass-error"></span>
+          <label for="user"><span lang="en">Email</span></label>
+          <input type="text" id="email" name="email" placeholder="Email"/>
+          <span class="error none" id="email-error"></span>
 
-          <label for="pass_rep">Ripeti <span lang="en">password</span></label>
-          <input type="password" id="pass_rep" name="password_rep" />
-          <span class="error none" id="pass-rep-error"></span>
+          <label for="user"><span lang="en">Password</span></label>
+          <input type="password" id="password" name="password" placeholder="Password"/>
+          <span class="error none" id="password-error"></span>
+          
+          <span class="error none" id="form-error"></span>
+          <span class="success" id="form-success"></span>
 
           <button type="submit" value="Registrami" name="submit">
             Registrami
           </button>
         </form>
 
-        <p><a href="login.html">Torna indietro</a></p>
+        <p><a href="../html/login.html">Torna indietro</a></p>
       </div>
     </main>
 

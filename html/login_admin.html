@@ -30,10 +30,10 @@
           <li>
             <a href="main.html"><span lang="en">Home</span></a>
           </li>
-          <li><a href="adotta.html">Adotta</a></li>
+          <li><a href="../php/adotta_cane.php">Adotta</a></li>
           <li><a href="about.html">Chi siamo</a></li>
           <li><a href="contatti.html">Contattaci</a></li>
-          <li id="currentLink" aria-curr ent="page">Area personale</li>
+          <li id="currentLink" aria-curr ent="page">Profilo</li>
         </ul>
       </nav>
 
@@ -49,14 +49,15 @@
       <div class="login">
         <h2>Accedi da amministratore</h2>
 
-        <form action="#" method="post" id="validatedForm">
-          <label for="user_login" lang="en">Email</label>
-          <input type="text" id="user_login" name="username" />
-          <span class="error none" id="user-login"></span>
-          <label for="pass_login" lang="en">Password</label>
-          <input type="password" id="pass_login" name="password" />
-          <span class="error none" id="pass-login"></span>
+        <form action="../php/login_admin.php" method="post" id="validatedForm">
+          <label for="user"><span lang="en">Username</span></label>
+          <input type="text" id="username" name="username" placeholder="Username"/>
+          
+          <label for="user"><span lang="en">Password</span></label>
+          <input type="password" id="password" name="password" placeholder="Password"/>
 
+          <span class="error none" id="form-error"></span>
+          
           <button type="submit" value="Accedi" name="submit">Accedi</button>
         </form>
 
