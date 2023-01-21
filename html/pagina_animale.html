@@ -19,14 +19,14 @@
       <h1>Centro Adozioni PD</h1>
       <nav id="menu" aria-label="menu del sito">
         <ul>
-          <li><a href="main.html"><span lang="en">Home</span></a></li>
-          <li><a href="adotta.html">Adotta</a></li>
+          <li><a href="../html/main.html"><span lang="en">Home</span></a></li>
+          <li><a href="adotta.php">Adotta</a></li>
           <li id="currentLink" aria-current="page">Chi siamo</li>
-          <li><a href="contatti.html">Contattaci</a></li>
+          <li><a href="../html/contatti.html">Contattaci</a></li>
         </ul>
       </nav>
       <nav id="breadcrumb" aria-label="percorso">
-        <p>Ti trovi in: <span lang="en"><a href="main.html">Home</a></span> &gt; &gt;<a href="adotta.html">Adotta </a>  &gt; &gt; %nome_animale%</p>
+        <p>Ti trovi in: <span lang="en"><a href="../html/main.html">Home</a></span> &gt; &gt;<a href="adotta.php">Adotta </a>  &gt; &gt; %nome_animale%</p>
       </nav>
     </header>
       
@@ -43,7 +43,10 @@
         <dd>%stato%</dd>    
 
         <div id="Prenota">
-            <li><a href ="prenota.html"></a></li>
+          <form action="prenota.php" method="get" >
+            <input type="hidden" value="%id%" name="id">	
+            <button type="submit" aria-label="prenota">Prenota Visita</button>	
+        </form>
         </div>
     </dl>
     </main>

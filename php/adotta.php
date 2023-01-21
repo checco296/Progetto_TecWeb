@@ -3,7 +3,7 @@
 require_once ('conessione.php');
 require_once ('card.php');
 
-$pagina=file_get_contents("../html/adotta_cane.html");
+$pagina=file_get_contents("../html/adotta.html");
 
 $query_info_cane="SELECT animali.id_animale as id,foto_animali.path as foto ,animali.nome,animali.sesso,animali.data_nascita as
  nascita,animali.stato

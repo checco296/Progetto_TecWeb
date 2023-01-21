@@ -20,6 +20,7 @@ $pagina=str_replace('%descrizione%',$risultato_info_cane[0]['descrizione'],$pagi
 $pagina=str_replace('%sesso%',$risultato_info_cane[0]['sesso'],$pagina);
 $pagina=str_replace('%nascita%',$risultato_info_cane[0]['nascita'],$pagina);
 $pagina=str_replace('%stato%',$risultato_info_cane[0]['stato'],$pagina);
+$pagina=str_replace('%id%',$id,$pagina);
 
 echo $pagina;
 ?>

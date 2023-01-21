@@ -19,14 +19,14 @@
       <h1>Centro Adozioni PD</h1>
       <nav id="menu" aria-label="menu del sito">
         <ul>
-          <li><a href="main.html"><span lang="en">Home</span></a></li>
-          <li><a href="adotta.html">Adotta</a></li>
+          <li><a href="../html/main.html"><span lang="en">Home</span></a></li>
+          <li><a href="adotta.php">Adotta</a></li>
           <li id="currentLink" aria-current="page">Chi siamo</li>
-          <li><a href="contatti.html">Contattaci</a></li>
+          <li><a href="../html/contatti.html">Contattaci</a></li>
         </ul>
       </nav>
       <nav id="breadcrumb" aria-label="percorso">
-        <p>Ti trovi in: <span lang="en"><a href="main.html">Home</a></span> &gt; &gt; Adotta  &gt; &gt; %nome_animale% &gt; &gt;Prenota</p>
+        <p>Ti trovi in: <span lang="en"><a href="main.html">Home</a></span> &gt; &gt;<a href ="../php/adotta.php"> Adotta </a> &gt; &gt; <a href ="../php/pagina_animale.php?id=%id_animale%">%nome_animale%</a> &gt; &gt;Prenota</p>
       </nav>
     </header>
       
@@ -41,10 +41,14 @@
                 <input type="email" name="email" id="email"><br>
                 <label for="data">Data</label>
                 <input type="date" name="data" id="data"><br>
-                <label for="nome_animale">Nome Animale</label>
-                <input type="text" name="nome_animale" id="nome_animale"><br>
-                <input type="submit" value="Submit">
+                <label for="orario">Ora</label>
+                <input type="time" name="orario" id="orario" min="09:00" max="19:30" required><br>
+              
         </form>    
+        <form method="POST" action="conferma_prenotazione.php">
+          <input type="submit"/>
+        </form>
+    
       </div>
 
       
