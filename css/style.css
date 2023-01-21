@@ -21,8 +21,8 @@ dichiarazione variabili di colore
   --menucolor: #9B0014;
   --txtcolor: #FFF;
   --visitedcolor: #FFF;
-  --linkcolor: #ace432;
-  --linkesterni: #45bbff;
+  --linkcolor: #D4F291;
+  --linkesterni: #FFE0FF;
   --bread_footer_color: #454953;
   --hovercolor: #777;
   --footer_txt_color: #FFF;
@@ -95,6 +95,7 @@ SEZIONE MENU
   padding-top: 1em;
   padding-bottom: 1em;
   display: inline;
+  border-right: solid black;
 }
 
 #menu a 
@@ -114,6 +115,7 @@ SEZIONE MENU
 {
   color: var(--txtcolor);
   background-color: var(--hovercolor);
+  text-decoration-line: underline;
 }
 
 #currentLink
@@ -124,6 +126,7 @@ SEZIONE MENU
   color: var(--txtcolor);
   padding-left: 1.6em;
   padding-right: 1em;
+  border-right: solid black;
 }
 
 #Log_in>a
@@ -453,7 +456,6 @@ footer p
 footer img
 {
   margin: 0em 0em;
-  size: 1em;
 }
 /*
 ==============
@@ -477,7 +479,7 @@ form
 form label 
 {
   font-size: 1.3em;
-  margin-bottom: 5px;
+  margin-bottom: 0.5em;
   display: block;
 }
 form input, form textarea 
@@ -501,11 +503,13 @@ form textarea
 {
   background-color: var(--bgcolor);
   color: var(--menucolor);
-  padding: 0.75em 1.25em;
+  width: 50%;
+  padding: 0.5em;
   border: solid black;
   border-radius: 1em;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 2em;
+  margin-bottom: 0em;
 }
 #button:hover 
 {
