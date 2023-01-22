@@ -129,10 +129,6 @@ SEZIONE MENU
   border-right: solid black;
 }
 
-#Log_in>a
-{
-  
-}
 
 /*
 ==============
@@ -375,13 +371,13 @@ main dd>p
   background-image: url(../images/gattino-con-pelo-a-forma-di-cuore-e1446037850649.jpg);
 }
 
-#errore_404
+#errore_404,#grazie
 {
   text-align: center;
   color: var(--txtcolor);
 } 
 
-#errore_404 h2
+#errore_404 h2,#grazie h2
 {
   font-size: 3em;
 }
@@ -397,21 +393,33 @@ main dd>p
   font-size: 6em;
 }
 
-#errore_404 a:link
+#grazie h3
+{
+  background-image: url('../images/pngtree-cartoon-cat-and-dog-vector-material-image_2275607-PhotoRoom.png.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -9999px;
+  line-height: 4em;
+  font-size: 6em;
+}
+
+#errore_404 a:link,#grazie a:link
 {
   color: var(--linkcolor);
 }
 
-#errore_404 a:visited
+#errore_404 a:visited,#grazie a:visited
 {
   color: var(--menucolor);
 }
 
-#errore_404 p
+#errore_404 p,#grazie p
 {
   font-size: 1.5em;
   padding-bottom: 1em;
 }
+
 /*
 ==============
 SEZIONE AIUTI
