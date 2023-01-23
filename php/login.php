@@ -1,5 +1,6 @@
 <?php
-    require('database.php');
+session_start();
+require('database.php');
     
 if (isset($_POST['username'])) {
     $username = $_POST['username'];
@@ -16,10 +17,10 @@ if (isset($_POST['username'])) {
         $msg_errore = '"form-error">Riempire tutti i campi.';
     } else {
         if ($rows == 1) {
-            session_start();
-            $_SESSION['session_user'] = $_POST['username'];
+            $_SESSION['session_user'] = 'utente';
             $_SESSION["session_id"] = $_POST['email'];
-            header('Location: ../html/user_area.html');
+            header('Location: ../php/login_check.php');
+            
         } else {
             $msg_errore = '"form-error">Username o password non validi.';
         }

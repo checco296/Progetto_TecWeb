@@ -1,6 +1,7 @@
 <?php
-    require('database.php');
-    
+require('database.php');
+session_start();
+
 if (isset($_POST['username'])) {
     $username = $_POST['username'];
     $username = mysqli_real_escape_string($con, $username);
@@ -16,10 +17,9 @@ if (isset($_POST['username'])) {
         $msg_errore = '"form-error">Riempire tutti i campi.';
     } else {
         if ($rows == 1) {
-            session_start();
-            $_SESSION['session_user'] = $_POST['username'];
+            $_SESSION['session_user'] = 'admin';
             $_SESSION["session_id"] = $_POST['email'];
-            header('Location: ../html/admin_area.html');
+            header('Location: ../php/login_check.php');
         } else {
             $msg_errore = '"form-error">Username o password non validi.';
         }
