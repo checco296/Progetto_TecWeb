@@ -7,3 +7,5 @@ Da fare:
 -completare le pagine html
 -testare con tool di verifica validità codice
 -testare l'accessibilità del sito
+
+-bisogna spostare almeno index.html(ex main.html dalla cartella html alla root)
