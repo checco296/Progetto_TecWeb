@@ -13,18 +13,26 @@ reset impostazioni browser
 dichiarazione variabili di colore
 ======================
 */
-/*#9C0015*/
-/*#454953*/
+/*ricontrollare la questione contrasti e link visitati e non*/
 :root
 {
 	--bgcolor: #FFF;
   --menucolor: #9B0014;
-  --txtcolor: #000;
-  --linkcolor: #FFF;
-  --visitedcolor: #454953;
+  --warningcolor: #9B0014;
+  --activity_titlecolor: #9B0014;
+  --activity_bordercolor: #9B0014;
+  --formcolor: #9b0014;
+  --txtcolor: #FFF;
+  --txtcolor_onwhitebg: #000;
+  --linkcolor: #D4F291;
+  --visited_linkcolor: #FFF;
+  --linkesterni: #FFE0FF;
   --bread_footer_color: #454953;
-  --hovercolor: #777;
+  --hover_menucolor: #969696;
+  --hover_linkcolor: black;
   --footer_txt_color: #FFF;
+  --body_bgcolor: #373f51f5;
+  --bordercolor: black;
 }
 /*
 ======================
@@ -33,25 +41,26 @@ impostazione generale
 */
 html, body 
 {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin: auto;
-  font-size: 100%;
   max-width: 800px;
+  font-size: 1em;
 }
 
+html
+{
+  background-image: url(../images/free-cat-and-dog-pattern-vector.png);
+}
+
+body
+{
+  background-color: var(--body_bgcolor);
+}
 /*
 ==============
 SEZIONE HEADER
 ==============
 */
-header 
-{
-  color: var(--txtcolor);
-  text-align: center;
-  padding-top: 0.7em;
-  margin: auto;
-}
-
 header h1 
 {
   background-image: url('../images/logo_senza_sfondo.png');
@@ -59,8 +68,9 @@ header h1
   background-position: center;
   background-size: contain;
   text-indent: -9999px;
-  line-height: 1.5em;
+  line-height: 2em;
   font-size: 6em;
+  color: var(--txtcolor);
 }
 
 /*
@@ -71,7 +81,7 @@ SEZIONE MENU
 #menu 
 {
   border-style: solid;
-  border-color: #000;
+  border-color: var(--bordercolor);
   border-bottom: none;
   height: 3em;
   overflow: hidden;
@@ -92,20 +102,26 @@ SEZIONE MENU
   padding-top: 1em;
   padding-bottom: 1em;
   display: inline;
+  border-right: solid var(--bordercolor);
 }
 
 #menu a 
 {
   color: var(--linkcolor);
   padding: 1.1em;
-  background-color: var(--menucolor);
   text-decoration: none;
 }
 
-#menu a:hover 
+#menu a:visited
 {
-  color: var(--txtcolor);
-  background-color: var(--hovercolor);
+  color: var(--visited_linkcolor);
+}
+
+#menu a:hover
+{
+  color: var(--hover_linkcolor);
+  background-color: var(--hover_menucolor);
+  text-decoration: underline;
 }
 
 #currentLink
@@ -113,15 +129,12 @@ SEZIONE MENU
   background: url('../images/heart-69-16.ico') 8% center no-repeat;
   background-size: 1em;
   background-color: var(--bread_footer_color);
-  color: var(--linkcolor);
+  color: var(--txtcolor);
   padding-left: 1.6em;
   padding-right: 1em;
+  border-right: solid var(--bordercolor);
 }
 
-#Log_in>a
-{
-  
-}
 
 /*
 ==============
@@ -131,21 +144,23 @@ SEZIONE BREADCRUMB
 #breadcrumb
 {
   border-style: solid;
-  border-color: #000;
+  border-color: var(--bordercolor);
   text-align: left;
   background-color: var(--bread_footer_color);
-  color: var(--linkcolor);
+  color: var(--txtcolor);
   padding: 0.5em 1em 0.5em;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
 }
 
-#breadcrumb a:link{
+#breadcrumb a
+{
   color: var(--linkcolor);
 }
 
-#breadcrumb a:visited{
-  color: var(--linkcolor); /*dovrei cambiarlo?*/
+#breadcrumb a:visited
+{
+  color: var(--visited_linkcolor);
 }
 
 /*
@@ -161,22 +176,24 @@ main
 
 #presentazione
 {
-  background-color: rgb(172, 172, 172);
+  background-color: var(--bgcolor);
+  color: var(--txtcolor_onwhitebg);
   padding: 0.5em;
   margin-bottom: 0.3em;
   border-style: solid;
   border-radius: 1em;
+  border-color: var(--bordercolor);
 }
 
 #avvertimento
 {
-  background-color: var(--menucolor);
+  background-color: var(--warningcolor);
   color: var(--footer_txt_color);
   margin-bottom: 0.3em;
   padding: 0.5em;
   border-style: solid;
   border-radius: 1em;
-  border-color: #000;
+  border-color: var(--bordercolor);
 }
 
 main h2 
@@ -184,44 +201,69 @@ main h2
   font-size: 2em;
   margin-bottom: 0.5em;
   text-align: center;
+  color: var(--txtcolor);
 }
+
 main h3
 {
-  text-align: left;
+  text-align: center;
   padding: 0.5em;
+  color: var(--txtcolor);
 }
 
 main dl
 {
-  padding: 0.5em 2em;
+  width: 70%;
+  margin: auto;
 }
 
 main dt
 {
-  color: var(--menucolor);
+  color: var(--activity_titlecolor);
+  text-align: center;
   border-style: solid;
+  border-width: 0.3em;
   border-bottom: none;
   border-radius: 1em 1em 0em 0em;
-  border-color: var(--menucolor);
+  border-color: var(--activity_bordercolor);
   padding: 0.5em;
   padding-bottom: 0.2em;
+  background-color: var(--bgcolor);
+  font-weight: bold;
 }
+
 main dd
 {
   border-style: solid;
   border-top: none;
+  border-width: 0.3em;
   border-radius: 0em 0em 1em 1em;
-  border-color: var(--menucolor);
-  padding: 0.5em;
-  padding-top: 0.2em;
+  border-color: var(--activity_bordercolor);
   margin-bottom: 1em;
+  background-color: var(--bgcolor);
+  display: flex;
+}
+
+main dd>p
+{
+  margin-left: 0.5em;
+  padding: 1em;
+}
+
+.icona
+{
+  margin-left: 0.5em;
+  width: 6em;
+  height: 6em;
+  align-self: center;
+  
 }
 
 #Recapiti
 {
   display: flex;
   list-style: none;
-  justify-content: space-around;
+  justify-content:space-evenly;
   margin-bottom: 1.25em;
 }
 
@@ -232,17 +274,24 @@ main dd
   margin: 0.5em;
   width: 33%;
   background-color: var(--menucolor);
-  color: var(--footer_txt_color);
-  border: solid black;
+  border: solid var(--bordercolor);
   border-radius: 2em;
   text-align: center;
+  padding-bottom: 1em;
+  display: block;
+}
+
+#Recapiti a
+{
+  display: block;
+  color: var(--linkesterni);
 }
 
 #Recapiti img
 {
   width: 4em;
   height: 4em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 #Social
@@ -250,14 +299,15 @@ main dd
   display: flex;
   list-style: none;
   justify-content: space-around;
+  margin-bottom: 0.8em
 }
 
 #Social img
 {
   width: 5em;
   height: 5em;
-  padding: 0.5em;
-
+  background-color: var(--bgcolor); /*rimuove il problema trasparenze in caso ingrandire un po le icone*/
+  border-radius: 5em;
 }
 
 #Social a:hover
@@ -269,13 +319,113 @@ main dd
 {
   margin-bottom: 1.5em;
   text-align: center;
+  color: var(--txtcolor);
 }
 
 #contatti h3
 {
   text-align: center;
+  color: var(--txtcolor);
 }
 
+.paragrafo-dispari
+{
+  background-color: var(--bgcolor);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 30% 100%;
+  background-clip: padding-box;
+  padding: 2em;
+  padding-left: 31%;
+  border-radius: 1em;
+  border: solid var(--activity_bordercolor);
+  margin-bottom: 1em;
+}
+
+.paragrafo-pari
+{
+  background-color: var(--bgcolor);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 30% 100%;
+  background-clip: padding-box;
+  padding: 2em;
+  padding-right: 31%;
+  border-radius: 1em;
+  border: solid var(--activity_bordercolor);
+  margin-bottom: 1em;
+}
+
+
+#intro
+{
+  background-image: url(../images/Team-7-1671797716186-638x425.jpg);
+}
+
+#adozione
+{
+  background-image: url(../images/cane-canile-600x399.jpg.webp);
+  
+}
+
+#post-adozione
+{
+  background-image: url(../images/shutterstock_242940202-2.jpg);
+}
+
+#ringraziamenti
+{
+  background-image: url(../images/gattino-con-pelo-a-forma-di-cuore-e1446037850649.jpg);
+}
+
+#errore_404,#grazie
+{
+  text-align: center;
+  color: var(--txtcolor);
+} 
+
+#errore_404 h2,#grazie h2
+{
+  font-size: 3em;
+}
+
+#errore_404 h3 /*da rivedere se tenere h3 o magari un p con id*/
+{
+  background-image: url('../images/Cuccioli-di-Gattini.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -9999px;
+  line-height: 4em;
+  font-size: 6em;
+}
+
+#grazie h3 /*idem*/
+{
+  background-image: url('../images/pngtree-cartoon-cat-and-dog-vector-material-image_2275607-PhotoRoom.png.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -9999px;
+  line-height: 4em;
+  font-size: 6em;
+}
+
+#errore_404 a:link,#grazie a:link
+{
+  color: var(--linkcolor);
+}
+
+#errore_404 a:visited,#grazie a:visited
+{
+  color: var(--visited_linkcolor)
+}
+
+#errore_404 p,#grazie p
+{
+  font-size: 1.5em;
+  padding-bottom: 1em;
+}
 
 /*
 ==============
@@ -284,10 +434,10 @@ SEZIONE AIUTI
 */
 .aiuti
 {
-  display: block;
-  text-indent: -9999em;
   height: 1px;
   width: 1px;
+  overflow: hidden;
+  position: absolute;
 }
 
 /*
@@ -298,15 +448,17 @@ SEZIONE FOOTER
 footer 
 {
   display: flex;
+  align-items: center;
   justify-content: space-around;
-
+  border-radius: 1em 1em 0em 0em;
   background-color: var(--bread_footer_color);
   color: var(--footer_txt_color);
   text-align: center;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  margin-bottom: 0.01em;
   border-style: solid;
-  border-color: black;
+  border-color: var(--bordercolor);
 }
 
 footer p
@@ -316,11 +468,6 @@ footer p
   font-size: 0.8em;
 }
 
-footer img
-{
-  margin: 0em 0em;
-  size: 1em;
-}
 /*
 ==============
 SEZIONE FORM
@@ -334,49 +481,60 @@ form
   width: 50%;
   margin: 0 auto;
   padding: 1.5em;
-  border: solid black;
+  border: solid var(--bordercolor);
   border-radius: 1em;
-  background-color: var(--menucolor);
-  color: var(--footer_txt_color);
+  background-color: var(--formcolor);
+  color: var(--txtcolor);
 }
 
 form label 
 {
   font-size: 1.3em;
-  margin-bottom: 5px;
-  display: block;
+  margin-bottom: 0.5em;
 }
+
 form input, form textarea 
 {
   width: 100%;
   padding: 0.75em 1.25em;
   margin-bottom: 1.25em;
-  border: solid black;
+  border: solid var(--bordercolor);
   border-radius: 1em;
   box-sizing: border-box;
   font-size: 1em;
   background-color: var(--bgcolor);
-  color: var(--menucolor);
+  color: var(--activity_titlecolor);
 }
+
 form textarea 
 {
   height: 12.5em;
   resize: vertical;
 }
-form button 
+
+#button 
 {
   background-color: var(--bgcolor);
-  color: var(--txtcolor);
-  padding: 0.75em 1.25em;
-  border: solid black;
+  color: var(--activity_titlecolor);
+  width: 50%;
+  padding: 0.5em;
+  border: solid var(--bordercolor);
   border-radius: 1em;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 2em;
+  margin-bottom: 0em;
 }
-form button:hover 
+
+#button:hover 
 {
   opacity: 0.8;
 }
+
+/*
+==============
+SEZIONE CARD
+==============
+*/
 
 .card{
   width: calc(30% - 0.6em);
