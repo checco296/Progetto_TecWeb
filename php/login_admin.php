@@ -1,6 +1,5 @@
 <?php
 require('database.php');
-session_start();
 
 if (isset($_POST['username'])) {
     $username = $_POST['username'];
@@ -17,6 +16,8 @@ if (isset($_POST['username'])) {
         $msg_errore = '"form-error">Riempire tutti i campi.';
     } else {
         if ($rows == 1) {
+            session_set_cookie_params(0);
+            session_start();
             $_SESSION['session_user'] = 'admin';
             $_SESSION["session_id"] = $_POST['email'];
             header('Location: ../php/login_check.php');

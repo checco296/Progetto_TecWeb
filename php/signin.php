@@ -38,6 +38,7 @@ if (isset($_REQUEST['username'])) {
                   VALUES ('$username', '" . md5($password) . "', '$email', '$livello')";
         $result = mysqli_query($con, $query);
         if ($result) {
+            session_set_cookie_params(0);
             session_start();
             $_SESSION['session_user'] = $_POST['username'];
             $_SESSION["session_id"] = $_POST['email'];
