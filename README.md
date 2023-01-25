@@ -8,4 +8,6 @@ Da fare:
 -testare con tool di verifica validità codice
 -testare l'accessibilità del sito
 
--bisogna spostare almeno index.html(ex main.html dalla cartella html alla root)
+-ho lasciato qualche nota all'interno dei file facilmente rintracciabili mediante "<!- -->" OPPURE /* */ per rifiniture
+
+-uniformare le form a livello di controllo ed aggiungere alla form dei contatti dei controlli lato client

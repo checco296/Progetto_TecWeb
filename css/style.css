@@ -13,8 +13,7 @@ reset impostazioni browser
 dichiarazione variabili di colore
 ======================
 */
-/*#9C0015*/
-/*#454953*/
+/*ricontrollare la questione contrasti e link visitati e non*/
 :root
 {
 	--bgcolor: #FFF;
@@ -415,6 +414,11 @@ main dd>p
 #errore_404 a:link,#grazie a:link
 {
   color: var(--linkcolor);
+}
+
+#errore_404 a:visited,#grazie a:visited
+{
+  color: var(--visited_linkcolor)
 }
 
 #errore_404 p,#grazie p

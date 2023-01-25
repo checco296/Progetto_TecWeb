@@ -71,4 +71,6 @@ function IsInjected($str)
     return false;
   }
 }
+
+/*da confrontare con i metodi implementati per le altre form ed eventualmente unifromarli, ATTENZIONE riveder anche il controllo lato sia user che server dei dati inseriti*/
 ?>
