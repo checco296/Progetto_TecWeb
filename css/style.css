@@ -42,15 +42,8 @@ impostazione generale
 html, body 
 {
   font-family: Arial, Helvetica, sans-serif;
-  font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   max-width: 800px;
-  font-size: 1em;
-}
-
-html
-{
-  background-image: url(../images/free-cat-and-dog-pattern-vector.png);
   font-size: 1em;
 }
 
@@ -76,9 +69,7 @@ header h1
   background-size: contain;
   text-indent: -9999px;
   line-height: 2em;
-  line-height: 2em;
   font-size: 6em;
-  color: var(--txtcolor);
   color: var(--txtcolor);
 }
 
@@ -127,7 +118,6 @@ SEZIONE MENU
 }
 
 #menu a:hover
-#menu a:hover
 {
   color: var(--hover_linkcolor);
   background-color: var(--hover_menucolor);
@@ -139,7 +129,6 @@ SEZIONE MENU
   background: url('../images/heart-69-16.ico') 8% center no-repeat;
   background-size: 1em;
   background-color: var(--bread_footer_color);
-  color: var(--txtcolor);
   color: var(--txtcolor);
   padding-left: 1.6em;
   padding-right: 1em;
@@ -159,14 +148,11 @@ SEZIONE BREADCRUMB
   text-align: left;
   background-color: var(--bread_footer_color);
   color: var(--txtcolor);
-  color: var(--txtcolor);
   padding: 0.5em 1em 0.5em;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
 }
 
-#breadcrumb a
-{
 #breadcrumb a
 {
   color: var(--linkcolor);
@@ -216,22 +202,17 @@ main h2
   margin-bottom: 0.5em;
   text-align: center;
   color: var(--txtcolor);
-  color: var(--txtcolor);
 }
 
 main h3
 {
   text-align: center;
-  text-align: center;
   padding: 0.5em;
-  color: var(--txtcolor);
   color: var(--txtcolor);
 }
 
 main dl
 {
-  width: 70%;
-  margin: auto;
   width: 70%;
   margin: auto;
 }
@@ -242,7 +223,6 @@ main dt
   text-align: center;
   border-style: solid;
   border-width: 0.3em;
-  border-width: 0.3em;
   border-bottom: none;
   border-radius: 1em 1em 0em 0em;
   border-color: var(--activity_bordercolor);
@@ -250,16 +230,12 @@ main dt
   padding-bottom: 0.2em;
   background-color: var(--bgcolor);
   font-weight: bold;
-  background-color: var(--bgcolor);
-  font-weight: bold;
 }
-
 
 main dd
 {
   border-style: solid;
   border-top: none;
-  border-width: 0.3em;
   border-width: 0.3em;
   border-radius: 0em 0em 1em 1em;
   border-color: var(--activity_bordercolor);
@@ -272,23 +248,6 @@ main dd>p
 {
   margin-left: 0.5em;
   padding: 1em;
-  background-color: var(--bgcolor);
-  display: flex;
-}
-
-main dd>p
-{
-  margin-left: 0.5em;
-  padding: 1em;
-}
-
-.icona
-{
-  margin-left: 0.5em;
-  width: 6em;
-  height: 6em;
-  align-self: center;
-  
 }
 
 .icona
@@ -304,7 +263,6 @@ main dd>p
 {
   display: flex;
   list-style: none;
-  justify-content:space-evenly;
   justify-content:space-evenly;
   margin-bottom: 1.25em;
 }
@@ -327,21 +285,12 @@ main dd>p
 {
   display: block;
   color: var(--linkesterni);
-  padding-bottom: 1em;
-  display: block;
-}
-
-#Recapiti a
-{
-  display: block;
-  color: var(--linkesterni);
 }
 
 #Recapiti img
 {
   width: 4em;
   height: 4em;
-  margin-bottom: 1em;
   margin-bottom: 1em;
 }
 
@@ -370,7 +319,6 @@ main dd>p
 {
   margin-bottom: 1.5em;
   text-align: center;
-  color: var(--txtcolor);
   color: var(--txtcolor);
 }
 
@@ -430,13 +378,13 @@ main dd>p
   background-image: url(../images/gattino-con-pelo-a-forma-di-cuore-e1446037850649.jpg);
 }
 
-#errore_404,#grazie
+#errore_404,#grazie,#errore_500
 {
   text-align: center;
   color: var(--txtcolor);
 } 
 
-#errore_404 h2,#grazie h2
+#errore_404 h2,#grazie h2,#errore_500 h2
 {
   font-size: 3em;
 }
@@ -463,17 +411,28 @@ main dd>p
   font-size: 6em;
 }
 
-#errore_404 a:link,#grazie a:link
+#errore_500 h3
+{
+  background-image: url('../images/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__05__sleeping-kitten-860e60b709a641b8b6a8415d461be5c7.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -9999px;
+  line-height: 4em;
+  font-size: 6em;
+}
+
+#errore_404 a:link,#grazie a:link,#errore_500 a:link
 {
   color: var(--linkcolor);
 }
 
-#errore_404 a:visited,#grazie a:visited
+#errore_404 a:visited,#grazie a:visited,#errore_500 a:visited
 {
   color: var(--visited_linkcolor)
 }
 
-#errore_404 p,#grazie p
+#errore_404 p,#grazie p,#errore_500 p
 {
   font-size: 1.5em;
   padding-bottom: 1em;
@@ -490,8 +449,6 @@ SEZIONE AIUTI
   width: 1px;
   overflow: hidden;
   position: absolute;
-  overflow: hidden;
-  position: absolute;
 }
 
 /*
@@ -503,16 +460,13 @@ footer
 {
   display: flex;
   align-items: center;
-  align-items: center;
   justify-content: space-around;
-  border-radius: 1em 1em 0em 0em;
   border-radius: 1em 1em 0em 0em;
   background-color: var(--bread_footer_color);
   color: var(--footer_txt_color);
   text-align: center;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  margin-bottom: 0.01em;
   margin-bottom: 0.01em;
   border-style: solid;
   border-color: var(--bordercolor);
@@ -580,20 +534,12 @@ form textarea
   cursor: pointer;
   font-size: 2em;
   margin-bottom: 0em;
-  font-size: 2em;
-  margin-bottom: 0em;
 }
 
 #button:hover 
 {
   opacity: 0.8;
 }
-
-/*
-==============
-SEZIONE CARD
-==============
-*/
 
 /*
 ==============

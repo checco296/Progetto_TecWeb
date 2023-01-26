@@ -13,3 +13,4 @@ Da fare:
 -uniformare le form a livello di controllo ed aggiungere alla form dei contatti dei controlli lato client
 
 -mettere un icona o qualcosa che faccia capire se si è loggati o meno
+

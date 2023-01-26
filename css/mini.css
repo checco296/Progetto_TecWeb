@@ -109,12 +109,9 @@ form
 form button
 {
     padding: 2em;
-    padding: 2em;
 }
 
 .paragrafo-dispari, .paragrafo-pari
-.paragrafo-dispari, .paragrafo-pari
 {
-    background-size: 30% 70%;
     background-size: 30% 70%;
 }
