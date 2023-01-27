@@ -389,61 +389,29 @@ main dd>p
   background-image: url(../images/gattino-con-pelo-a-forma-di-cuore-e1446037850649.jpg);
 }
 
-#errore_404,#grazie,#errore_500
+.no_menu
 {
   text-align: center;
   color: var(--txtcolor);
 } 
 
-#errore_404 h2,#grazie h2,#errore_500 h2
+.no_menu h2
 {
   font-size: 3em;
 }
 
-#errore_404 h3 /*da rivedere se tenere h3 o magari un p con id*/
-{
-  background-image: url('../images/Cuccioli-di-Gattini.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  text-indent: -9999px;
-  line-height: 4em;
-  font-size: 6em;
-}
 
-#grazie h3 /*idem*/
-{
-  background-image: url('../images/pngtree-cartoon-cat-and-dog-vector-material-image_2275607-PhotoRoom.png.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  text-indent: -9999px;
-  line-height: 4em;
-  font-size: 6em;
-}
-
-#errore_500 h3
-{
-  background-image: url('../images/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__05__sleeping-kitten-860e60b709a641b8b6a8415d461be5c7.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  text-indent: -9999px;
-  line-height: 4em;
-  font-size: 6em;
-}
-
-#errore_404 a:link,#grazie a:link,#errore_500 a:link
+.no_menu a:link
 {
   color: var(--linkcolor);
 }
 
-#errore_404 a:visited,#grazie a:visited,#errore_500 a:visited
+.no_menu a:visited
 {
   color: var(--visited_linkcolor)
 }
 
-#errore_404 p,#grazie p,#errore_500 p
+.no_menu p
 {
   font-size: 1.5em;
   padding-bottom: 1em;

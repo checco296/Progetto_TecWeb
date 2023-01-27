@@ -2,11 +2,15 @@
 Progetto di Tecnologie Web UNIPD anno 2022/23
 
 Da fare:
--Creare il DB
--Completare i fogli di stile
--completare le pagine html
--testare con tool di verifica validità codice
--testare l'accessibilità del sito
+-Completare il DB
+
+-Completare i fogli di stile (con le modifiche eventuali delle nuove pagine in arrivo e print.css)
+
+-completare le pagine html(evntuali ritocchi/collegamenti a php)
+
+-testare con tool di verifica validità codice(già fatto ma ricontrollare se si aggiunge dell'altro)
+
+-testare l'accessibilità del sito(a parte i colori è ok)
 
 -ho lasciato qualche nota all'interno dei file facilmente rintracciabili mediante "<!- -->" OPPURE /* */ per rifiniture
 
@@ -14,5 +18,5 @@ Da fare:
 
 -mettere un icona o qualcosa che faccia capire se si è loggati o meno
 
--correggere le keyword e mettere le pagine non principali come non raggiungibili da ricerca
+-correggere le keyword
 
