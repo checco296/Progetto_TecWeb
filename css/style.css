@@ -135,6 +135,17 @@ SEZIONE MENU
   border-right: solid var(--bordercolor);
 }
 
+#currentLink_last
+{
+  background: url('../images/heart-69-16.ico') 8% center no-repeat;
+  background-size: 1em;
+  background-color: var(--bread_footer_color);
+  color: var(--txtcolor);
+  padding-left: 1.6em;
+  padding-right: 1em;
+  border-right: solid var(--bordercolor);
+}
+
 
 /*
 ==============
@@ -438,6 +449,11 @@ main dd>p
   padding-bottom: 1em;
 }
 
+#Log_in p
+{
+  color: var(--txtcolor);
+}
+
 /*
 ==============
 SEZIONE AIUTI
@@ -491,6 +507,7 @@ form
   align-items: center;
   width: 50%;
   margin: 0 auto;
+  margin-bottom: 0.5em;
   padding: 1.5em;
   border: solid var(--bordercolor);
   border-radius: 1em;
@@ -504,7 +521,7 @@ form label
   margin-bottom: 0.5em;
 }
 
-form input, form textarea 
+form input, form textarea ,form select
 {
   width: 100%;
   padding: 0.75em 1.25em;
@@ -514,7 +531,7 @@ form input, form textarea
   box-sizing: border-box;
   font-size: 1em;
   background-color: var(--bgcolor);
-  color: var(--activity_titlecolor);
+  color: var(--txtcolor_onwhitebg);
 }
 
 form textarea 
@@ -527,12 +544,12 @@ form textarea
 {
   background-color: var(--bgcolor);
   color: var(--activity_titlecolor);
-  width: 50%;
+  width: 60%;
   padding: 0.5em;
   border: solid var(--bordercolor);
   border-radius: 1em;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.8em;
   margin-bottom: 0em;
 }
 
@@ -540,6 +557,13 @@ form textarea
 {
   opacity: 0.8;
 }
+
+#nuova_adozione legend
+{
+  font-size: 1.5em;
+}
+
+#nuova_adozione 
 
 /*
 ==============

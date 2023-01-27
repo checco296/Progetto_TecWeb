@@ -1,38 +1,41 @@
 <?php
+  require('check.php');
+
 $name = $_POST['name'];
 $surname = $_POST['surname'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 
-if(empty($name)) 
+if(empty($name) || empty($surname) || empty($email) || empty($message))
 {
-    echo "Il NOME e' obbligatorio!";
-    exit;
+  $msg_errore = '"form-error">Compila tutti i campi.';
 }
 
-if(empty($surname))
+elseif(!name_valido($name))
 {
-  echo "Il COGNOME e' obbligatorio!";
-  exit;
+  $msg_errore = '"name-error">Il nome inserito non è valido. Sono ammesse solamente lettere minuscole e maiuscole. Lunghezza minima 3 lettere, massima 20 lettere.';
+  $errore_form = '"form-error">errore con la compilazione del nome.';
 }
 
-if(empty($email))
+elseif(!name_valido($surname))
 {
-  echo "La E-MAIL e' obbligatoria!";
-  exit;
+  $msg_errore = '"surname-error">Il cognome inserito non è valido. Sono ammesse solamente lettere minuscole e maiuscole. Lunghezza minima 3 lettere, massima 20 lettere.';
+  $errore_form = '"form-error">errore con la compilazione del cognome.';
 }
 
-if(IsInjected($email))
+elseif(!email_valida($email))
 {
-    echo "E-mail non valida!";
-    exit;
+  $msg_errore = '"email-error">L\'email inserita non è valida.';
+  $errore_form = '"form-error">errore con la compilazione della email.';
 }
 
-if(empty($message))
+elseif(IsInjected($message))
 {
-  echo "scrivere il messaggio da inviare!";
-  exit;
+  $msg_errore = '"text-error">Il messaggio inserito contiene dei caratteri non accettabili.';
+  $errore_form = '"form-error">errore nella compilazione del messaggio.';
 }
+
+echo str_replace($errore_form,$msg_errore,file_get_contents("../html/contatti.html"));
 
 $email_from = 'francescovillorba@gmail.com'; /*da modificare eventualmente*/
 $email_subject = "Nuova Email Form contatti";
@@ -48,29 +51,6 @@ if (mail($to, $email_subject, $email_body, $headers)) {
   echo "Errore nell'invio della mail";
 }
 die();
-
-
-function IsInjected($str)
-{
-  $injections = array('(\n+)',
-              '(\r+)',
-              '(\t+)',
-              '(%0A+)',
-              '(%0D+)',
-              '(%08+)',
-              '(%09+)'
-              );
-  $inject = join('|', $injections);
-  $inject = "/$inject/i";
-  if(preg_match($inject,$str))
-    {
-    return true;
-  }
-  else
-    {
-    return false;
-  }
-}
 
 /*da confrontare con i metodi implementati per le altre form ed eventualmente unifromarli, ATTENZIONE riveder anche il controllo lato sia user che server dei dati inseriti*/
 ?>

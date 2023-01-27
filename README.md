@@ -10,7 +10,9 @@ Da fare:
 
 -ho lasciato qualche nota all'interno dei file facilmente rintracciabili mediante "<!- -->" OPPURE /* */ per rifiniture
 
--uniformare le form a livello di controllo ed aggiungere alla form dei contatti dei controlli lato client
+-uniformare le form a livello di controllo ed aggiungere alla form dei contatti dei controlli lato client (prendere come riferimento la form log in/log in admin) controllare il funzionamento(quella dei contatti ancora non funziona)
 
 -mettere un icona o qualcosa che faccia capire se si è loggati o meno
+
+-correggere gli h1
 
