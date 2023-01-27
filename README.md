@@ -4,7 +4,7 @@ Progetto di Tecnologie Web UNIPD anno 2022/23
 Da fare:
 -Completare il DB
 
--Completare i fogli di stile (con le modifiche eventuali delle nuove pagine in arrivo e print.css)
+-Completare i fogli di stile (con le modifiche eventuali delle nuove pagine in arrivo)
 
 -completare le pagine html(evntuali ritocchi/collegamenti a php)
 
@@ -18,5 +18,5 @@ Da fare:
 
 -mettere un icona o qualcosa che faccia capire se si è loggati o meno
 
--correggere le keyword
+-scrivere la relazione
 
