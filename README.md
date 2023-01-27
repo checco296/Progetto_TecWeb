@@ -14,5 +14,5 @@ Da fare:
 
 -mettere un icona o qualcosa che faccia capire se si è loggati o meno
 
--correggere gli h1
+-correggere le keyword e mettere le pagine non principali come non raggiungibili da ricerca
 
