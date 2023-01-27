@@ -59,22 +59,22 @@
         <p>Se preferisci puoi utilizzare la <span lang="en">form</span> sottostante per inviarci un messaggio</p>
       <form action="../php/sendEmail.php" method="post" id="Form-contatti">
         <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" placeholder="Nome" />
-        <span class="error none" id="name-error"></span>
+        <input type="text" id="name" name="name" placeholder="Nome" required />
+        <span class="error" id="name-error"></span>
         
         <label for="surname">Cognome:</label>
-        <input type="text" id="surname" name="surname" placeholder="Cognome" />
-        <span class="error none" id="surname-error"></span>
+        <input type="text" id="surname" name="surname" placeholder="Cognome" required />
+        <span class="error" id="surname-error"></span>
         
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" placeholder="email@dominio.com" />
-        <span class="error none" id="email-error"></span>
+        <input type="text" id="email" name="email" placeholder="email@dominio.com" required />
+        <span class="error" id="email-error"></span>
         
         <label for="message">Messaggio:</label>
-        <textarea id="message" name="message" placeholder="Inserire il testo qui"></textarea>
-        <span class="error none" id="text-error"></span>
+        <textarea id="message" name="message" placeholder="Inserire il testo qui" required></textarea>
+        <span class="error" id="text-error"></span>
         
-        <span class="error none" id="form-error"></span>
+        <span class="error" id="form-error"></span>
         <input type="submit" value="Invia" id="button">
       </form> 
     </main>

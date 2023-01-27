@@ -33,6 +33,7 @@ dichiarazione variabili di colore
   --footer_txt_color: #FFF;
   --body_bgcolor: #373f51f5;
   --bordercolor: black;
+  --error_color: #bcd914;
 }
 /*
 ======================
@@ -317,7 +318,7 @@ main dd>p
 {
   width: 5em;
   height: 5em;
-  background-color: var(--bgcolor); /*rimuove il problema trasparenze in caso ingrandire un po le icone*/
+  background-color: var(--bgcolor);
   border-radius: 5em;
 }
 
@@ -415,6 +416,7 @@ main dd>p
 {
   font-size: 1.5em;
   padding-bottom: 1em;
+  color: var(--txtcolor);
 }
 
 #Log_in p
@@ -507,6 +509,13 @@ form textarea
   height: 12.5em;
   resize: vertical;
 }
+
+.error
+{
+  color: var(--error_color);
+  margin-bottom: 0.5em;
+}
+
 
 #button 
 {

@@ -61,7 +61,7 @@ function IsInjected($str)
               );
   $inject = join('|', $injections);
   $inject = "/$inject/i";
-  if(preg_match($inject,$str))
+  if(!preg_match($inject,$str))
     {
     return true;
   }
