@@ -42,14 +42,34 @@ main
     display: none;
 }
 
+.icona
+{
+    display: none;
+}
+
+#Recapiti img
+{
+    display: none;
+}
+
+#contatti p
+{
+    display: none;
+}
+
+#Social
+{
+    display: none;
+}
+
+#Area_personale img
+{
+    width: 80px;
+    height: 80px;
+}
+
 footer
 {
     display: none;
 }
 
-form
-{
-    display: none;
-}
-
-/*da rivedere*/

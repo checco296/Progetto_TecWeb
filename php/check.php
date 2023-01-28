@@ -27,6 +27,14 @@ function username_valido($username) {   //può contenere solo caratterri alfanum
         {return true;}
 }
 
+function name_valido($name)
+{
+	if (!preg_match('/^[a-zA-Z]{2,20}$/', $name))
+        {return false;}
+    else
+        {return true;}
+}
+
 function email_valida($email){
     if (!preg_match('/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/', $email))
         {return false;}
@@ -39,5 +47,27 @@ function password_valida($password){   //almeno un carattere minuscolo, uno maiu
         {return false;}
 	else
 		{return true;}
+}
+
+function IsInjected($str)
+{
+  $injections = array('(\n+)',
+              '(\r+)',
+              '(\t+)',
+              '(%0A+)',
+              '(%0D+)',
+              '(%08+)',
+              '(%09+)'
+              );
+  $inject = join('|', $injections);
+  $inject = "/$inject/i";
+  if(!preg_match($inject,$str))
+    {
+    return true;
+  }
+  else
+    {
+    return false;
+  }
 }
 ?>

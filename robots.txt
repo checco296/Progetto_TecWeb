@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /html/404.html
+Disallow: /html/500.html
+Disallow: /html/Admin_area.html
+Disallow: /html/login_admin.html
+Disallow: /html/ringraziamenti.html
+Disallow: /html/user_area.html

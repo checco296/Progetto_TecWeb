@@ -33,6 +33,8 @@ dichiarazione variabili di colore
   --footer_txt_color: #FFF;
   --body_bgcolor: #373f51f5;
   --bordercolor: black;
+  --error_color: #bcd914;
+  --success_color: green;
 }
 /*
 ======================
@@ -125,6 +127,17 @@ SEZIONE MENU
 }
 
 #currentLink
+{
+  background: url('../images/heart-69-16.ico') 8% center no-repeat;
+  background-size: 1em;
+  background-color: var(--bread_footer_color);
+  color: var(--txtcolor);
+  padding-left: 1.6em;
+  padding-right: 1em;
+  border-right: solid var(--bordercolor);
+}
+
+#currentLink_last
 {
   background: url('../images/heart-69-16.ico') 8% center no-repeat;
   background-size: 1em;
@@ -306,7 +319,7 @@ main dd>p
 {
   width: 5em;
   height: 5em;
-  background-color: var(--bgcolor); /*rimuove il problema trasparenze in caso ingrandire un po le icone*/
+  background-color: var(--bgcolor);
   border-radius: 5em;
 }
 
@@ -378,64 +391,38 @@ main dd>p
   background-image: url(../images/gattino-con-pelo-a-forma-di-cuore-e1446037850649.jpg);
 }
 
-#errore_404,#grazie,#errore_500
+.no_menu
 {
   text-align: center;
   color: var(--txtcolor);
 } 
 
-#errore_404 h2,#grazie h2,#errore_500 h2
+.no_menu h2
 {
   font-size: 3em;
 }
 
-#errore_404 h3 /*da rivedere se tenere h3 o magari un p con id*/
-{
-  background-image: url('../images/Cuccioli-di-Gattini.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  text-indent: -9999px;
-  line-height: 4em;
-  font-size: 6em;
-}
 
-#grazie h3 /*idem*/
-{
-  background-image: url('../images/pngtree-cartoon-cat-and-dog-vector-material-image_2275607-PhotoRoom.png.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  text-indent: -9999px;
-  line-height: 4em;
-  font-size: 6em;
-}
-
-#errore_500 h3
-{
-  background-image: url('../images/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__05__sleeping-kitten-860e60b709a641b8b6a8415d461be5c7.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  text-indent: -9999px;
-  line-height: 4em;
-  font-size: 6em;
-}
-
-#errore_404 a:link,#grazie a:link,#errore_500 a:link
+.no_menu a:link
 {
   color: var(--linkcolor);
 }
 
-#errore_404 a:visited,#grazie a:visited,#errore_500 a:visited
+.no_menu a:visited
 {
   color: var(--visited_linkcolor)
 }
 
-#errore_404 p,#grazie p,#errore_500 p
+.no_menu p
 {
   font-size: 1.5em;
   padding-bottom: 1em;
+  color: var(--txtcolor);
+}
+
+#Log_in p
+{
+  color: var(--txtcolor);
 }
 
 /*
@@ -491,6 +478,7 @@ form
   align-items: center;
   width: 50%;
   margin: 0 auto;
+  margin-bottom: 0.5em;
   padding: 1.5em;
   border: solid var(--bordercolor);
   border-radius: 1em;
@@ -504,7 +492,7 @@ form label
   margin-bottom: 0.5em;
 }
 
-form input, form textarea 
+form input, form textarea ,form select
 {
   width: 100%;
   padding: 0.75em 1.25em;
@@ -514,7 +502,7 @@ form input, form textarea
   box-sizing: border-box;
   font-size: 1em;
   background-color: var(--bgcolor);
-  color: var(--activity_titlecolor);
+  color: var(--txtcolor_onwhitebg);
 }
 
 form textarea 
@@ -523,16 +511,29 @@ form textarea
   resize: vertical;
 }
 
+.error
+{
+  color: var(--error_color);
+  margin-bottom: 0.5em;
+}
+
+.success
+{
+  color: var(--success_color);
+  margin-bottom: 0.5em;
+}
+
+
 #button 
 {
   background-color: var(--bgcolor);
   color: var(--activity_titlecolor);
-  width: 50%;
+  width: 60%;
   padding: 0.5em;
   border: solid var(--bordercolor);
   border-radius: 1em;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.8em;
   margin-bottom: 0em;
 }
 
@@ -540,6 +541,13 @@ form textarea
 {
   opacity: 0.8;
 }
+
+#nuova_adozione legend
+{
+  font-size: 1.5em;
+}
+
+#nuova_adozione 
 
 /*
 ==============

@@ -5,7 +5,7 @@
 
     <title>Contatti &#8722; C.A.PD</title>
     <meta name="description" content="Pagina dedicata ai contatti diretti con Centro Adozioni PD" />
-    <meta name="keywords"    content="Numero, telefono, indirizzo, scivici, chiamaci" />
+    <meta name="keywords"    content="Numero, telefono, indirizzo, scivici, chiamaci,Centro Adozioni PD" />
     <meta name="author"      content="Francesco Ferraioli" />    
     
     <link rel="stylesheet" href="../css/style.css" media="handheld,screen" />
@@ -17,7 +17,7 @@
 
   <body>
     <header>
-      <h1>Contatti &#8722; <abbr>C.A.PD</abbr></h1>
+      <h1>Centro Adozioni PD</h1>
       <nav id="menu" aria-label="menu del sito">
         <ul>
           <li><a href="../index.html"><span lang="en">Home</span></a></li>
@@ -59,13 +59,22 @@
         <p>Se preferisci puoi utilizzare la <span lang="en">form</span> sottostante per inviarci un messaggio</p>
       <form action="../php/sendEmail.php" method="post" id="Form-contatti">
         <label for="name">Nome:</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" placeholder="Nome" required />
+        <span class="error" id="name-error"></span>
+        
         <label for="surname">Cognome:</label>
-        <input type="text" id="surname" name="surname">
+        <input type="text" id="surname" name="surname" placeholder="Cognome" required />
+        <span class="error" id="surname-error"></span>
+        
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email">
+        <input type="text" id="email" name="email" placeholder="email@dominio.com" required />
+        <span class="error" id="email-error"></span>
+        
         <label for="message">Messaggio:</label>
-        <textarea id="message" name="message"></textarea>
+        <textarea id="message" name="message" placeholder="Inserire il testo qui" required></textarea>
+        <span class="error" id="text-error"></span>
+        
+        <span class="error" id="form-error"></span>
         <input type="submit" value="Invia" id="button">
       </form> 
     </main>
