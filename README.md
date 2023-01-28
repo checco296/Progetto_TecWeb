@@ -20,5 +20,5 @@ Da fare:
 
 -testare sul server dell'università
 
--scrivere la relazione
+-scrivere la relazione(già iniziata)
 

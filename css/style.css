@@ -542,12 +542,16 @@ form textarea
   opacity: 0.8;
 }
 
-#nuova_adozione legend
-{
-  font-size: 1.5em;
+#admin_form{
+  display: flex;
+  list-style: none;
+  justify-content:space-evenly;
+  margin-bottom: 1.25em;
 }
 
-#nuova_adozione 
+#admin_form form{
+  margin: 0.8em;
+}
 
 /*
 ==============

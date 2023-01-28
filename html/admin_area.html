@@ -46,17 +46,33 @@
     <a class="aiuti" href="#nuova_adozione">Salta al selettore di adozione</a>
     <a class="aiuti" href="#aggiungi_animale">Salta al pulsante di aggiunta animali</a>
     <main>
-      <form method="post" action="#" id="nuova_adozione">
-        <h2>Nuova adozione</h2>
-        <label for="nome_utente">Seleziona utente</label>
-        <select name="nome_utente" id="nome_utente"></select>
-        <label for="nome_animale">Seleziona animale</label>
-        <select name="nome_animale" id="nome_animale"></select>
-        <input type="submit" value="Invia" id="button" />
-      </form>
-      <form method="post" action="#" id="aggiungi_animale">
+      <div id="admin_form">
+        <form method="post" action="#" id="nuova_adozione">
+          <h2>Nuova adozione&#160;&#160;</h2>
+            <label for="nome_utente">Utente: </label>
+            <select name="nome_utente" id="nome_utente">
+              <option value="0">Seleziona un utente</option>
+            </select>
+
+            <label for="nome_animale">Animale: </label>
+            <select name="nome_animale" id="nome_animale">
+              <option value="0">Seleziona un animale</option>
+            </select>
+            <input type="submit" value="Invia" id="button" />
+        </form>
+
+        <form method="post" action="#" id="aggiungi_animale">
           <h2>Aggiungi animale</h2>
-      </form>
+        
+          <label for="nome_animale">Nome animale:</label>
+          <input type="text" id="nome_animale" name="nome_animale">
+
+          <label for="img_animale">Seleziona un'immagine</label>
+          <input type="file" id="img_animale" name="img_animale">
+          <input type="submit" value="Invia" id="button" />
+        </form>
+      </div>
+      
       <a href="../php/logout.php">Logoout</a>
     </main>
 
