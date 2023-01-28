@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Centro Adozioni PD</title>
+    <meta
+      name="description"
+      content="Home page del centro adozioni PD nella quale è presente una breve introduzione e la descrizione dei servizi."
+    />
+    <meta name="keywords" content="Adozione, cane, gatto, PD" />
+    <meta name="author" content="Riccardo Lotto" />
+
+    <link rel="stylesheet" href="../css/style.css" media="handheld,screen" />
+    <link
+      rel="stylesheet"
+      href="../css/mini.css"
+      media="handheld, screen and (max-width:600px), only screen and (max-device-width:600px)"
+    />
+    <link rel="stylesheet" href="../css/print.css" media="print" />
+
+    <link rel="shortcut icon" type="image/png" href="../images/prototipo.png" />
+  </head>
+
+  <body id="Home">
+    <header>
+      <h1>Centro Adozioni PD</h1>
+      <nav id="menu" aria-label="menu del sito">
+        <ul>
+          <li>
+            <a href="../index.html"><span lang="en">Home</span></a>
+          </li>
+          <li><a href="../php/adotta_cane.php">Adotta</a></li>
+          <li><a href="../html/about.html">Chi siamo</a></li>
+          <li><a href="../html/contatti.html">Contattaci</a></li>
+          <li id="currentLink" aria-curr ent="page">Profilo</li>
+        </ul>
+      </nav>
+
+      <nav id="breadcrumb" aria-label="percorso">
+        <p>
+          Ti trovi in: <span lang="en"><a href="main.html">Home</a></span> &gt;
+          &gt; Area amministratore
+        </p>
+      </nav>
+    </header>
+
+    <main>
+      <div id="admin_form">
+        <form method="post" action="#">
+          <h2>Nuova adozione</h2>
+            <label for="nome_utente">Utente: </label>
+            <select name="nome_utente" id="nome_utente">
+              <option value="0">Seleziona un utente</option>
+            </select><br>
+
+            <label for="nome_animale">Animale: </label>
+            <select name="nome_animale" id="nome_animale">
+              <option value="0">Seleziona un animale</option>
+            </select>
+        </form>
+        <form method="post" action="#">
+          <h2>Aggiungi animale</h2>
+        
+          <label for="nome_animale">Nome animale:</label>
+          <input type="text" id="nome_animale" name="nome_animale">
+
+          <label for="img_animale">Seleziona un'immagine</label>
+          <input type="file" id="img_animale" name="img_animale">
+        </form>
+      </div>
+
+      <p><a href="../php/logout.php">Logoout</a></p>
+    </main>
+
+    <footer>
+      <img
+        class="imgValidCode"
+        src="../images/valid-xhtml10.png"
+        alt="HTML valido"
+      />
+      <p>
+        <span lang="en">Copyright</span> 2023 Centro Adozione PD
+        <span lang="en">All right Reserved</span>
+      </p>
+      <img
+        class="imgValidCode"
+        src="../images/vcss-blue.gif"
+        alt="CSS valido"
+      />
+    </footer>
+  </body>
+</html>
