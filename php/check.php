@@ -70,4 +70,11 @@ function IsInjected($str)
     return false;
   }
 }
+
+function nome_animale_valido($nome){
+    if (!preg_match('~^[\p{L}\p{Z}]{2,20}+$~u',$nome)) 
+        {return false;}
+	else
+		{return true;}
+}
 ?>

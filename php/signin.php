@@ -40,8 +40,6 @@ if (isset($_REQUEST['username'])) {
         if ($result) {
             session_set_cookie_params(0);
             session_start();
-            $_SESSION['session_user'] = $_POST['username'];
-            $_SESSION["session_id"] = $_POST['email'];
             $msg_errore = '"form-success"><p>Registrazione avvenuta con successo, <a href="../html/login.html">accedi QUI</a>.</p>';
             $errore_form = '"form-success">';
         }

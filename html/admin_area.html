@@ -47,28 +47,54 @@
     <a class="aiuti" href="#aggiungi_animale">Salta al pulsante di aggiunta animali</a>
     <main>
       <div id="admin_form">
-        <form method="post" action="#" id="nuova_adozione">
+        <form method="post" action="../php/nuova_adozione.php" id="nuova_adozione">
           <h2>Nuova adozione&#160;&#160;</h2>
             <label for="nome_utente">Utente: </label>
             <select name="nome_utente" id="nome_utente">
-              <option value="0">Seleziona un utente</option>
+              <option value="utente"></option>
             </select>
 
             <label for="nome_animale">Animale: </label>
             <select name="nome_animale" id="nome_animale">
-              <option value="0">Seleziona un animale</option>
+              <optgroup label="Cani">
+                <option value="cane"></option>
+              </optgroup>
+              <optgroup label="Gatti">
+                <option value="gatto"></option>
+              </optgroup>
             </select>
+            <span class="error" id="form-error"></span>
+            <span class="success" id="form-success"></span>
             <input type="submit" value="Invia" id="button" />
+            <p>Controlla se ci sono nuove richieste di adozione cliccando <a href="../php/admin_area.php">qui</a>.</p>
         </form>
 
-        <form method="post" action="#" id="aggiungi_animale">
+        <form method="post" action="../php/aggiungi_animale.php" id="aggiungi_animale">
           <h2>Aggiungi animale</h2>
         
           <label for="nome_animale">Nome animale:</label>
           <input type="text" id="nome_animale" name="nome_animale">
+          <span class="error" id="nome-error"></span>
+
+          <label for="tipo">Cane o Gatto:</label>
+          <select name="tipo" id="tipo">
+              <option value="cane">Cane</option>
+              <option value="gatto">Gatto</option>
+          </select>
+
+          <label for="sesso">Sesso:</label>
+          <select name="sesso" id="sesso">
+              <option value="maschio">Maschio</option>
+              <option value="femmina">Femmina</option>
+          </select>
+
+          <label for="data_nascita">Data di nascita:</label>
+          <input type="date" id="data_nascita" name="data_nascita">
 
           <label for="img_animale">Seleziona un'immagine</label>
           <input type="file" id="img_animale" name="img_animale">
+          <span class="error" id="form-aggiungi-error"></span>
+          <span class="success" id="form-aggiungi-success"></span>
           <input type="submit" value="Invia" id="button" />
         </form>
       </div>
