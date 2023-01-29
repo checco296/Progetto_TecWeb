@@ -11,7 +11,7 @@ html, body
     width: 25em;
     text-align: center;
     margin: auto;
-    border-bottom: solid black;
+    border-bottom: solid var(--bordercolor);
     border-radius: 1em;
 }
 
@@ -26,7 +26,7 @@ html, body
     padding-top: 0em;
     padding-bottom: 0em;
     border-right: none;
-    border-bottom: solid black;
+    border-bottom: solid var(--bordercolor);
 }
 
 #menu a
@@ -34,7 +34,7 @@ html, body
     display: block;
 }
 
-#menu #currentLink
+#menu #currentLink,#menu #currentLink_last
 {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -42,10 +42,10 @@ html, body
     background: url('../images/heart-69-16.ico') 8% center no-repeat,url('../images/heart-69-16.ico') 92% center no-repeat;
     background-color: var(--bread_footer_color);
     border-right: none;
-    border-bottom: solid black;
+    border-bottom: solid var(--bordercolor);
 }
 
-#menu #Profilo
+#menu #Profilo,#menu #currentLink_last
 {
     border-bottom: none;
 }
@@ -115,3 +115,13 @@ form button
 {
     background-size: 30% 70%;
 }
+
+#admin_form{
+    display: block;
+    margin: auto;
+  }
+  
+  #admin_form form{
+    margin: auto;
+    margin-bottom: 0.8em;
+  }

@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Centro Adozioni PD</title>
+    <title>Registrazione &#8722; C.A.PD</title>
     <meta
       name="description"
-      content="Home page del centro adozioni PD nella quale è presente una breve introduzione e la descrizione dei servizi."
+      content="Pagina di Registrazione al Centro adozione Animali PD"
     />
-    <meta name="keywords" content="Adozione, cane, gatto, PD" />
+    <meta name="keywords" content="Registrati, Centro, Adozioni" />
     <meta name="author" content="Francesco Ferraioli" />
 
     <link rel="stylesheet" href="../css/style.css" media="handheld,screen" />
@@ -22,72 +22,66 @@
     <link rel="shortcut icon" type="image/png" href="../images/prototipo.png" />
   </head>
 
-  <body id="Home">
+  <body id="Sign_in">
     <header>
       <h1>Centro Adozioni PD</h1>
       <nav id="menu" aria-label="menu del sito">
         <ul>
-          <li>
-            <a href="../html/main.html"><span lang="en">Home</span></a>
-          </li>
+          <li><a href="../index.html"><span lang="en">Home</span></a></li>
           <li><a href="../php/adotta_cane.php">Adotta</a></li>
           <li><a href="../html/about.html">Chi siamo</a></li>
           <li><a href="../html/contatti.html">Contattaci</a></li>
-          <li id="currentLink" aria-curr ent="page">Profilo</li>
+          <li id="currentLink_last" aria-current="page">Profilo</li>
         </ul>
       </nav>
-
+      
       <nav id="breadcrumb" aria-label="percorso">
         <p>
-          Ti trovi in: <span lang="en"><a href="../html/main.html">Home</a></span> &gt;
-          &gt; Registrati
+          Ti trovi in: <span lang="en"><a href="../index.html">Home</a></span> &gt;
+          &gt; <a href="../html/login.html">Accedi</a> &gt; &gt; Registrati
         </p>
       </nav>
     </header>
-
+    
+    <a class="aiuti" href="#sign_in">Salta all'inserimento dei dati di registrazione</a>
+    <a class="aiuti" href="#back">Salta al link per tornare alla pagina di accesso</a>
     <main>
-      <div id="signin">
+      <form action="../php/signin.php" method="post" id="sign_in">
         <h2>Registrati</h2>
-
-        <form action="../php/signin.php" method="post" id="validatedForm">
-          <label for="user"><span lang="en">Username</span>   </label>
-          <input type="text" id="username" name="username" placeholder="Username"/>
-          <span class="error none" id="user-error"></span>
-
-          <label for="user"><span lang="en">Email</span></label>
-          <input type="text" id="email" name="email" placeholder="Email"/>
-          <span class="error none" id="email-error"></span>
-
-          <label for="user"><span lang="en">Password</span></label>
-          <input type="password" id="password" name="password" placeholder="Password"/>
-          <span class="error none" id="password-error"></span>
-          
-          <span class="error none" id="form-error"></span>
-          <span class="success" id="form-success"></span>
-
-          <button type="submit" value="Registrami" name="submit">
-            Registrami
-          </button>
-        </form>
-
-        <p><a href="../html/login.html">Torna indietro</a></p>
-      </div>
+        <label for="username"><span lang="en">Username</span>   </label>
+        <input type="text" id="username" name="username" placeholder="Username"/>
+        <span class="error" id="user-error"></span>
+        
+        <label for="email"><span lang="en">Email</span></label>
+        <input type="text" id="email" name="email" placeholder="Email"/>
+        <span class="error" id="email-error"></span>
+        
+        <label for="password"><span lang="en">Password</span></label>
+        <input type="password" id="password" name="password" placeholder="Password"/>
+        <span class="error" id="password-error"></span>
+        
+        <span class="error" id="form-error"></span>
+        <span class="success" id="form-success"></span>
+        
+        <input type="submit" value="Registrami" id="button" />
+      </form>
+      <a href="../html/login.html" id="back">Torna indietro</a>
     </main>
-
+    
     <footer>
       <img
-        class="imgValidCode"
-        src="../images/valid-xhtml10.png"
-        alt="HTML valido"
+      class="imgValidCode"
+      src="../images/valid-xhtml10.png"
+      alt="HTML valido"
       />
       <p>
         <span lang="en">Copyright</span> 2023 Centro Adozione PD
         <span lang="en">All right Reserved</span>
       </p>
       <img
-        class="imgValidCode"
-        src="../images/vcss-blue.gif"
-        alt="CSS valido"
+      class="imgValidCode"
+      src="../images/vcss-blue.gif"
+      alt="CSS valido"
       />
     </footer>
   </body>

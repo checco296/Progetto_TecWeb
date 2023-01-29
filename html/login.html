@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Centro Adozioni PD</title>
+    <title>Login &#8722; C.A.PD</title>
     <meta
       name="description"
-      content="Home page del centro adozioni PD nella quale è presente una breve introduzione e la descrizione dei servizi."
+      content="Pagina di Log in del Centro adozione Animali PD"
     />
-    <meta name="keywords" content="Adozione, cane, gatto, PD" />
+    <meta name="keywords" content="Accedi, Centro, Adozioni" />
     <meta name="author" content="Francesco Ferraioli" />
 
     <link rel="stylesheet" href="../css/style.css" media="handheld,screen" />
@@ -22,50 +22,46 @@
     <link rel="shortcut icon" type="image/png" href="../images/prototipo.png" />
   </head>
 
-  <body id="Home">
+  <body id="Log_in">
     <header>
       <h1>Centro Adozioni PD</h1>
       <nav id="menu" aria-label="menu del sito">
         <ul>
-          <li>
-            <a href="../html/main.html"><span lang="en">Home</span></a>
-          </li>
+          <li><a href="../index.html"><span lang="en">Home</span></a></li>
           <li><a href="../php/adotta_cane.php">Adotta</a></li>
           <li><a href="../html/about.html">Chi siamo</a></li>
           <li><a href="../html/contatti.html">Contattaci</a></li>
-          <li id="currentLink" aria-curr ent="page">Profilo</li>
+          <li id="currentLink_last" aria-current="page">Profilo</li>
         </ul>
       </nav>
 
       <nav id="breadcrumb" aria-label="percorso">
         <p>
-          Ti trovi in: <span lang="en"><a href="main.html">Home</a></span> &gt;
+          Ti trovi in: <span lang="en"><a href="../index.html">Home</a></span> &gt;
           &gt; Accedi
         </p>
       </nav>
     </header>
 
+    <a class="aiuti" href="#log_in">Salta all'inserimento delle credenziali di accesso</a>
+    <a class="aiuti" href="#registrazione">Salta al reindirizzamento per la registrazione</a>
+    <a class="aiuti" href="#log_in_admin">Salta al reindirizzamento per l'accesso come amministratore</a>
     <main>
-      <div class="login">
+      <form action="../php/login.php" method="post" id="log_in">
         <h2>Accedi</h2>
-
-        <form action="../php/login.php" method="post" id="validatedForm">
-          <label for="user"><span lang="en">Username</span></label>
-          <input type="text" id="username" name="username" placeholder="Username"/>
-          
-          <label for="user"><span lang="en">Password</span></label>
-          <input type="password" id="password" name="password" placeholder="Password"/>
-
-          <span class="error none" id="form-error"></span>
-          
-          <button type="submit" value="Accedi" name="submit">Accedi</button>
-        </form>
-
-        <p>
+        <label for="username"><span lang="en">Username</span></label>
+        <input type="text" id="username" name="username" placeholder="Username"/>
+        
+        <label for="password"><span lang="en">Password</span></label>
+        <input type="password" id="password" name="password" placeholder="Password"/>
+        <span class="error" id="form-error"></span>
+        
+        <input type="submit" value="Accedi" id="button" />
+      </form>
+        <p id="registrazione">
           Non sei ancora registrato? <a href="../html/signin.html">Registrati QUI</a>.
         </p>
-        <p>Sei un amministratore? <a href="../html/login_admin.html">Accedi QUI</a>.</p>
-      </div>
+        <p id="log_in_admin">Sei un amministratore? <a href="../html/login_admin.html">Accedi QUI</a>.</p>
     </main>
 
     <footer>

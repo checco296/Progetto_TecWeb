@@ -13,19 +13,28 @@ reset impostazioni browser
 dichiarazione variabili di colore
 ======================
 */
-/*#9C0015*/
-/*#454953*/
+/*ricontrollare la questione contrasti e link visitati e non*/
 :root
 {
 	--bgcolor: #FFF;
   --menucolor: #9B0014;
+  --warningcolor: #9B0014;
+  --activity_titlecolor: #9B0014;
+  --activity_bordercolor: #9B0014;
+  --formcolor: #9b0014;
   --txtcolor: #FFF;
-  --visitedcolor: #FFF;
+  --txtcolor_onwhitebg: #000;
   --linkcolor: #D4F291;
+  --visited_linkcolor: #FFF;
   --linkesterni: #FFE0FF;
   --bread_footer_color: #454953;
-  --hovercolor: #777;
+  --hover_menucolor: #969696;
+  --hover_linkcolor: black;
   --footer_txt_color: #FFF;
+  --body_bgcolor: #373f51f5;
+  --bordercolor: black;
+  --error_color: #bcd914;
+  --success_color: green;
 }
 /*
 ======================
@@ -47,7 +56,7 @@ html
 
 body
 {
-  background-color: #373f51f5;
+  background-color: var(--body_bgcolor);
 }
 /*
 ==============
@@ -74,7 +83,7 @@ SEZIONE MENU
 #menu 
 {
   border-style: solid;
-  border-color: #000;
+  border-color: var(--bordercolor);
   border-bottom: none;
   height: 3em;
   overflow: hidden;
@@ -95,27 +104,26 @@ SEZIONE MENU
   padding-top: 1em;
   padding-bottom: 1em;
   display: inline;
-  border-right: solid black;
+  border-right: solid var(--bordercolor);
 }
 
 #menu a 
 {
   color: var(--linkcolor);
   padding: 1.1em;
-  background-color: var(--menucolor);
   text-decoration: none;
 }
 
 #menu a:visited
 {
-  color: var(--visitedcolor);
+  color: var(--visited_linkcolor);
 }
 
 #menu a:hover
 {
-  color: var(--txtcolor);
-  background-color: var(--hovercolor);
-  text-decoration-line: underline;
+  color: var(--hover_linkcolor);
+  background-color: var(--hover_menucolor);
+  text-decoration: underline;
 }
 
 #currentLink
@@ -126,13 +134,20 @@ SEZIONE MENU
   color: var(--txtcolor);
   padding-left: 1.6em;
   padding-right: 1em;
-  border-right: solid black;
+  border-right: solid var(--bordercolor);
 }
 
-#Log_in>a
+#currentLink_last
 {
-  
+  background: url('../images/heart-69-16.ico') 8% center no-repeat;
+  background-size: 1em;
+  background-color: var(--bread_footer_color);
+  color: var(--txtcolor);
+  padding-left: 1.6em;
+  padding-right: 1em;
+  border-right: solid var(--bordercolor);
 }
+
 
 /*
 ==============
@@ -142,7 +157,7 @@ SEZIONE BREADCRUMB
 #breadcrumb
 {
   border-style: solid;
-  border-color: #000;
+  border-color: var(--bordercolor);
   text-align: left;
   background-color: var(--bread_footer_color);
   color: var(--txtcolor);
@@ -158,7 +173,7 @@ SEZIONE BREADCRUMB
 
 #breadcrumb a:visited
 {
-  color: var(--visitedcolor);
+  color: var(--visited_linkcolor);
 }
 
 /*
@@ -174,24 +189,24 @@ main
 
 #presentazione
 {
-  background-color: var(--bread_footer_color);
-  color: var(--txtcolor);
+  background-color: var(--bgcolor);
+  color: var(--txtcolor_onwhitebg);
   padding: 0.5em;
   margin-bottom: 0.3em;
   border-style: solid;
   border-radius: 1em;
-  border-color: black;
+  border-color: var(--bordercolor);
 }
 
 #avvertimento
 {
-  background-color: var(--menucolor);
+  background-color: var(--warningcolor);
   color: var(--footer_txt_color);
   margin-bottom: 0.3em;
   padding: 0.5em;
   border-style: solid;
   border-radius: 1em;
-  border-color: #000;
+  border-color: var(--bordercolor);
 }
 
 main h2 
@@ -201,6 +216,7 @@ main h2
   text-align: center;
   color: var(--txtcolor);
 }
+
 main h3
 {
   text-align: center;
@@ -216,13 +232,13 @@ main dl
 
 main dt
 {
-  color: var(--menucolor);
+  color: var(--activity_titlecolor);
   text-align: center;
   border-style: solid;
   border-width: 0.3em;
   border-bottom: none;
   border-radius: 1em 1em 0em 0em;
-  border-color: var(--menucolor);
+  border-color: var(--activity_bordercolor);
   padding: 0.5em;
   padding-bottom: 0.2em;
   background-color: var(--bgcolor);
@@ -235,7 +251,7 @@ main dd
   border-top: none;
   border-width: 0.3em;
   border-radius: 0em 0em 1em 1em;
-  border-color: var(--menucolor);
+  border-color: var(--activity_bordercolor);
   margin-bottom: 1em;
   background-color: var(--bgcolor);
   display: flex;
@@ -271,8 +287,7 @@ main dd>p
   margin: 0.5em;
   width: 33%;
   background-color: var(--menucolor);
-  color: var(--footer_txt_color);
-  border: solid black;
+  border: solid var(--bordercolor);
   border-radius: 2em;
   text-align: center;
   padding-bottom: 1em;
@@ -297,14 +312,15 @@ main dd>p
   display: flex;
   list-style: none;
   justify-content: space-around;
+  margin-bottom: 0.8em
 }
 
 #Social img
 {
   width: 5em;
   height: 5em;
-  padding: 0.5em;
-
+  background-color: var(--bgcolor);
+  border-radius: 5em;
 }
 
 #Social a:hover
@@ -322,12 +338,12 @@ main dd>p
 #contatti h3
 {
   text-align: center;
-  color: #9B0014;
+  color: var(--txtcolor);
 }
 
 .paragrafo-dispari
 {
-  background-color: #FFF;
+  background-color: var(--bgcolor);
   background-repeat: no-repeat;
   background-position: left;
   background-size: 30% 100%;
@@ -335,13 +351,13 @@ main dd>p
   padding: 2em;
   padding-left: 31%;
   border-radius: 1em;
-  border: solid var(--menucolor);
+  border: solid var(--activity_bordercolor);
   margin-bottom: 1em;
 }
 
 .paragrafo-pari
 {
-  background-color: #FFF;
+  background-color: var(--bgcolor);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 30% 100%;
@@ -349,7 +365,7 @@ main dd>p
   padding: 2em;
   padding-right: 31%;
   border-radius: 1em;
-  border: solid var(--menucolor);
+  border: solid var(--activity_bordercolor);
   margin-bottom: 1em;
 }
 
@@ -375,43 +391,40 @@ main dd>p
   background-image: url(../images/gattino-con-pelo-a-forma-di-cuore-e1446037850649.jpg);
 }
 
-#errore_404
+.no_menu
 {
   text-align: center;
   color: var(--txtcolor);
 } 
 
-#errore_404 h2
+.no_menu h2
 {
   font-size: 3em;
 }
 
-#errore_404 h3
-{
-  background-image: url('../images/Cuccioli-di-Gattini.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  text-indent: -9999px;
-  line-height: 4em;
-  font-size: 6em;
-}
 
-#errore_404 a:link
+.no_menu a:link
 {
   color: var(--linkcolor);
 }
 
-#errore_404 a:visited
+.no_menu a:visited
 {
-  color: var(--menucolor);
+  color: var(--visited_linkcolor)
 }
 
-#errore_404 p
+.no_menu p
 {
   font-size: 1.5em;
   padding-bottom: 1em;
+  color: var(--txtcolor);
 }
+
+#Log_in p
+{
+  color: var(--txtcolor);
+}
+
 /*
 ==============
 SEZIONE AIUTI
@@ -443,7 +456,7 @@ footer
   padding-bottom: 0.5em;
   margin-bottom: 0.01em;
   border-style: solid;
-  border-color: black;
+  border-color: var(--bordercolor);
 }
 
 footer p
@@ -453,10 +466,6 @@ footer p
   font-size: 0.8em;
 }
 
-footer img
-{
-  margin: 0em 0em;
-}
 /*
 ==============
 SEZIONE FORM
@@ -469,51 +478,79 @@ form
   align-items: center;
   width: 50%;
   margin: 0 auto;
+  margin-bottom: 0.5em;
   padding: 1.5em;
-  border: solid black;
+  border: solid var(--bordercolor);
   border-radius: 1em;
-  background-color: var(--menucolor);
-  color: var(--footer_txt_color);
+  background-color: var(--formcolor);
+  color: var(--txtcolor);
 }
 
 form label 
 {
   font-size: 1.3em;
   margin-bottom: 0.5em;
-  display: block;
 }
-form input, form textarea 
+
+form input, form textarea ,form select
 {
   width: 100%;
   padding: 0.75em 1.25em;
   margin-bottom: 1.25em;
-  border: solid black;
+  border: solid var(--bordercolor);
   border-radius: 1em;
   box-sizing: border-box;
   font-size: 1em;
   background-color: var(--bgcolor);
-  color: var(--menucolor);
+  color: var(--txtcolor_onwhitebg);
 }
+
 form textarea 
 {
   height: 12.5em;
   resize: vertical;
 }
+
+.error
+{
+  color: var(--error_color);
+  margin-bottom: 0.5em;
+}
+
+.success
+{
+  color: var(--success_color);
+  margin-bottom: 0.5em;
+}
+
+
 #button 
 {
   background-color: var(--bgcolor);
-  color: var(--menucolor);
-  width: 50%;
+  color: var(--activity_titlecolor);
+  width: 60%;
   padding: 0.5em;
-  border: solid black;
+  border: solid var(--bordercolor);
   border-radius: 1em;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.8em;
   margin-bottom: 0em;
 }
+
 #button:hover 
 {
   opacity: 0.8;
+}
+
+#admin_form{
+  display: flex;
+  list-style: none;
+  justify-content:space-evenly;
+  margin-bottom: 1.25em;
+}
+
+#admin_form form{
+  margin: 0.8em;
 }
 
 /*

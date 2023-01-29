@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Centro Adozioni PD</title>
+    <title>Area personale &#8722; C.A.PD</title>
     <meta
       name="description"
-      content="Home page del centro adozioni PD nella quale è presente una breve introduzione e la descrizione dei servizi."
+      content="Area personale del centro adozioni PD nella quale è possibile visualizzare la lista dei propri animali."
     />
-    <meta name="keywords" content="Adozione, cane, gatto, PD" />
+    <meta name="keywords" content="Area, personale, animali, Centro Adozioni" />
     <meta name="author" content="Francesco Ferraioli" />
-
+    <meta name="robots" content="noindex">
     <link rel="stylesheet" href="../css/style.css" media="handheld,screen" />
     <link
       rel="stylesheet"
@@ -22,25 +22,23 @@
     <link rel="shortcut icon" type="image/png" href="../images/prototipo.png" />
   </head>
 
-  <body id="Home">
+  <body id="Area_personale">
     <header>
       <h1>Centro Adozioni PD</h1>
       <nav id="menu" aria-label="menu del sito">
         <ul>
-          <li>
-            <a href="main.html"><span lang="en">Home</span></a>
-          </li>
+          <li><a href="../index.html"><span lang="en">Home</span></a></li>
           <li><a href="../php/adotta_cane.php">Adotta</a></li>
-          <li><a href="about.html">Chi siamo</a></li>
-          <li><a href="contatti.html">Contattaci</a></li>
-          <li id="currentLink" aria-curr ent="page">Profilo</li>
+          <li><a href="../html/about.html">Chi siamo</a></li>
+          <li><a href="../html/contatti.html">Contattaci</a></li>
+          <li id="currentLink_last" aria-current="page">Profilo</li>
         </ul>
       </nav>
 
       <nav id="breadcrumb" aria-label="percorso">
         <p>
-          Ti trovi in: <span lang="en"><a href="main.html">Home</a></span> &gt;
-          &gt; Area personale
+          Ti trovi in: <span lang="en"><a href="../index.html">Home</a></span> &gt;
+          &gt; <a href="../html/login.html">Accedi</a> &gt; &gt; Area personale
         </p>
       </nav>
     </header>
@@ -51,7 +49,7 @@
       <dl id="animali">
         <dt>Luna</dt>
         <dd>
-          <img src="/images/Luna.jpg" alt="" />
+          <img src="../images/Luna.jpg" alt="" />
           <dl class="animale">
             <dt>Età</dt>
             <dd>11 anni</dd>
