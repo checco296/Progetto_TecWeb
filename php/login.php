@@ -20,7 +20,7 @@ if (isset($_POST['username'])) {
             session_set_cookie_params(0);
             session_start();
             $_SESSION['session_user'] = 'utente';
-            $_SESSION["session_id"] = $_POST['email'];
+            $_SESSION["session_id"] = $_POST['username'];
             header('Location: ../php/login_check.php');
             
         } else {

@@ -2,12 +2,14 @@
     require('database.php');
     require('check.php');
 
-if (isset($_POST['nome_animale'])) {
+if (isset($_POST['invia'])) {
     $nome = $_POST['nome_animale'];
     $tipo = $_POST['tipo'];
     $sesso = $_POST['sesso'];
     $data_nascita = $_POST['data_nascita'];
-    $img = $_POST['img_animale'];
+
+    $img = $_FILES['img_animale']['name'];
+    $img_path = "../images/".basename($img);
 
     if (empty($nome) || empty($data_nascita) || empty($img)) {
          $msg_errore = '<span class="error" id="form-error">Compila tutti i campi.</span>';
@@ -26,7 +28,7 @@ if (isset($_POST['nome_animale'])) {
                   VALUES ('$img')";
             $result_foto = mysqli_query($con, $query_foto);
 
-            if($result_cane && $result_foto){
+            if($result_cane && $result_cane && (move_uploaded_file($_FILES['img_animale']['tmp_name'], $img_path))){
                 $msg_errore = '<span class="success" id="form-aggiungi-success">Animale aggiunto con successo.</span>';
                 $errore_form = '<span class="success" id="form-aggiungi-success"></span>';
             }
@@ -39,7 +41,7 @@ if (isset($_POST['nome_animale'])) {
                   VALUES ('$img')";
             $result_foto = mysqli_query($con, $query_foto);
             
-            if($result_gatto && $result_foto){
+            if($result_gatto && $result_foto && (move_uploaded_file($_FILES['img_animale']['tmp_name'], $img_path))){
                 $msg_errore = '<span class="success" id="form-aggiungi-success">Animale aggiunto con successo.</span>';
                 $errore_form = '<span class="success" id="form-aggiungi-success"></span>';
             }

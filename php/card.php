@@ -6,27 +6,58 @@ class Card {
     public $nome;
     public $sesso;
     public $nascita;
+    public $richiesta;
     public $stato;
     
     public function __construct(&$array){
         
         $this->id=$array['id'];
-        $this->foto=$array['foto'];
         $this->nome=$array['nome'];
         $this->sesso=$array['sesso'];
-        $this->nascita=$array['nascita'];
-        $this->stato=$array['stato'];
+        $this->nascita=$array['data_nascita'];
+        $this->richiesta = $array['richiesta'];
+        $this->foto=$array['path'];
     }
 
    
     public function makeCard(){
+
         $pagina=file_get_contents("../html/card.html");
         $pagina=str_replace('%id%',$this->id,$pagina);
-        $pagina=str_replace('%foto%',$this->foto,$pagina);
-        $pagina=str_replace('%nomeCane%',$this->nome,$pagina);
-        $pagina=str_replace('%sessoCane%',$this->sesso,$pagina);
+        $pagina=str_replace('%nome%',$this->nome,$pagina);
+        $pagina=str_replace('%sesso%',$this->sesso,$pagina);
         $pagina=str_replace('%nascita%',$this->nascita,$pagina);
-        $pagina=str_replace('%stato%',$this->stato,$pagina);
+        $parte_foto = "<img src='../images/" . $this->foto . "' />";
+        $pagina = str_replace('%foto%', $parte_foto, $pagina);
+        return $pagina;
+    }
+
+    public function makeCard_register(){
+
+        $pagina=file_get_contents("../html/card_register.html");
+        $pagina=str_replace('%id%',$this->id,$pagina);
+        $pagina=str_replace('%nome%',$this->nome,$pagina);
+        $pagina=str_replace('%sesso%',$this->sesso,$pagina);
+        $pagina=str_replace('%nascita%',$this->nascita,$pagina);
+        $parte_foto = "<img src='../images/" . $this->foto . "' />";
+        $pagina = str_replace('%foto%', $parte_foto, $pagina);
+        return $pagina;
+    }
+
+    public function makeCard_admin(){
+
+        $pagina=file_get_contents("../html/card_admin.html");
+        $pagina=str_replace('%id%',$this->id,$pagina);
+        $pagina=str_replace('%nome%',$this->nome,$pagina);
+        $pagina=str_replace('%sesso%',$this->sesso,$pagina);
+        $pagina=str_replace('%nascita%',$this->nascita,$pagina);
+        $parte_foto = "<img src='../images/" . $this->foto . "' />";
+        if($this->richiesta==null){
+            $pagina=str_replace('<input type="submit" value="%richiesta%" id="button" name="adotta" />','<span>Nessuna richiesta</span>',$pagina);
+        } else {
+            $pagina=str_replace('%richiesta%',$this->richiesta,$pagina);
+        }
+        $pagina = str_replace('%foto%', $parte_foto, $pagina);
         return $pagina;
     }
 }

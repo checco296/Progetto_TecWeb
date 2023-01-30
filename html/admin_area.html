@@ -28,7 +28,7 @@
       <nav id="menu" aria-label="menu del sito">
         <ul>
           <li><a href="../index.html"><span lang="en">Home</span></a></li>
-          <li><a href="../php/adotta_cane.php">Adotta</a></li>
+          <li><a href="../php/adotta.php">Adotta</a></li>
           <li><a href="../html/about.html">Chi siamo</a></li>
           <li><a href="../html/contatti.html">Contattaci</a></li>
           <li id="currentLink_last" aria-current="page">Profilo</li>
@@ -69,7 +69,7 @@
             <p>Controlla se ci sono nuove richieste di adozione cliccando <a href="../php/admin_area.php">qui</a>.</p>
         </form>
 
-        <form method="post" action="../php/aggiungi_animale.php" id="aggiungi_animale">
+        <form method="post" action="../php/aggiungi_animale.php" id="aggiungi_animale" enctype="multipart/form-data">
           <h2>Aggiungi animale</h2>
         
           <label for="nome_animale">Nome animale:</label>
@@ -93,9 +93,10 @@
 
           <label for="img_animale">Seleziona un'immagine</label>
           <input type="file" id="img_animale" name="img_animale">
+
           <span class="error" id="form-aggiungi-error"></span>
           <span class="success" id="form-aggiungi-success"></span>
-          <input type="submit" value="Invia" id="button" />
+          <input type="submit" value="Invia" id="button" name="invia" />
         </form>
       </div>
       
