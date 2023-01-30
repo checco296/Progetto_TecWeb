@@ -425,6 +425,22 @@ main dd>p
   color: var(--txtcolor);
 }
 
+#istruzioni_adozione{
+  background-color: var(--bgcolor);
+  color: var(--txtcolor_onwhitebg);
+  padding: 0.5em;
+  margin-bottom: 0.3em;
+  border-style: solid;
+  border-radius: 1em;
+  border-color: var(--bordercolor);
+}
+#istruzioni_adozione ol{
+  padding-left: 2em;
+  padding-bottom: 0.5em;
+}
+
+
+
 /*
 ==============
 SEZIONE AIUTI

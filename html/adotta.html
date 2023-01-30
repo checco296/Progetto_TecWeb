@@ -4,12 +4,19 @@
     <meta charset="utf-8" />
 
     <title>Adozioni - C.A.PD</title>
-    <meta name="description" content="Pagina dedicata all'adozione degli animali." />
-    <meta name="keywords"    content="Adozione, cane, gatto,Centro Adozioni PD" />
-    <meta name="author"      content="Francesco Ferraioli" />    
-    
+    <meta
+      name="description"
+      content="Pagina dedicata all'adozione degli animali."
+    />
+    <meta name="keywords" content="Adozione, cane, gatto,Centro Adozioni PD" />
+    <meta name="author" content="Francesco Ferraioli" />
+
     <link rel="stylesheet" href="../css/style.css" media="handheld,screen" />
-    <link rel="stylesheet" href="../css/mini.css"  media="handheld, screen and (max-width:600px), only screen and (max-device-width:600px)" />
+    <link
+      rel="stylesheet"
+      href="../css/mini.css"
+      media="handheld, screen and (max-width:600px), only screen and (max-device-width:600px)"
+    />
     <link rel="stylesheet" href="../css/print.css" media="print" />
 
     <link rel="shortcut icon" type="image/png" href="../images/prototipo.png" />
@@ -20,7 +27,9 @@
       <h1>Centro Adozioni PD</h1>
       <nav id="menu" aria-label="menu del sito">
         <ul>
-          <li><a href="../index.html"><span lang="en">Home</span></a></li>
+          <li>
+            <a href="../index.html"><span lang="en">Home</span></a>
+          </li>
           <li id="currentLink" aria-current="page">Adotta</li>
           <li><a href="about.html">Chi siamo</a></li>
           <li><a href="contatti.html">Contattaci</a></li>
@@ -28,40 +37,104 @@
         </ul>
       </nav>
       <nav id="breadcrumb" aria-label="percorso">
-        <p>Ti trovi in: <span lang="en"><a href="../index.html">Home</a></span> &gt; &gt; Adotta</p>
+        <p>
+          Ti trovi in:
+          <span lang="en"><a href="../index.html">Home</a></span> &gt; &gt;
+          Adotta
+        </p>
       </nav>
     </header>
-      
+
     <main>
       <h2>Processo di adozione:</h2>
-      <p>Ti siamo grati per l'interesse ad adottare uno dei nostri magnifici animali, Di seguito è presente il processo da seguire:</p>
-      <ol>
-        <li>Sfoglia tra gli animali disponibili e seleziona quello che più vi interessa</li>
-        <li>Compila il <span lang="en">form</span> con i dati richiesti</li>
-        <li>Attendi la mail di approvazione/rifiuto</li>
-        <li>Se la richiesta va in porto,verrai contattato telefonicamente per l'incontro con l'animale, inoltre sul tuo profilo personale verrà aggiunta la scheda dell'animale</li>
-      </ol>
-      <p>Dopo aver inoltrato la richiesta potremo richiedervi ulteriori informazioni necessarie all'adozione come la visualizzazione dell'ambiente domestico del candidato ospitante</p>
-      <!--<h3>Application Form</h3>
-    <form action="submit.php" method="post">
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name"><br>
-      <label for="email">Email:</label><br>
-      <input type="text" id="email" name="email"><br>
-      <label for="phone">Phone:</label><br>
-      <input type="text" id="phone" name="phone"><br>
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message"></textarea><br>
-      <input type="submit" value="Submit">
-    </form>--> 
+      <div id="istruzioni_adozione">
+        <p>
+          Se sei arrivato in questa pagina vuol dire che stai tenendo in
+          cosiderazione la possibilità di adottare un animale, ti ricordiamo
+          ancora una volta che gli animali non sono giochi. Di seguito ti
+          elenchiamo delle semplici indicazioni per adottare il tuo prossimo
+          amico peloso:
+        </p>
+        <ol>
+          <li>
+            Sfoglia tra gli animali disponibili e individua quello che più vi
+            interessa;
+          </li>
+          <li>Compila il <span lang="en">form</span> con i dati richiesti;</li>
+          <li>Attendi la mail di approvazione/rifiuto;</li>
+          <li>
+            Se la richiesta va in porto,verrai contattato per l'incontro con
+            l'animale, inoltre sul tuo profilo personale verrà aggiunta la sua
+            scheda.
+          </li>
+        </ol>
+        <p>
+          Dopo aver inoltrato la richiesta potremo richiedervi ulteriori
+          informazioni necessarie all'adozione come la visualizzazione
+          dell'ambiente domestico del candidato ospitante
+        </p>
+      </div>
+
+      <dl id="animali_adozione">
+        <dt>Luna</dt>
+        <dd>
+          <img src="../images/Luna.jpg" alt="" />
+          <dl class="animale">
+            <dt>Età</dt>
+            <dd>11 anni</dd>
+            <dt>Peso</dt>
+            <dd>29 kg</dd>
+            <dt>Altezza</dt>
+            <dd>43 cm</dd>
+          </dl>
+          <p>Prossima visita:</p>
+        </dd>
+      </dl>
+
+      <form id="adotta_form" action="#" method="post">
+        <label for="cognome">Cognome:</label><br />
+        <input
+          type="text"
+          id="cognome"
+          name="cognome"
+          placeholder="Inserici il tuo cognome"
+        /><br />
+        <label for="nome">Nome:</label><br />
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Inserisci il tuo nome"
+        /><br />
+        <label for="email">Email con cui ti sei inscritto:</label><br />
+        <input type="email" id="email" name="email" placeholder="Email" /><br />
+        <label for="message"
+          >Scrivi il nome dell'animale che vorresti adottare e scrivi anche un
+          po' di informazioni in più: per esempio parlaci degli spazi che questo
+          animale riceverà, per chi è destinato, se hai avuto altre esperienze
+          con animali, ...</label
+        ><br />
+        <textarea id="message" name="message"></textarea><br />
+        <input type="submit" value="Invia richiesta" />
+      </form>
     </main>
     <footer>
-      <img class="imgValidCode" src="../images/valid-xhtml10.png" alt="HTML valido" />
-      <p><span lang="en">Copyright</span> 2023 Centro Adozione PD <span lang="en">All right Reserved</span></p>
-      <img class="imgValidCode" src="../images/vcss-blue.gif" alt="CSS valido" />
+      <img
+        class="imgValidCode"
+        src="../images/valid-xhtml10.png"
+        alt="HTML valido"
+      />
+      <p>
+        <span lang="en">Copyright</span> 2023 Centro Adozione PD
+        <span lang="en">All right Reserved</span>
+      </p>
+      <img
+        class="imgValidCode"
+        src="../images/vcss-blue.gif"
+        alt="CSS valido"
+      />
     </footer>
   </body>
 </html>
-
 
 <!--da rimuovere-->
