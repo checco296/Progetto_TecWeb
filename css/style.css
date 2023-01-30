@@ -16,22 +16,24 @@ dichiarazione variabili di colore
 /*ricontrollare la questione contrasti e link visitati e non*/
 :root
 {
-	--bgcolor: #FFF;
-  --menucolor: #9B0014;
-  --warningcolor: #9B0014;
-  --activity_titlecolor: #9B0014;
-  --activity_bordercolor: #9B0014;
-  --formcolor: #9b0014;
+  --bgcolor1: #454953;
+  --bgcolor2: #D14600;
+  --body_bgcolor: #373f51f5;
+  --form_bgcolor: #FFF;
+  --menucolor: #D14600;
+  --warningcolor: #D14600;
+  --activity_titlecolor: #FFF;
+  --activity_bordercolor: #D14600;
+  --formcolor: #D14600;
   --txtcolor: #FFF;
   --txtcolor_onwhitebg: #000;
-  --linkcolor: #D4F291;
+  --linkcolor: #000;
+  --linkcoloralt: #D14600;
   --visited_linkcolor: #FFF;
-  --linkesterni: #FFE0FF;
+  --linkesterni: #FFFF6B;
   --bread_footer_color: #454953;
   --hover_menucolor: #969696;
   --hover_linkcolor: black;
-  --footer_txt_color: #FFF;
-  --body_bgcolor: #373f51f5;
   --bordercolor: black;
   --error_color: #bcd914;
   --success_color: green;
@@ -168,11 +170,6 @@ SEZIONE BREADCRUMB
 
 #breadcrumb a
 {
-  color: var(--linkcolor);
-}
-
-#breadcrumb a:visited
-{
   color: var(--visited_linkcolor);
 }
 
@@ -189,8 +186,8 @@ main
 
 #presentazione
 {
-  background-color: var(--bgcolor);
-  color: var(--txtcolor_onwhitebg);
+  background-color: var(--bgcolor1);
+  color: var(--txtcolor);
   padding: 0.5em;
   margin-bottom: 0.3em;
   border-style: solid;
@@ -200,8 +197,8 @@ main
 
 #avvertimento
 {
-  background-color: var(--warningcolor);
-  color: var(--footer_txt_color);
+  background-color: var(--bgcolor2);
+  color: var(--txtcolor);
   margin-bottom: 0.3em;
   padding: 0.5em;
   border-style: solid;
@@ -241,7 +238,7 @@ main dt
   border-color: var(--activity_bordercolor);
   padding: 0.5em;
   padding-bottom: 0.2em;
-  background-color: var(--bgcolor);
+  background-color: var(--bgcolor1);
   font-weight: bold;
 }
 
@@ -253,7 +250,8 @@ main dd
   border-radius: 0em 0em 1em 1em;
   border-color: var(--activity_bordercolor);
   margin-bottom: 1em;
-  background-color: var(--bgcolor);
+  background-color: var(--bgcolor1);
+  color: var(--txtcolor);
   display: flex;
 }
 
@@ -291,12 +289,10 @@ main dd>p
   border-radius: 2em;
   text-align: center;
   padding-bottom: 1em;
-  display: block;
 }
 
 #Recapiti a
 {
-  display: block;
   color: var(--linkesterni);
 }
 
@@ -304,7 +300,9 @@ main dd>p
 {
   width: 4em;
   height: 4em;
+  margin: auto;
   margin-bottom: 1em;
+  display: block;
 }
 
 #Social
@@ -319,7 +317,7 @@ main dd>p
 {
   width: 5em;
   height: 5em;
-  background-color: var(--bgcolor);
+  background-color: var(--txtcolor);
   border-radius: 5em;
 }
 
@@ -343,28 +341,30 @@ main dd>p
 
 .paragrafo-dispari
 {
-  background-color: var(--bgcolor);
+  background-color: var(--bgcolor1);
+  color: var(--txtcolor);
   background-repeat: no-repeat;
   background-position: left;
   background-size: 30% 100%;
   background-clip: padding-box;
   padding: 2em;
   padding-left: 31%;
-  border-radius: 1em;
+  border-radius: 7em;
   border: solid var(--activity_bordercolor);
   margin-bottom: 1em;
 }
 
 .paragrafo-pari
 {
-  background-color: var(--bgcolor);
+  background-color: var(--bgcolor1);
+  color: var(--txtcolor);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 30% 100%;
   background-clip: padding-box;
   padding: 2em;
   padding-right: 31%;
-  border-radius: 1em;
+  border-radius: 7em;
   border: solid var(--activity_bordercolor);
   margin-bottom: 1em;
 }
@@ -402,15 +402,25 @@ main dd>p
   font-size: 3em;
 }
 
-
-.no_menu a:link
+.no_menu img
 {
-  color: var(--linkcolor);
+  width: 80%;
 }
 
-.no_menu a:visited
+
+.no_menu p>a:link
 {
-  color: var(--visited_linkcolor)
+  color: var(--linkcoloralt);
+  padding: 0.5em;
+  background-color: var(--bgcolor1);
+  border: solid var(--bordercolor);
+  border-radius: 8em;
+}
+
+.no_menu p>a:visited
+{
+  color: var(--visited_linkcolor);
+  border: var(--bordercolor);
 }
 
 .no_menu p
@@ -425,6 +435,34 @@ main dd>p
   color: var(--txtcolor);
 }
 
+#Log_in p>a
+{
+  color: var(--linkcoloralt);
+  padding: 0.5em;
+  background-color: var(--bgcolor1);
+  border: solid var(--bordercolor);
+  border-radius: 8em;
+  line-height: 3em;
+}
+
+#Log_in p>a:visited
+{
+  color: var(--visited_linkcolor);
+}
+
+#back
+{
+  color: var(--linkcoloralt);
+  padding: 0.5em;
+  background-color: var(--bgcolor1);
+  border: solid var(--bordercolor);
+  border-radius: 8em;
+}
+
+#back:visited
+{
+  color: var(--visited_linkcolor);
+}
 /*
 ==============
 SEZIONE AIUTI
@@ -450,7 +488,7 @@ footer
   justify-content: space-around;
   border-radius: 1em 1em 0em 0em;
   background-color: var(--bread_footer_color);
-  color: var(--footer_txt_color);
+  color: var(--txtcolor);
   text-align: center;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -461,7 +499,6 @@ footer
 
 footer p
 {
-  display: inline;
   font-style: italic;
   font-size: 0.8em;
 }
@@ -501,7 +538,7 @@ form input, form textarea ,form select
   border-radius: 1em;
   box-sizing: border-box;
   font-size: 1em;
-  background-color: var(--bgcolor);
+  background-color: var(--form_bgcolor);
   color: var(--txtcolor_onwhitebg);
 }
 
@@ -510,6 +547,32 @@ form textarea
   height: 12.5em;
   resize: vertical;
 }
+
+form p
+{
+  margin-top: 1em;
+  padding: 2em;
+  text-align: center;
+  background-color: var(--bgcolor1);
+  border: solid var(--bordercolor);
+  border-radius: 1em;
+  line-height: 2em;
+}
+
+form p>a
+{
+  color: var(--linkcolor);
+  padding: 0.5em;
+  background-color: var(--bgcolor2);
+  border: solid var(--bordercolor);
+  border-radius: 8em;
+}
+
+form p>a:visited
+{
+  color: var(--visited_linkcolor);
+}
+
 
 .error
 {
@@ -526,8 +589,8 @@ form textarea
 
 #button 
 {
-  background-color: var(--bgcolor);
-  color: var(--activity_titlecolor);
+  background-color: var(--form_bgcolor);
+  color: var(--bgcolor2);
   width: 60%;
   padding: 0.5em;
   border: solid var(--bordercolor);
@@ -579,4 +642,45 @@ SEZIONE CARD
 
 .card input[type=image] {
   width: 100%;
+}
+
+table
+{
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  border: solid var(--bordercolor);
+  margin-bottom: 2em;
+}
+
+caption
+{
+  text-align: center;
+  color: var(--txtcolor);
+  font-weight: bold;
+  padding: 0.8em;
+}
+
+th, td
+{
+  padding: 0.8em;
+  color: var();
+  text-align: center;
+}
+
+th
+{
+  background-color: var(--bgcolor2);
+  color: var(--txtcolor);
+}
+
+tr:nth-child(even)
+{
+  background-color: var(--hover_menucolor);
+  color: var(--txtcolor_onwhitebg);
+}
+tr:nth-child(odd)
+{
+  background-color: var(--bread_footer_color);
+  color: var(--txtcolor);
 }
