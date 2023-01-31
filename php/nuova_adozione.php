@@ -1,7 +1,7 @@
 <?php
 require('database.php');
 $username = $_POST['nome_utente']; //nome dell'utente selezionato
-$nome = $_POST['nome_animale'];  //nome dell'animale selezionato
+$nome = $_POST['animale'];  //nome dell'animale selezionato
 
 $query = "SELECT animale1, animale2, animale3, animale4 FROM `users` WHERE username='$username'";
 $result = mysqli_query($con, $query);
