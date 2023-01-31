@@ -21,7 +21,7 @@ if (isset($_REQUEST['username'])) {
         $msg_errore = '"email-error">L\'email inserita non è valida.';
         $errore_form = '"email-error">';
     } elseif (!password_valida($password)) {
-        $msg_errore = '"password-error">La password inserita non è valida. La password deve contenere almeno un carattere minuscolo, almeno un carattere minuscolo,
+        $msg_errore = '"password-error">La password inserita non è valida. La password deve contenere almeno un carattere Maiuscolo, almeno un carattere minuscolo,
             almeno un numero e almeno un carattere speciale.';
         $errore_form = '"password-error">';
     } elseif (check_username($username)) {
