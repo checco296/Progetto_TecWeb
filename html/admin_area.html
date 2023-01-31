@@ -98,6 +98,26 @@
           <span class="success" id="form-aggiungi-success"></span>
           <input type="submit" value="Invio" id="button" class="invia" />
         </form>
+
+        <form method="post" action="../php/elimina_animale.php" id="elimina_animale">
+          <h2>Elimina animale</h2>
+            <label for="elimina_animale">Animale: </label>
+            <select name="elimina_animale" id="elimina_animale">
+              <optgroup label="Cani">
+                <option value="elimina_cane"></option>
+              </optgroup>
+              <optgroup label="Gatti">
+                <option value="elimina_gatto"></option>
+              </optgroup>
+            </select>
+
+            <label for="motivazione">Motivazione:</label>
+            <textarea id="motivazione" name="motivazione" placeholder="Inserire il testo qui"></textarea>
+
+            <span class="error" id="form-elimina-error"></span>
+            <span class="success" id="form-elimina-success"></span>
+            <input type="submit" value="Elimina" id="button" class="invia" />
+        </form>
       </div>
       
       <a href="../php/logout.php" id="back">Logoout</a>
