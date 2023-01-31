@@ -587,7 +587,7 @@ form p>a:visited
 }
 
 
-#button 
+.button 
 {
   background-color: var(--form_bgcolor);
   color: var(--bgcolor2);
@@ -600,7 +600,7 @@ form p>a:visited
   margin-bottom: 0em;
 }
 
-#button:hover 
+.button:hover 
 {
   opacity: 0.8;
 }
