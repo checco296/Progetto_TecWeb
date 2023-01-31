@@ -60,5 +60,16 @@ class Card {
         $pagina = str_replace('%foto%', $parte_foto, $pagina);
         return $pagina;
     }
+
+    public function makeCard_user(){
+        $pagina=file_get_contents("../html/card_user.html");
+        $pagina=str_replace('%id%',$this->id,$pagina);
+        $pagina=str_replace('%nome%',$this->nome,$pagina);
+        $pagina=str_replace('%sesso%',$this->sesso,$pagina);
+        $pagina=str_replace('%nascita%',$this->nascita,$pagina);
+        $parte_foto = "<img src='../images/" . $this->foto . "' />";
+        $pagina = str_replace('<img src="%foto%" class="immagine" />', $parte_foto, $pagina);
+        return $pagina;
+    }
 }
 ?>
