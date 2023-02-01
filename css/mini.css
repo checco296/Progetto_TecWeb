@@ -116,12 +116,29 @@ form button
     background-size: 30% 60%;
 }
 
-#admin_form{
+#admin_form
+{
     display: block;
     margin: auto;
-  }
+}
   
-  #admin_form form{
+#admin_form form
+{
     margin: auto;
     margin-bottom: 0.8em;
-  }
+}
+
+
+.card li
+{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+
+.card label
+{
+  font-size: 1em
+}
+

@@ -1,17 +1,17 @@
-<div class ="card">
-    <dt>
-        <form action="../php/adozione.php" method="post" class="copertina" aria-hidden="true">
-            <span>Nome:</span>
-            <span>%nome%</span>
-            <span>Foto:</span>
-            <span>%foto%</span>
-            <span>Sesso:</span>
-            <span>%sesso%</span>
-            <span>Data di nascita:</span>
-            <span>%nascita%</span>
-            <input type="hidden" value="%foto%" name="foto">
-            <input type="hidden" value="%nome%" name="nome">	
-            <input type="submit" value="Adotta" id="button" name="adotta" />
-        </form>
-    </dt>    
-</div> 
+<li>
+    <form action="../php/adozione.php" method="post" class="copertina" aria-hidden="true">
+        <label for="nome">Nome:</label>
+        <span>%nome%</span>
+        <label for="foto">Foto:</label>
+        <span>%foto%</span>
+        <label for="sesso">Sesso:</label>
+        <span>%sesso%</span>
+        <label for="nascita">Data di nascita:</label>
+        <span>%nascita%</span>
+        <input type="hidden" value="%foto%" name="foto"/>
+        <input type="hidden" value="%nome%" name="nome"/>
+        <input type="hidden" value="%sesso" name="sesso"/>
+        <input type="hidden" value="%nascita" name="nascita"/>	
+        <input type="submit" value="Adotta" class="button" name="adotta" />
+    </form>
+</li>    
