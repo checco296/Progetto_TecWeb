@@ -53,7 +53,7 @@ class Card {
         $pagina=str_replace('%nascita%',$this->nascita,$pagina);
         $parte_foto = "<img src='../images/" . $this->foto . "' />";
         if($this->richiesta==null){
-            $pagina=str_replace('<input type="submit" value="%richiesta%" id="button" name="adotta" />','<span>Nessuna richiesta</span>',$pagina);
+            $pagina=str_replace('<input type="submit" value="%richiesta%" class="button" name="adotta" />','<span>Nessuna richiesta</span>',$pagina);
         } else {
             $pagina=str_replace('%richiesta%',$this->richiesta,$pagina);
         }
