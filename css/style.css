@@ -228,7 +228,7 @@ main dl
   margin: auto;
 }
 
-main dt
+#index dt
 {
   color: var(--activity_titlecolor);
   text-align: center;
@@ -649,30 +649,43 @@ SEZIONE CARD
 ==============
 */
 
-.card{
-  width: 30%;
+.card
+{
   margin: 0.6em 0.3em 0 0.3em;
   font-size: 0.7em;
-  display: flex;
-  flex-direction: column;
+  list-style: none;
 }
 
-.copertina>span>img
+.card li
 {
-  size: 7em;
-  height: 7em;
+  display: inline-block;
+  width: 24%;
 }
 
-.copertina>label
+.card .copertina
+{
+  padding: 0.5em 0.2em;
+  width: 90%;
+}
+
+.card .copertina span img
+{
+  width: 100%;
+  height: 100%;
+}
+
+.card label
 {
   margin-bottom: 0em;
   font-size: 0.8em
 }
 
-.copertina>span
+.card span
 {
   margin-bottom: 0.5em;
 }
+
+
 
 /* 
 ===============

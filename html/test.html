@@ -9,7 +9,7 @@
     <meta name="author"      content="Francesco Ferraioli" />    
     
     <link rel="stylesheet" href="../css/style.css" media="handheld,screen" />
-    <link rel="stylesheet" href="../css/mini.css"  media="handheld, screen and (max-width:600px), only screen and (max-device-width:600px)" />
+    <link rel="stylesheet" href="../css/mini.css"  media="handheld, screen and (max-wilih:600px), only screen and (max-device-wilih:600px)" />
     <link rel="stylesheet" href="../css/print.css" media="print" />
 
     <link rel="shortcut icon" type="image/png" href="../images/prototipo.png" />
@@ -34,8 +34,8 @@
       </nav>
     </header>
     <main>
-        <div class ="card">
-            <dt>
+        <ul class ="card">
+            <li>
                 <form action="../php/adozione.php" method="post" class="copertina" aria-hidden="true">
                     <label for="nome">Nome:</label>
                     <span>Prova</span>
@@ -49,8 +49,83 @@
                     <input type="hidden" value="%nome%" name="nome">	<!--aggiungere anche gli altri?-->
                     <input type="submit" value="Adotta" class="button" name="adotta" />
                 </form>
-            </dt>
-        </div>
+              </li>
+            <li>
+              <form action="../php/adozione.php" method="post" class="copertina" aria-hidden="true">
+                <label for="nome">Nome:</label>
+                <span>Prova</span>
+                <label for="foto">Foto:</label>
+                <span><img src="../images/Luna.jpg"></span>
+                <label for="sesso">Sesso:</label>
+                <span>Femmina</span>
+                <label for="nascita">Data di nascita:</label>
+                <span>23-04-2014</span>
+                <input type="hidden" value="%foto%" name="foto">
+                <input type="hidden" value="%nome%" name="nome">	<!--aggiungere anche gli altri?-->
+                <input type="submit" value="Adotta" class="button" name="adotta" />
+              </form>
+            </li>
+            <li>
+              <form action="../php/adozione.php" method="post" class="copertina" aria-hidden="true">
+                  <label for="nome">Nome:</label>
+                  <span>Prova</span>
+                  <label for="foto">Foto:</label>
+                  <span><img src="../images/Luna.jpg"></span>
+                  <label for="sesso">Sesso:</label>
+                  <span>Femmina</span>
+                  <label for="nascita">Data di nascita:</label>
+                  <span>23-04-2014</span>
+                  <input type="hidden" value="%foto%" name="foto">
+                  <input type="hidden" value="%nome%" name="nome">	<!--aggiungere anche gli altri?-->
+                  <input type="submit" value="Adotta" class="button" name="adotta" />
+              </form>
+          </li>
+          <li>
+            <form action="../php/adozione.php" method="post" class="copertina" aria-hidden="true">
+              <label for="nome">Nome:</label>
+              <span>Prova</span>
+              <label for="foto">Foto:</label>
+              <span><img src="../images/Luna.jpg"></span>
+              <label for="sesso">Sesso:</label>
+              <span>Femmina</span>
+              <label for="nascita">Data di nascita:</label>
+              <span>23-04-2014</span>
+              <input type="hidden" value="%foto%" name="foto">
+              <input type="hidden" value="%nome%" name="nome">	<!--aggiungere anche gli altri?-->
+              <input type="submit" value="Adotta" class="button" name="adotta" />
+            </form>
+          </li>
+          <li>
+            <form action="../php/adozione.php" method="post" class="copertina" aria-hidden="true">
+                <label for="nome">Nome:</label>
+                <span>Prova</span>
+                <label for="foto">Foto:</label>
+                <span><img src="../images/Luna.jpg"></span>
+                <label for="sesso">Sesso:</label>
+                <span>Femmina</span>
+                <label for="nascita">Data di nascita:</label>
+                <span>23-04-2014</span>
+                <input type="hidden" value="%foto%" name="foto">
+                <input type="hidden" value="%nome%" name="nome">	<!--aggiungere anche gli altri?-->
+                <input type="submit" value="Adotta" class="button" name="adotta" />
+            </form>
+        </li>
+        <li>
+          <form action="../php/adozione.php" method="post" class="copertina" aria-hidden="true">
+            <label for="nome">Nome:</label>
+            <span>Prova</span>
+            <label for="foto">Foto:</label>
+            <span><img src="../images/Luna.jpg"></span>
+            <label for="sesso">Sesso:</label>
+            <span>Femmina</span>
+            <label for="nascita">Data di nascita:</label>
+            <span>23-04-2014</span>
+            <input type="hidden" value="%foto%" name="foto">
+            <input type="hidden" value="%nome%" name="nome">	<!--aggiungere anche gli altri?-->
+            <input type="submit" value="Adotta" class="button" name="adotta" />
+          </form>
+        </li>
+      </ul>
     </main>
     <footer>
       <img class="imgValidCode" src="../images/valid-xhtml10.png" alt="HTML valido" />
