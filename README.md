@@ -16,7 +16,7 @@ Da fare:
 
 -controllare il funzionamento delle form(quella dei contatti funziona e manda le mail)
 
--mettere un icona o qualcosa che faccia capire se si è loggati o meno
+-mettere un icona o qualcosa che faccia capire se si è loggati o meno(messa ma manca alt e non riesco a metterlo)
 
 -testare sul server dell'università
 

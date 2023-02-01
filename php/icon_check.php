@@ -12,12 +12,12 @@ if (isset($_SESSION['session_user'])) {
   } elseif($session_user=='admin'){
     header("Content-Type: image/png");
     header("Content-Length: " . filesize("../images/loggato_admin.png"));
-    readfile("/images/loggato_admin.png");
+    readfile("../images/loggato_admin.png");
   }
 } else {
   header("Content-Type: image/png");
   header("Content-Length: " . filesize("../images/non_loggato.png"));
-  readfile("/images/non_loggato.png");
+  readfile("../images/non_loggato.png");
 }
 ?>
 
