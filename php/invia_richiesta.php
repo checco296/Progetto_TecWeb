@@ -12,7 +12,7 @@ if (isset($_POST['invia'])) {
         $cognome = $_POST['cognome'];
         $nome = $_POST['nome'];
         $email = $_POST['email'];
-        $messagge = $_POST['message'];
+        $message = $_POST['message'];
 
         $livello = 'utente';
 
@@ -28,7 +28,7 @@ if (isset($_POST['invia'])) {
             $msg_errore = '<span class="error" id="form-error">Attendi che un amministratore completi la tua richiesta in corso. Non puoi adottare un animale se la tua richiesta in corso non è stata conclusa.</span>';
             $errore_form = '<span class="error" id="form-error"></span>';
         } else {
-            if (empty($cognome) || empty($nome) || empty($email) || empty($messagge)) {
+            if (empty($cognome) || empty($nome) || empty($email) || empty($message)) {
                 $msg_errore = '<span class="error" id="form-error">Compila tutti i campi.</span>';
                 $errore_form = '<span class="error" id="form-error"></span>';
             } elseif (!email_valida($email)) {
@@ -56,6 +56,13 @@ if (isset($_POST['invia'])) {
                             header("Location: ../php/user_area.php?Message=".$successo);
                         }
                     }
+                    $email_from = 'francescovillorba@gmail.com';
+                    $email_subject = "Nuova Richiesta di adozione";
+                    $email_body = "Hai ricevuto una nuova richiesta di adozione da $nome $cognome user: $username per quanto riguarda l'animale $nome_animale.\n Questo è il messaggio allegato :\n $message.\n \nRispondi a questo indirizzo e-mail: $email.\n";
+                    $to = "francescovillorba@gmail.com";
+                    $headers = "Da: $email_from \r\n";
+                    $headers .= "Reply-To: $email \r\n";
+                    mail($to, $email_subject, $email_body, $headers);
                 }
             }
         }
