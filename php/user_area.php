@@ -50,7 +50,7 @@ if (isset($_SESSION['session_id'])) {
     $listCard_3 = "";
     $listCard_4 = "";
 
-    $adozione = '<p><a href="../php/adotta.php">Nuova adozione</a></p>';
+    $adozione = '<a href="../php/adotta.php">Nuova adozione</a>';
 
     if($richiesta=='avviata'){
         $adozione = '<p>La tua richiesta di adozione è stata avviata. Attendi che un amministratore completi la tua richiesta in corso.</p>';
@@ -149,7 +149,7 @@ if (isset($_SESSION['session_id'])) {
     $a3 = array('');
     $a4 = array('');
 
-    $nuova_adozione = '<p><a href="../php/adotta.php">Nuova adozione</a><p>';
+    $nuova_adozione = '<a href="../php/adotta.php">Nuova adozione</a>';
     $campo_vuoto = '<p>Nessun dato, puoi comunque adottare un nuovo animale cliccando <a href="../php/adotta_cane.php">qui</a>.</p>';
 
     if (cane($animale1)) {

@@ -36,7 +36,7 @@ dichiarazione variabili di colore
   --hover_linkcolor: black;
   --bordercolor: black;
   --error_color: #bcd914;
-  --success_color: green;
+  --success_color: #00DB00;
 }
 /*
 ======================
@@ -228,7 +228,7 @@ main dl
   margin: auto;
 }
 
-#index dt
+main dt
 {
   color: var(--activity_titlecolor);
   text-align: center;
@@ -458,6 +458,7 @@ main dd>p
   background-color: var(--bgcolor1);
   border: solid var(--bordercolor);
   border-radius: 8em;
+  margin-top: 2em;
 }
 
 #back:visited
@@ -586,6 +587,11 @@ form p
   line-height: 2em;
 }
 
+form span>p
+{
+  border: none;
+}
+
 form p>a
 {
   color: var(--linkcolor);
@@ -603,14 +609,20 @@ form p>a:visited
 
 .error
 {
+  background-color: var(--bgcolor1);
+  border-radius: 1em;
   color: var(--error_color);
   margin-bottom: 0.5em;
+  text-align: center;
 }
 
 .success
 {
+  background-color: var(--bgcolor1);
+  border-radius: 1em;
   color: var(--success_color);
   margin-bottom: 0.5em;
+  text-align: center;
 }
 
 
@@ -640,7 +652,17 @@ form p>a:visited
 }
 
 #admin_form form{
-  margin: 0.8em;
+  margin: 0.4em;
+}
+
+#link_placeholder>a
+{
+  color: var(--linkcoloralt);
+  padding: 0.5em;
+  background-color: var(--bgcolor1);
+  border: solid var(--bordercolor);
+  border-radius: 8em;
+  line-height: 3em;
 }
 
 /*
@@ -654,12 +676,13 @@ SEZIONE CARD
   margin: 0.6em 0.3em 0 0.3em;
   font-size: 0.7em;
   list-style: none;
+  margin-bottom: 0.5em;
 }
 
 .card li
 {
   display: inline-block;
-  width: 24%;
+  width: 22%;
 }
 
 .card .copertina
@@ -685,7 +708,54 @@ SEZIONE CARD
   margin-bottom: 0.5em;
 }
 
+.card .nome1
+{
+  margin: 0.5em;
+  background-color: var(--bgcolor2);
+  border: solid var(--bordercolor);
+  border-radius: 1em;
+}
 
+.card .nome1 dd,.card .nome1 dt
+{
+  text-align: center;
+  border-color: var(--bordercolor);
+}
+
+.card .nome1 dd
+{
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  text-align: center;
+  display: block;
+}
+
+.card .nome1 img
+{
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  display: block;
+}
+
+.card p
+{
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.card p>a
+{
+  padding: 1em;
+  background-color: var(--bgcolor1);
+  border: solid var(--bordercolor);
+  border-radius: 1em;
+  color: var(--linkcoloralt);
+  font-size: 1em;
+}
 
 /* 
 ===============
