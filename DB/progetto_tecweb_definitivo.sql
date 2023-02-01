@@ -74,3 +74,5 @@ CREATE TABLE IF NOT EXISTS `tec_progetto`.`users` (
  `richiesta` VARCHAR(20) NULL DEFAULT NULL,
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `livello`, `animale1`, `animale2`, `animale3`, `animale4`, `richiesta`) VALUES ('1', 'admin', '', '21232f297a57a5a743894a0e4a801fc3', 'admin', NULL, NULL, NULL, NULL, NULL), ('2', 'user', '', 'ee11cbb19052e40b07aac0ca060c23ee', 'utente', NULL, NULL, NULL, NULL, NULL);

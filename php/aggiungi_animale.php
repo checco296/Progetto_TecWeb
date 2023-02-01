@@ -2,7 +2,7 @@
     require('database.php');
     require('check.php');
 
-if (isset($_POST['invia'])) {
+
     $nome = $_POST['nome_animale'];
     $tipo = $_POST['tipo'];
     $sesso = $_POST['sesso'];
@@ -14,10 +14,11 @@ if (isset($_POST['invia'])) {
     if (empty($nome) || empty($data_nascita) || empty($img)) {
          $msg_errore = '<span class="error" id="form-error">Compila tutti i campi.</span>';
          $errore_form = '<span class="error" id="form-aggiungi-error"></span>';
+         header("Location: ../php/admin_area.php?messaggio_campi=".$msg_errore);
     } elseif (!nome_animale_valido($nome)) {
-        $msg_errore = '<span class="error" id="nome-error">Il nome inserito non è valido. Un animale non può contenere numeri e caratteri speciali
-        nel suo nome. Lunghezza minina 2 caratteri. Lunghezza massima 20 caratteri.</span>';
-        $errore_form = '<span class="error" id="nome-error"></span>';            
+        $msg_errore = '<span class="error" id="nome-error">Il nome inserito non è valido. Un animale non può contenere numeri e caratteri speciali nel suo nome. Lunghezza minina 2 caratteri. Lunghezza massima 20 caratteri.</span>';
+        $errore_form = '<span class="error" id="nome-error"></span>';    
+        header("Location: ../php/admin_area.php?messaggio_nome=".$msg_errore);        
     } else {
         if ($tipo == 'cane'){
             $query_cane = "INSERT into `cani` (nome, data_nascita, sesso) 
@@ -29,8 +30,8 @@ if (isset($_POST['invia'])) {
             $result_foto = mysqli_query($con, $query_foto);
 
             if($result_cane && $result_cane && (move_uploaded_file($_FILES['img_animale']['tmp_name'], $img_path))){
-                $msg_errore = '<span class="success" id="form-aggiungi-success">Animale aggiunto con successo.</span>';
-                $errore_form = '<span class="success" id="form-aggiungi-success"></span>';
+                $successo = '<span class="success" id="form-aggiungi-success">Cane aggiunto con successo.</span>';
+                header("Location: ../php/admin_area.php?messaggio_successo=".$successo);            
             }
         } elseif ($tipo == 'gatto'){
             $query_gatto = "INSERT into `gatti` (nome, data_nascita, sesso) 
@@ -42,12 +43,9 @@ if (isset($_POST['invia'])) {
             $result_foto = mysqli_query($con, $query_foto);
             
             if($result_gatto && $result_foto && (move_uploaded_file($_FILES['img_animale']['tmp_name'], $img_path))){
-                $msg_errore = '<span class="success" id="form-aggiungi-success">Animale aggiunto con successo.</span>';
-                $errore_form = '<span class="success" id="form-aggiungi-success"></span>';
+                $successo = '<span class="success" id="form-aggiungi-success">Gatto aggiunto con successo.</span>';
+                header("Location: ../php/admin_area.php?messaggio_successo=".$successo);
             }
         }
     }
-   echo str_replace($errore_form, $msg_errore , file_get_contents("../html/admin_area.html"));
-}    
-
 ?>

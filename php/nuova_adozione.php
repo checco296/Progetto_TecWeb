@@ -20,8 +20,7 @@ $result_gatti = mysqli_query($con, $query_gatti);
 $row_cani = mysqli_fetch_assoc($result_cani);
 $row_gatti = mysqli_fetch_assoc($result_gatti);
 
-$messaggio_successo = '<span class="success" id="form-success">Adozione completata con successo.</span>';
-$successo_form = '<span class="success" id="form-success"></span>';
+$successo = '<span class="success" id="form-success">Adozione completata con successo.</span>';
 
 if (!empty($row_cani)) {
     $query_cane = "UPDATE cani SET richiesta = 'conclusa' WHERE nome = '$nome'";
@@ -44,7 +43,7 @@ if (!empty($row_cani)) {
         $query_utente = "UPDATE users SET animale1 = '$nome', richiesta = 'conclusa' WHERE username = '$username'";
         $result = mysqli_query($con, $query_utente);
     }
-    echo str_replace($successo_form, $messaggio_successo , file_get_contents("../html/admin_area.html"));
+    header("Location: ../php/admin_area.php?messaggio_adozione=".$successo);
 
 } elseif(!empty($row_gatti)){
     $query_gatto = "UPDATE gatti SET richiesta = 'conclusa' WHERE nome = '$nome'";
@@ -67,8 +66,7 @@ if (!empty($row_cani)) {
         $query_utente = "UPDATE users SET animale1 = '$nome', richiesta = 'conclusa' WHERE username = '$username'";
         $result = mysqli_query($con, $query_utente);
     }
-    echo str_replace($successo_form, $messaggio_successo , file_get_contents("../html/admin_area.html"));
-
+    header("Location: ../php/admin_area.php?messaggio_adozione=".$successo);
 } else {
     header('Location: ../php/admin_area.php');
 }
