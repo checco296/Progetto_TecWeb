@@ -25,6 +25,7 @@
   <body id="Adotta">
     <header>
       <h1>Centro Adozioni PD</h1>
+      <img id="log_in_status" src="../php/icon_check.php"/>
       <nav id="menu" aria-label="menu del sito">
         <ul>
           <li>
@@ -45,35 +46,39 @@
       </nav>
     </header>
 
+    <a class="aiuti" href="#avvertimento">Salta all'avvertimento</a>
+    <a class="aiuti" href="#procedura">Salta alla procedura di adozione</a>
+    <a class="aiuti" href="#nota">Salta alla sezione richieste supplementari</a>
+    <a class="aiuti" href="#adotta_form">Salta alla <span lang="en">form</span> per l'adozione</a>
     <main>
       <h2>Processo di adozione:</h2>
-      <div id="istruzioni_adozione">
-        <p>
-          Se sei arrivato in questa pagina vuol dire che stai tenendo in
-          cosiderazione la possibilità di adottare un animale, ti ricordiamo
-          ancora una volta che gli animali non sono giochi. Di seguito ti
-          elenchiamo delle semplici indicazioni per adottare il tuo prossimo
-          amico peloso:
-        </p>
-        <ol>
-          <li>
-            Sfoglia tra gli animali disponibili e individua quello che più vi
-            interessa;
-          </li>
-          <li>Compila il <span lang="en">form</span> con i dati richiesti;</li>
-          <li>Attendi la mail di approvazione/rifiuto;</li>
-          <li>
-            Se la richiesta va in porto,verrai contattato per l'incontro con
-            l'animale, inoltre sul tuo profilo personale verrà aggiunta la sua
-            scheda.
-          </li>
-        </ol>
-        <p>
-          Dopo aver inoltrato la richiesta potremo richiedervi ulteriori
-          informazioni necessarie all'adozione come la visualizzazione
-          dell'ambiente domestico del candidato ospitante
-        </p>
-      </div>
+      
+      <p id="avvertimento">
+        Se sei arrivato in questa pagina vuol dire che stai tenendo in
+        cosiderazione la possibilità di adottare un animale, ti ricordiamo
+        ancora una volta che gli animali non sono giochi. Di seguito ti
+        elenchiamo delle semplici indicazioni per adottare il tuo prossimo
+        amico peloso:
+      </p>
+      <ol id="procedura">
+        <li>
+          Sfoglia tra gli animali disponibili e individua quello che più vi
+          interessa;
+        </li>
+        <li>Compila il <span lang="en">form</span> con i dati richiesti;</li>
+        <li>Attendi la mail di approvazione/rifiuto;</li>
+        <li>
+          Se la richiesta va in porto,verrai contattato per l'incontro con
+          l'animale, inoltre sul tuo profilo personale verrà aggiunta la sua
+          scheda.
+        </li>
+      </ol>
+      <p id="nota">
+        Dopo aver inoltrato la richiesta potremo richiedervi ulteriori
+        informazioni necessarie all'adozione come la visualizzazione
+        dell'ambiente domestico del candidato ospitante
+      </p>
+      
 
       <form id="adotta_form" action="../php/invia_richiesta.php" method="post">
 
@@ -94,15 +99,15 @@
         <span class="error" id="email-error"></span><br />
         
         <label for="message"
-          >Scrivi il nome dell'animale che vorresti adottare e scrivi anche un
+          >Scrivi un
           po' di informazioni in più: per esempio parlaci degli spazi che questo
           animale riceverà, per chi è destinato, se hai avuto altre esperienze
-          con animali, ...</label><br />
+          con animali...</label><br />
 
         <textarea id="message" name="message"></textarea><br />
         <span class="error" id="form-error"></span>
         <span class="success" id="form-success"></span>
-        <input type="submit" value="Invia richiesta" id="button" name="invia" />
+        <input type="submit" value="Invia richiesta" class="button" name="invia" />
       </form>
     </main>
     <footer>
@@ -123,5 +128,3 @@
     </footer>
   </body>
 </html>
-
-<!--da rimuovere-->

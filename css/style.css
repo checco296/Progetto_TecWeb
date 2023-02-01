@@ -49,6 +49,7 @@ html, body
   margin: auto;
   max-width: 800px;
   font-size: 1em;
+  color: var(--txtcolor);
 }
 
 html
@@ -463,6 +464,32 @@ main dd>p
 {
   color: var(--visited_linkcolor);
 }
+
+#procedura
+{
+  background-color: var(--bgcolor1);
+  padding: 1em;
+  border: solid var(--activity_bordercolor);
+  border-radius: 1em 1em 0em 0em;
+  border-bottom: none;
+  color: var(--txtcolor);
+  line-height: 2em;
+}
+
+#procedura li
+{
+  margin-left: 0.8em;
+}
+
+#nota
+{
+  border: solid var(--activity_bordercolor);
+  border-radius: 0em 0em 1em 1em;
+  background-color: var(--bgcolor1);
+  padding: 1em;
+  color: var(--txtcolor);
+  margin-bottom: 1em;
+}
 /*
 ==============
 SEZIONE AIUTI
@@ -644,6 +671,11 @@ SEZIONE CARD
   width: 100%;
 }
 
+/* 
+===============
+Tabella
+===============
+*/
 table
 {
   width: 80%;
@@ -683,4 +715,9 @@ tr:nth-child(odd)
 {
   background-color: var(--bread_footer_color);
   color: var(--txtcolor);
+}
+
+th, td
+{
+  border: solid var(--bordercolor);
 }

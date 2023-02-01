@@ -18,6 +18,7 @@
   <body id="Adotta">
     <header>
       <h1>Centro Adozioni PD</h1>
+      <img id="log_in_status" src="../php/icon_check.php"/>
       <nav id="menu" aria-label="menu del sito">
         <ul>
           <li><a href="../index.html"><span lang="en">Home</span></a></li>
@@ -32,38 +33,42 @@
       </nav>
     </header>
       
+    <a class="aiuti" href="#avvertimento">Salta all'avvertimento</a>
+    <a class="aiuti" href="#procedura">Salta alla procedura di adozione</a>
+    <a class="aiuti" href="#nota">Salta alla sezione richieste supplementari</a>
+    <a class="aiuti" href="#Cani">Salta alla sezione Cani</a>
+    <a class="aiuti" href="#Gatti">Salta alla sezione Gatti</a>
     <main>
       <h2>Processo di adozione:</h2>
-      <div id="istruzioni_adozione">
-        <p>
-          Se sei arrivato in questa pagina vuol dire che stai tenendo in
-          cosiderazione la possibilità di adottare un animale, ti ricordiamo
-          ancora una volta che gli animali non sono giochi. Di seguito ti
-          elenchiamo delle semplici indicazioni per adottare il tuo prossimo
-          amico peloso:
-        </p>
-        <ol>
-          <li>
-            Sfoglia tra gli animali disponibili e individua quello che più vi
-            interessa;
-          </li>
-          <li>Compila il <span lang="en">form</span> con i dati richiesti;</li>
-          <li>Attendi la mail di approvazione/rifiuto;</li>
-          <li>
-            Se la richiesta va in porto,verrai contattato per l'incontro con
-            l'animale, inoltre sul tuo profilo personale verrà aggiunta la sua
-            scheda.
-          </li>
-        </ol>
-        <p>
-          Dopo aver inoltrato la richiesta potremo richiedervi ulteriori
-          informazioni necessarie all'adozione come la visualizzazione
-          dell'ambiente domestico del candidato ospitante
-        </p>
-      </div>
-      <h2>Cani</h2>
+      <p id="avvertimento">
+        Se sei arrivato in questa pagina vuol dire che stai tenendo in
+        cosiderazione la possibilità di adottare un animale, ti ricordiamo
+        ancora una volta che gli animali non sono giochi. Di seguito ti
+        elenchiamo delle semplici indicazioni per adottare il tuo prossimo
+        amico peloso:
+      </p>
+      <ol id="procedura">
+        <li>
+          Sfoglia tra gli animali disponibili e individua quello che più vi
+          interessa;
+        </li>
+        <li>Compila il <span lang="en">form</span> con i dati richiesti;</li>
+        <li>Attendi la mail di approvazione/rifiuto;</li>
+        <li>
+          Se la richiesta va in porto,verrai contattato per l'incontro con
+          l'animale, inoltre sul tuo profilo personale verrà aggiunta la sua
+          scheda.
+        </li>
+      </ol>
+      <p id="nota">
+        Dopo aver inoltrato la richiesta potremo richiedervi ulteriori
+        informazioni necessarie all'adozione come la visualizzazione
+        dell'ambiente domestico del candidato ospitante
+      </p>
+
+      <h2 id="Cani">Cani</h2>
         %listaCani%
-      <h2>Gatti</h2>
+      <h2 id="Gatti">Gatti</h2>
         %listaGatti%
     </main>
     <footer>
@@ -73,5 +78,3 @@
     </footer>
   </body>
 </html>
-
-<!--aggiungere aiuti alla navigazione-->

@@ -25,6 +25,7 @@
   <body id="Admin_area">
     <header>
       <h1>Centro Adozioni PD</h1>
+      <img id="log_in_status" src="../php/icon_check.php"/>
       <nav id="menu" aria-label="menu del sito">
         <ul>
           <li><a href="../index.html"><span lang="en">Home</span></a></li>
@@ -44,7 +45,9 @@
     </header>
 
     <a class="aiuti" href="#nuova_adozione">Salta al selettore di adozione</a>
+    <a class="aiuti" href="#controllo">Salta al controllo nuove richeste di adozione</a>
     <a class="aiuti" href="#aggiungi_animale">Salta al pulsante di aggiunta animali</a>
+    <a class="aiuti" href="#back">Salta al tasto di <span lang="en">Log-out</span></a>
     <main>
       <div id="admin_form">
         <form method="post" action="../php/nuova_adozione.php" id="nuova_adozione">
@@ -66,7 +69,7 @@
             <span class="error" id="form-error"></span>
             <span class="success" id="form-success"></span>
             <input type="submit" value="Invia" class="button" />
-            <p>Controlla se ci sono nuove richieste di adozione cliccando <a href="../php/admin_area.php">qui</a>.</p>
+            <p id="controllo">Controlla se ci sono nuove richieste di adozione cliccando <a href="../php/admin_area.php">qui</a>.</p>
         </form>
 
         <form method="post" action="../php/aggiungi_animale.php" id="aggiungi_animale" enctype="multipart/form-data">
@@ -96,7 +99,7 @@
 
           <span class="error" id="form-aggiungi-error"></span>
           <span class="success" id="form-aggiungi-success"></span>
-          <input type="submit" value="Invio" id="button" class="invia" />
+          <input type="submit" value="Invio" class="button" />
         </form>
 
         <form method="post" action="../php/elimina_animale.php" id="elimina_animale">
