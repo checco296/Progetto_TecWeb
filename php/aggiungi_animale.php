@@ -7,11 +7,12 @@
     $tipo = $_POST['tipo'];
     $sesso = $_POST['sesso'];
     $data_nascita = $_POST['data_nascita'];
+    $descrizione = $_POST['descrizione'];
 
     $img = $_FILES['img_animale']['name'];
     $img_path = "../images/".basename($img);
 
-    if (empty($nome) || empty($data_nascita) || empty($img)) {
+    if (empty($nome) || empty($data_nascita) || empty($img) || empty($descrizione)) {
          $msg_errore = '<span class="error" id="form-error">Compila tutti i campi.</span>';
          $errore_form = '<span class="error" id="form-aggiungi-error"></span>';
          header("Location: ../php/admin_area.php?messaggio_campi=".$msg_errore);
@@ -21,8 +22,8 @@
         header("Location: ../php/admin_area.php?messaggio_nome=".$msg_errore);        
     } else {
         if ($tipo == 'cane'){
-            $query_cane = "INSERT into `cani` (nome, data_nascita, sesso) 
-                  VALUES ('$nome', '$data_nascita', '$sesso')";
+            $query_cane = "INSERT into `cani` (nome, data_nascita, sesso, descrizione) 
+                  VALUES ('$nome', '$data_nascita', '$sesso','$descrizione')";
             $result_cane = mysqli_query($con, $query_cane);
 
             $query_foto = "INSERT into `foto_cane` (path) 
@@ -34,8 +35,8 @@
                 header("Location: ../php/admin_area.php?messaggio_successo=".$successo);            
             }
         } elseif ($tipo == 'gatto'){
-            $query_gatto = "INSERT into `gatti` (nome, data_nascita, sesso) 
-            VALUES ('$nome', '$data_nascita', '$sesso')";
+            $query_gatto = "INSERT into `gatti` (nome, data_nascita, sesso, descrizione) 
+            VALUES ('$nome', '$data_nascita', '$sesso','$descrizione')";
             $result_gatto = mysqli_query($con, $query_gatto);
 
             $query_foto = "INSERT into `foto_gatto` (path) 

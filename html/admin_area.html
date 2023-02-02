@@ -98,6 +98,9 @@
           <label for="img_animale">Seleziona un'immagine</label>
           <input type="file" id="img_animale" name="img_animale">
 
+          <label for="descrizione">Descrizione dell'animale:</label>
+          <textarea id="descrizione" name="descrizione" placeholder="Inserire una breve descrizione dell'animale qui"></textarea>
+
           <span class="error" id="form-aggiungi-error"></span>
           <span class="success" id="form-aggiungi-success"></span>
           <input type="submit" value="Invio" class="button" />
@@ -105,8 +108,8 @@
 
         <form method="post" action="../php/elimina_animale.php" id="elimina_animale">
           <h2>Elimina animale</h2>
-            <label for="elimina_animale">Animale: </label>
-            <select name="elimina_animale" id="elimina_animale">
+            <label for="elimina">Animale: </label>
+            <select name="elimina_animale" id="elimina">
               <optgroup label="Cani">
                 <option value="elimina_cane"></option>
               </optgroup>
