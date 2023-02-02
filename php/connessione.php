@@ -2,9 +2,9 @@
 
 class Connessione{
     const HOST="localhost";
-    const USERNAME="root";
-    const PASSWORD="";
-    const NOME_DATABASE="tec_progetto";
+    const USERNAME="fferraio";
+    const PASSWORD="eiGh1wooxahthohf";
+    const NOME_DATABASE="fferraio";
 
     public $conn=null;
 
