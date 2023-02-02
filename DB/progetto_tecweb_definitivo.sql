@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS `tec_progetto`.`cani` (
   `nome` VARCHAR(45) NOT NULL,
   `data_nascita` DATE NOT NULL,
   `sesso` VARCHAR(20) NOT NULL,
+  `descrizione` VARCHAR(250) NOT NULL,
   `richiesta` VARCHAR(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id_cani`))
 ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -39,6 +40,7 @@ CREATE TABLE IF NOT EXISTS `tec_progetto`.`gatti` (
   `nome` VARCHAR(45) NOT NULL,
   `data_nascita` VARCHAR(45) NOT NULL,
   `sesso` VARCHAR(45) NOT NULL,
+  `descrizione` VARCHAR(250) NOT NULL,
   `richiesta` VARCHAR(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id_gatti`))
 ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
