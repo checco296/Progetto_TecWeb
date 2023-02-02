@@ -1,7 +1,7 @@
 User-agent: *
-Disallow: /html/404.html
-Disallow: /html/500.html
-Disallow: /html/Admin_area.html
-Disallow: /html/login_admin.html
-Disallow: /html/ringraziamenti.html
-Disallow: /html/user_area.html
+Disallow: http://127.0.0.1:8080/fferraio/404.html
+Disallow: http://127.0.0.1:8080/fferraio/500.html
+Disallow: http://127.0.0.1:8080/fferraio/html/Admin_area.html
+Disallow: http://127.0.0.1:8080/fferraio/html/login_admin.html
+Disallow: http://127.0.0.1:8080/fferraio/html/ringraziamenti.html
+Disallow: http://127.0.0.1:8080/fferraio/html/user_area.html

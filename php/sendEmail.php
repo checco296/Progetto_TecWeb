@@ -35,10 +35,10 @@ if (isset($_REQUEST['name'])) {
     $to = "francescovillorba@gmail.com";
     $headers = "Da: $email_from \r\n";
     $headers .= "Reply-To: $email \r\n";
-    if (mail($to, $email_subject, $email_body, $headers)) {
+    /*if (mail($to, $email_subject, $email_body, $headers)) {*/
       header('Location: ../html/ringraziamenti.html');
-    } else {$msg_errore = '"form-error">Errore nell invio della mail.';
-            $errore_form = '"form-error">';}
+    /*} else {$msg_errore = '"form-error">Errore nell invio della mail.';
+            $errore_form = '"form-error">';}*/
   }else{
     echo str_replace($errore_form, $msg_errore , file_get_contents("../html/contatti.html"));
   }    
